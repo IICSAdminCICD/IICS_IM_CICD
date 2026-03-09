@@ -8,12 +8,8 @@ steps:
 - checkout: self
 
 - script: |
-    echo "User configured"
-  displayName: "Test secrets"
-  env:
-    USERNAME: $(UAT_IICS_USERNAME)
-    PASSWORD: $(UAT_IICS_PASSWORD)
-- script: |
-    echo "Secrets variables"
     echo "Username: $USERNAME"
     echo "Password: $PASSWORD"
+  env:
+    USERNAME: $(DEV_IICS_USERNAME)
+    PASSWORD: $(DEV_IICS_PASSWORD)
