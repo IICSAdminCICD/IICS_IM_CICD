@@ -7,12 +7,41 @@ pool:
 variables:
 - group: IICS_SECRETS
 
-steps:
-- checkout: self
+stages:
 
-- script: |
-    echo "Username: $USERNAME"
-    echo "Password: $PASSWORD"
-  env:
-    USERNAME: $(DEV_IICS_USERNAME)
-    PASSWORD: $(DEV_IICS_PASSWORD)
+# -----------------------
+# STAGE DEV
+# -----------------------
+- stage: DEV
+  displayName: "Build / Export from DEV"
+  jobs:
+  - job: Build
+    steps:
+    - checkout: self
+
+    - script: |
+        echo "Exportando assets desde DEV"
+        echo "Username: $USERNAME"
+      env:
+        USERNAME: $(DEV_IICS_USERNAME)
+        PASSWORD: $(DEV_IICS_PASSWORD)
+
+# -----------------------
+# STAGE QA
+# -----------------------
+- stage: QA
+  displayName: "Deploy to QA"
+  dependsOn: DEV
+  jobs:
+  - deployment: DeployQA
+    environment: QA
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: |
+              echo "Promocionando a QA"
+              echo "Username: $USERNAME"
+            env:
+              USERNAME: $(QA_IICS_USERNAME)
+              PASSWORD: $(QA_IICS_PASSWORD)
