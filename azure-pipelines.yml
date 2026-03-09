@@ -14,17 +14,31 @@ stages:
 # -----------------------
 - stage: DEV
   displayName: "Build / Export from DEV"
+
   jobs:
   - job: Build
+    displayName: "Export assets from DEV"
+
     steps:
     - checkout: self
+      clean: true
 
     - script: |
         echo "Exportando assets desde DEV"
-        echo "Username: $USERNAME"
-      env:
-        USERNAME: $(DEV_IICS_USERNAME)
-        PASSWORD: $(DEV_IICS_PASSWORD)
+        echo "Commit que dispara el pipeline: $(Build.SourceVersion)"
+        echo "Username: $(DEV_IICS_USERNAME)"
+
+        mkdir export
+        echo "Simulación export IICS assets" > export/assets.txt
+      displayName: "Export IICS assets"
+
+    - task: PublishPipelineArtifact@1
+      displayName: "Publicar artefacto DEV"
+      inputs:
+        targetPath: export
+        artifact: DEV_ASSETS
+        publishLocation: pipeline
+
 
 # -----------------------
 # STAGE QA
@@ -32,16 +46,29 @@ stages:
 - stage: QA
   displayName: "Deploy to QA"
   dependsOn: DEV
+  condition: succeeded()
+
   jobs:
   - deployment: DeployQA
+    displayName: "Deploy assets to QA"
     environment: QA
+
     strategy:
       runOnce:
         deploy:
           steps:
+
+          - checkout: none
+
+          - task: DownloadPipelineArtifact@2
+            displayName: "Descargar artefacto generado en DEV"
+            inputs:
+              artifact: DEV_ASSETS
+              path: $(Pipeline.Workspace)/DEV_ASSETS
+
           - script: |
               echo "Promocionando a QA"
-              echo "Username: $USERNAME"
-            env:
-              USERNAME: $(QA_IICS_USERNAME)
-              PASSWORD: $(QA_IICS_PASSWORD)
+              echo "Commit promovido: $(Build.SourceVersion)"
+              echo "Username QA: $(QA_IICS_USERNAME)"
+              ls -R $(Pipeline.Workspace)/DEV_ASSETS
+            displayName: "Deploy to QA"
