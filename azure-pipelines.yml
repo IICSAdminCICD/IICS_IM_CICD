@@ -1,0 +1,15 @@
+trigger:
+- DEV
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- checkout: self
+
+- script: |
+    echo "Usuario configurado"
+  displayName: "Test secrets"
+  env:
+    USERNAME: $(UAT_IICS_USERNAME)
+    PASSWORD: $(UAT_IICS_PASSWORD)
