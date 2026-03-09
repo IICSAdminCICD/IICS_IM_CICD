@@ -9,11 +9,11 @@ steps:
 
 - script: |
     echo "User configured"
-    echo "Secrets variables"
-    echo "Username: $USERNAME"
-    echo "Password: $PASSWORD"
   displayName: "Test secrets"
   env:
     USERNAME: $(UAT_IICS_USERNAME)
     PASSWORD: $(UAT_IICS_PASSWORD)
-
+- script: |
+    echo "Secrets variables"
+    echo "Username: $USERNAME"
+    echo "Password: $PASSWORD"
