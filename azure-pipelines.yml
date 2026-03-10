@@ -137,8 +137,8 @@ stages:
               echo "Commit que disparó el pipeline:"
               echo $COMMIT
 
-              git config --global user.email "pipeline@devops"
-              git config --global user.name "Azure DevOps Pipeline"
+              git config --global user.email "dl-GlobalMasterIICSAdmin@ppg.com"
+              git config --global user.name "IICSAdminCICD"
 
               echo "Fetch completo del repo"
               git fetch --all --prune --unshallow || git fetch --all
