@@ -2,13 +2,13 @@ import requests
 import os
 
 URL = os.environ['IICS_LOGIN_URL']
-USERNAME = os.environ['IICS_USERNAME']
-PASSWORD = os.environ['IICS_PASSWORD']
+DEV_USERNAME = os.environ['DEV_IICS_USERNAME']
+DEV_PASSWORD = os.environ['DEV_IICS_PASSWORD']
 
 UAT_USERNAME = os.environ['UAT_IICS_USERNAME']
 UAT_PASSWORD = os.environ['UAT_IICS_PASSWORD']
 
-BODY = {"username": USERNAME, "password": PASSWORD}
+BODY = {"username": DEV_USERNAME, "password": DEV_PASSWORD}
 
 r = requests.post(url=URL, json=BODY)
 
