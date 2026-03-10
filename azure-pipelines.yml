@@ -80,41 +80,33 @@ stages:
               echo "Commit que disparó el pipeline:"
               echo $COMMIT
 
-              git config --global user.email "dl-GlobalMasterIICSAdmin@ppg.com"
-              git config --global user.name "IICSAdminCICD"
+              git config --global user.email "pipeline@devops"
+              git config --global user.name "Azure DevOps Pipeline"
 
-              echo "Fetch repo"
-              git fetch origin
+              echo "Fetch completo del repo"
+              git fetch --all --prune --unshallow || git fetch --all
 
               echo "Checkout QA"
               git checkout QA
               git pull origin QA
 
-              echo "Detectando cambios del commit"
+              echo "Archivos modificados en el commit:"
+              CHANGED_FILES=$(git show --pretty="" --name-only $COMMIT)
 
-              git diff-tree --no-commit-id --name-status -r $COMMIT | while read status file
+              echo "$CHANGED_FILES"
+
+              for file in $CHANGED_FILES
               do
-
-                  echo "Cambio detectado: $status $file"
-
-                  if [ "$status" = "D" ]; then
-                      echo "El archivo fue eliminado en DEV → eliminando en QA"
-                      git rm -f "$file" || true
-
-                  else
-                      echo "Actualizando archivo desde DEV"
-                      git checkout $COMMIT -- "$file"
-                      git add "$file"
-
-                  fi
-
+                  echo "Promoviendo archivo $file"
+                  git checkout $COMMIT -- "$file"
+                  git add "$file"
               done
 
               echo "Creando commit de promoción"
 
-              git diff --cached --quiet || git commit -m "Promote changes from DEV commit $COMMIT to QA"
+              git diff --cached --quiet || git commit -m "Promote files from DEV commit $COMMIT to QA"
 
               echo "Push a QA"
               git push origin QA
 
-            displayName: "Promote only files changed in commit"
+            displayName: "Promote files changed in commit"
