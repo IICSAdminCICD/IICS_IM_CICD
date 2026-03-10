@@ -40,12 +40,12 @@ stages:
     # -----------------------
     - script: |
         pip install requests
-        python $(Build.SourcesDirectory)/CICD/scripts/infa_logic.py
+        python CICD/scripts/infa_logic.py
       displayName: "Login to IICS"
       env:
         IICS_LOGIN_URL: $(IICS_LOGIN_URL)
-        IICS_USERNAME: $(DEV_IICS_USERNAME)
-        IICS_PASSWORD: $(DEV_IICS_PASSWORD)
+        DEV_IICS_USERNAME: $(DEV_IICS_USERNAME)
+        DEV_IICS_PASSWORD: $(DEV_IICS_PASSWORD)
         UAT_IICS_USERNAME: $(QA_IICS_USERNAME)
         UAT_IICS_PASSWORD: $(QA_IICS_PASSWORD)
 
