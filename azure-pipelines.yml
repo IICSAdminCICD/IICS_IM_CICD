@@ -1,5 +1,7 @@
 trigger:
-- DEV
+  branches:
+    include:
+      - DEV
 
 pool:
   vmImage: ubuntu-latest
@@ -13,44 +15,47 @@ stages:
 # STAGE DEV
 # -----------------------
 - stage: DEV
-  displayName: "Build / Export from DEV"
+  displayName: "Build from DEV"
 
   jobs:
   - job: Build
-    displayName: "Export assets from DEV"
+    displayName: "Build using DEV commit"
 
     steps:
     - checkout: self
+      persistCredentials: true
       clean: true
 
     - script: |
-        echo "Exportando assets desde DEV"
-        echo "Commit que dispara el pipeline: $(Build.SourceVersion)"
-        echo "Username: $(DEV_IICS_USERNAME)"
+        echo "Pipeline disparado por commit:"
+        echo $(Build.SourceVersion)
 
-        mkdir export
-        echo "Simulación export IICS assets" > export/assets.txt
-      displayName: "Export IICS assets"
+        echo "Autor:"
+        git log -1 --pretty=format:'%an'
+
+        echo "Guardando commit para promoción"
+        echo $(Build.SourceVersion) > commit.txt
+      displayName: "Capturar commit"
 
     - task: PublishPipelineArtifact@1
-      displayName: "Publicar artefacto DEV"
       inputs:
-        targetPath: export
-        artifact: DEV_ASSETS
+        targetPath: commit.txt
+        artifact: commitinfo
         publishLocation: pipeline
+      displayName: "Publicar commit a promover"
 
 
 # -----------------------
 # STAGE QA
 # -----------------------
 - stage: QA
-  displayName: "Deploy to QA"
+  displayName: "Promote commit to QA"
   dependsOn: DEV
   condition: succeeded()
 
   jobs:
   - deployment: DeployQA
-    displayName: "Deploy assets to QA"
+    displayName: "Promote DEV commit to QA"
     environment: QA
 
     strategy:
@@ -58,17 +63,37 @@ stages:
         deploy:
           steps:
 
-          - checkout: none
+          - checkout: self
+            persistCredentials: true
+            clean: true
 
           - task: DownloadPipelineArtifact@2
-            displayName: "Descargar artefacto generado en DEV"
             inputs:
-              artifact: DEV_ASSETS
-              path: $(Pipeline.Workspace)/DEV_ASSETS
+              artifact: commitinfo
+              path: $(Pipeline.Workspace)
+            displayName: "Descargar commit"
 
           - script: |
-              echo "Promocionando a QA"
-              echo "Commit promovido: $(Build.SourceVersion)"
-              echo "Username QA: $(QA_IICS_USERNAME)"
-              ls -R $(Pipeline.Workspace)/DEV_ASSETS
-            displayName: "Deploy to QA"
+
+              COMMIT=$(cat $(Pipeline.Workspace)/commit.txt)
+
+              echo "Commit a promocionar:"
+              echo $COMMIT
+
+              echo "Configurando git"
+              git config --global user.email "dl-GlobalMasterIICSAdmin@ppg.com"
+              git config --global user.name "IICSAdminCICD"
+
+              echo "Fetch ramas"
+              git fetch origin
+
+              echo "Checkout QA"
+              git checkout QA
+
+              echo "Merge del commit de DEV"
+              git merge $COMMIT --no-edit
+
+              echo "Push a QA"
+              git push origin QA
+
+            displayName: "Promote commit DEV -> QA"
