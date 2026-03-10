@@ -90,8 +90,12 @@ stages:
               git checkout QA
               git pull origin QA
 
-              echo "Aplicando solo el commit con cherry-pick"
-              git cherry-pick $COMMIT
+              echo "Cherry-pick del commit de DEV (DEV gana en conflictos)"
+              git cherry-pick -X theirs $COMMIT || true
+
+              echo "Resolviendo posibles conflictos automáticamente"
+              git add -A
+              git cherry-pick --continue || true
 
               echo "Push a QA"
               git push origin QA
