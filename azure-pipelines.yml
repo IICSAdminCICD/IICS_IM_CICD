@@ -84,16 +84,16 @@ stages:
               git config --global user.email "dl-GlobalMasterIICSAdmin@ppg.com"
               git config --global user.name "IICSAdminCICD"
 
-              echo "Fetch ramas"
+              echo "Fetch repo"
               git fetch origin
 
               echo "Checkout QA"
-              git checkout QA
+              git checkout -B QA origin/QA || git checkout -b QA
 
-              echo "Merge del commit de DEV"
-              git merge $COMMIT --no-edit
+              echo "Moviendo QA al commit de DEV"
+              git reset --hard $COMMIT
 
               echo "Push a QA"
-              git push origin QA
+              git push origin QA --force
 
             displayName: "Promote commit DEV -> QA"
