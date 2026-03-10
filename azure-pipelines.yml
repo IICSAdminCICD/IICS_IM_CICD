@@ -159,7 +159,7 @@ stages:
           # -----------------------
           - script: |
               pip install requests
-              python infa_login.py
+              python CICD/scripts/infa_login.py
             displayName: "Login to IICS QA"
             env:
               IICS_LOGIN_URL: $(IICS_LOGIN_URL)
