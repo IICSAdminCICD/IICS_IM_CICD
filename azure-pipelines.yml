@@ -22,10 +22,22 @@ stages:
     displayName: "Build using DEV commit"
 
     steps:
+
     - checkout: self
       persistCredentials: true
       clean: true
 
+    # -----------------------
+    # Instalar Python
+    # -----------------------
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '3.x'
+      displayName: "Use Python 3"
+
+    # -----------------------
+    # Capturar commit
+    # -----------------------
     - script: |
         echo "Pipeline disparado por commit:"
         echo $(Build.SourceVersion)
@@ -37,6 +49,9 @@ stages:
         echo $(Build.SourceVersion) > commit.txt
       displayName: "Capturar commit"
 
+    # -----------------------
+    # Publicar artifact
+    # -----------------------
     - task: PublishPipelineArtifact@1
       inputs:
         targetPath: commit.txt
@@ -67,37 +82,74 @@ stages:
             persistCredentials: true
             clean: true
 
+          # -----------------------
+          # Instalar Python
+          # -----------------------
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: '3.x'
+            displayName: "Use Python 3"
+
+          # -----------------------
+          # Descargar commit
+          # -----------------------
           - task: DownloadPipelineArtifact@2
             inputs:
               artifact: commitinfo
               path: $(Pipeline.Workspace)
             displayName: "Descargar commit"
 
+          # -----------------------
+          # Promoción del commit
+          # -----------------------
           - script: |
 
               COMMIT=$(cat $(Pipeline.Workspace)/commit.txt)
 
-              echo "Commit a promocionar:"
+              echo "Commit que disparó el pipeline:"
               echo $COMMIT
 
               git config --global user.email "dl-GlobalMasterIICSAdmin@ppg.com"
               git config --global user.name "IICSAdminCICD"
 
-              echo "Fetch repo"
-              git fetch origin
+              echo "Fetch completo del repo"
+              git fetch --all --prune --unshallow || git fetch --all
 
               echo "Checkout QA"
               git checkout QA
               git pull origin QA
 
-              echo "Cherry-pick del commit de DEV (DEV gana en conflictos)"
-              git cherry-pick -X theirs $COMMIT || true
+              echo "Archivos modificados en el commit:"
+              CHANGED_FILES=$(git show --pretty="" --name-only $COMMIT)
 
-              echo "Resolviendo posibles conflictos automáticamente"
-              git add -A
-              git cherry-pick --continue || true
+              echo "$CHANGED_FILES"
+
+              for file in $CHANGED_FILES
+              do
+                  echo "Promoviendo archivo $file"
+                  git checkout $COMMIT -- "$file"
+                  git add "$file"
+              done
+
+              echo "Creando commit de promoción"
+
+              git diff --cached --quiet || git commit -m "Promote files from DEV commit $COMMIT to QA"
 
               echo "Push a QA"
               git push origin QA
 
-            displayName: "Promote commit DEV -> QA"
+            displayName: "Promote files changed in commit"
+
+                      # -----------------------
+          # Login IICS en QA
+          # -----------------------
+          - script: |
+              pip install requests
+              python CICD/scripts/infa_login.py
+            displayName: "Login to IICS QA"
+            env:
+              IICS_LOGIN_URL: $(IICS_LOGIN_URL)
+              IICS_USERNAME: $(DEV_IICS_USERNAME)
+              IICS_PASSWORD: $(DEV_IICS_PASSWORD)
+              UAT_IICS_USERNAME: $(QA_IICS_USERNAME)
+              UAT_IICS_PASSWORD: $(QA_IICS_PASSWORD)
