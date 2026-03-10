@@ -80,31 +80,41 @@ stages:
               echo "Commit que disparó el pipeline:"
               echo $COMMIT
 
-              git config --global user.email "pipeline@devops"
-              git config --global user.name "Azure DevOps Pipeline"
+              git config --global user.email "dl-GlobalMasterIICSAdmin@ppg.com"
+              git config --global user.name "IICSAdminCICD"
 
               echo "Fetch repo"
               git fetch origin
-
-              echo "Archivos modificados en el commit:"
-              git diff-tree --no-commit-id --name-only -r $COMMIT > files.txt
-              cat files.txt
 
               echo "Checkout QA"
               git checkout QA
               git pull origin QA
 
-              echo "Copiando solo los archivos modificados desde DEV"
-              while read file; do
-                  echo "Actualizando $file"
-                  git checkout $COMMIT -- "$file"
-                  git add "$file"
-              done < files.txt
+              echo "Detectando cambios del commit"
+
+              git diff-tree --no-commit-id --name-status -r $COMMIT | while read status file
+              do
+
+                  echo "Cambio detectado: $status $file"
+
+                  if [ "$status" = "D" ]; then
+                      echo "El archivo fue eliminado en DEV → eliminando en QA"
+                      git rm -f "$file" || true
+
+                  else
+                      echo "Actualizando archivo desde DEV"
+                      git checkout $COMMIT -- "$file"
+                      git add "$file"
+
+                  fi
+
+              done
 
               echo "Creando commit de promoción"
-              git commit -m "Promote files from DEV commit $COMMIT to QA"
+
+              git diff --cached --quiet || git commit -m "Promote changes from DEV commit $COMMIT to QA"
 
               echo "Push a QA"
               git push origin QA
 
-            displayName: "Promote changed files only"
+            displayName: "Promote only files changed in commit"
