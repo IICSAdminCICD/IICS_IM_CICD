@@ -105,20 +105,6 @@ stages:
             displayName: "Use Python 3"
 
           # -----------------------
-          # Login IICS en QA
-          # -----------------------
-          - script: |
-              pip install requests
-              python infa_login.py
-            displayName: "Login to IICS QA"
-            env:
-              IICS_LOGIN_URL: $(IICS_LOGIN_URL)
-              IICS_USERNAME: $(DEV_IICS_USERNAME)
-              IICS_PASSWORD: $(DEV_IICS_PASSWORD)
-              UAT_IICS_USERNAME: $(QA_IICS_USERNAME)
-              UAT_IICS_PASSWORD: $(QA_IICS_PASSWORD)
-
-          # -----------------------
           # Descargar commit
           # -----------------------
           - task: DownloadPipelineArtifact@2
@@ -167,3 +153,17 @@ stages:
               git push origin QA
 
             displayName: "Promote files changed in commit"
+
+                      # -----------------------
+          # Login IICS en QA
+          # -----------------------
+          - script: |
+              pip install requests
+              python infa_login.py
+            displayName: "Login to IICS QA"
+            env:
+              IICS_LOGIN_URL: $(IICS_LOGIN_URL)
+              IICS_USERNAME: $(DEV_IICS_USERNAME)
+              IICS_PASSWORD: $(DEV_IICS_PASSWORD)
+              UAT_IICS_USERNAME: $(QA_IICS_USERNAME)
+              UAT_IICS_PASSWORD: $(QA_IICS_PASSWORD)
