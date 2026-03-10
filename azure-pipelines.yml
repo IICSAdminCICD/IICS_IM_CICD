@@ -80,7 +80,6 @@ stages:
               echo "Commit a promocionar:"
               echo $COMMIT
 
-              echo "Configurando git"
               git config --global user.email "dl-GlobalMasterIICSAdmin@ppg.com"
               git config --global user.name "IICSAdminCICD"
 
@@ -88,12 +87,17 @@ stages:
               git fetch origin
 
               echo "Checkout QA"
-              git checkout -B QA origin/QA || git checkout -b QA
+              git checkout QA
+              git pull origin QA
 
-              echo "Moviendo QA al commit de DEV"
-              git reset --hard $COMMIT
+              echo "Cherry-pick del commit de DEV (DEV gana en conflictos)"
+              git cherry-pick -X theirs $COMMIT || true
+
+              echo "Resolviendo posibles conflictos automáticamente"
+              git add -A
+              git cherry-pick --continue || true
 
               echo "Push a QA"
-              git push origin QA --force
+              git push origin QA
 
             displayName: "Promote commit DEV -> QA"
