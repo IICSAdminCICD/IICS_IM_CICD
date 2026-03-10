@@ -40,7 +40,7 @@ stages:
     # -----------------------
     - script: |
         pip install requests
-        python CICD/scripts/infa_logic.py
+        python CICD/scripts/infa_login.py
       displayName: "Login to IICS"
       env:
         IICS_LOGIN_URL: $(IICS_LOGIN_URL)
