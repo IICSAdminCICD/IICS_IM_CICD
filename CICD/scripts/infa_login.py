@@ -31,6 +31,5 @@ uat_sessionId = uat_data['userInfo']['sessionId']
 print("DEV session obtained")
 print("UAT session obtained")
 
-# Export variables to Azure DevOps pipeline
 print(f"##vso[task.setvariable variable=sessionId;isOutput=true]{sessionId}")
 print(f"##vso[task.setvariable variable=uat_sessionId;isOutput=true]{uat_sessionId}")
