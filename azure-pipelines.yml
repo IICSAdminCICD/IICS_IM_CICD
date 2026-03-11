@@ -144,7 +144,7 @@ stages:
           # ------------------------
 
           - script: |
-              python3 scripts/infa_login.py
+              python3 CICD/scripts/infa_login.py
             name: iicsLogin
             displayName: "Login to IICS"
 
@@ -165,7 +165,7 @@ stages:
 
               export ZIP_FILE=$(pwd)/deploy_package.zip
 
-              python3 scripts/upload_iics_zip.py
+              python3 CICD/scripts/upload_iics_zip.py
 
             displayName: "Upload ZIP to IICS"
 
