@@ -11,11 +11,12 @@ headers = {
     "INFA-SESSION-ID": session_id
 }
 
-files = {
-    "package": open(zip_path, "rb")
-}
+with open(zip_path, "rb") as f:
+    files = {
+        "package": f
+    }
 
-response = requests.post(url, headers=headers, files=files)
+    response = requests.post(url, headers=headers, files=files)
 
 if response.status_code != 200:
     raise Exception(f"Upload failed: {response.text}")
