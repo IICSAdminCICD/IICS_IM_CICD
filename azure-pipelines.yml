@@ -73,7 +73,6 @@ stages:
             inputs:
               artifact: commitinfo
               path: $(Pipeline.Workspace)
-            displayName: "Descargar commit"
 
           - script: |
 
@@ -85,43 +84,36 @@ stages:
               git config --global user.email "pipeline@devops"
               git config --global user.name "Azure DevOps Pipeline"
 
-              echo "Fetch completo del repo"
               git fetch --all
 
-              echo "Checkout QA"
               git checkout QA
               git pull origin QA
 
-              echo "Detectando archivos modificados en el commit"
+              echo "Detectando archivos modificados"
 
               CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r --diff-filter=AM $COMMIT)
 
-              echo "Archivos detectados:"
               echo "$CHANGED_FILES"
 
               COUNT=$(echo "$CHANGED_FILES" | wc -l)
 
               if [ "$COUNT" -eq 0 ]; then
-                echo "No hay archivos válidos para desplegar"
+                echo "No hay archivos válidos para deploy"
                 exit 1
               fi
 
-              echo ""
-              echo "Promoviendo archivos a QA..."
+              echo "Promoviendo archivos"
 
               for file in $CHANGED_FILES
               do
-                  echo "Promoviendo $file"
                   git checkout $COMMIT -- "$file"
                   git add "$file"
               done
 
               git diff --cached --quiet || git commit -m "Promote files from DEV commit $COMMIT to QA"
 
-              echo "Push a QA"
               git push origin QA
 
-              echo ""
               echo "Construyendo paquete IICS"
 
               mkdir -p deploy_package/assets
@@ -132,8 +124,6 @@ stages:
                   git show $COMMIT:$file > deploy_package/assets/$file
               done
 
-              echo "Creando package.xml"
-
               cat <<EOF > deploy_package/package.xml
               <package>
                   <name>AzurePipelineDeploy</name>
@@ -141,24 +131,44 @@ stages:
               </package>
               EOF
 
-              echo "Creando ZIP del paquete"
-
               cd deploy_package
               zip -r ../deploy_package.zip .
               cd ..
 
-              echo "Contenido del ZIP:"
               unzip -l deploy_package.zip
 
-              echo ""
-              echo "Subiendo paquete a IICS"
+            displayName: "Promote files + Build ZIP"
+
+          # ------------------------
+          # LOGIN IICS
+          # ------------------------
+
+          - script: |
+              python3 scripts/infa_login.py
+            name: iicsLogin
+            displayName: "Login to IICS"
+
+            env:
+              IICS_LOGIN_URL: $(IICS_LOGIN_URL)
+              DEV_IICS_USERNAME: $(DEV_IICS_USERNAME)
+              DEV_IICS_PASSWORD: $(DEV_IICS_PASSWORD)
+              UAT_IICS_USERNAME: $(UAT_IICS_USERNAME)
+              UAT_IICS_PASSWORD: $(UAT_IICS_PASSWORD)
+
+          # ------------------------
+          # UPLOAD ZIP
+          # ------------------------
+
+          - script: |
+
+              echo "Uploading ZIP to IICS"
 
               export ZIP_FILE=$(pwd)/deploy_package.zip
 
               python3 scripts/upload_iics_zip.py
 
-            displayName: "Promote files + Build ZIP + Upload to IICS"
+            displayName: "Upload ZIP to IICS"
 
             env:
-              IICS_SESSION_ID: $(IICS_SESSION_ID)
+              IICS_SESSION_ID: $(iicsLogin.sessionId)
               IICS_POD_URL: $(IICS_POD_URL)
