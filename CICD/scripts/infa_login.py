@@ -23,7 +23,7 @@ if u.status_code != 200:
     raise Exception("Login QA failed: " + u.text)
 
 data = r.json()
-uat_data = u.json()
+qa_data = u.json()
 
 sessionId = data['userInfo']['sessionId']
 qa_sessionId = qa_data['userInfo']['sessionId']
@@ -32,4 +32,4 @@ print("DEV session obtained")
 print("QA session obtained")
 
 print(f"##vso[task.setvariable variable=sessionId;isOutput=true]{sessionId}")
-print(f"##vso[task.setvariable variable=uat_sessionId;isOutput=true]{qa_sessionId}")
+print(f"##vso[task.setvariable variable=qa_sessionId;isOutput=true]{qa_sessionId}")
