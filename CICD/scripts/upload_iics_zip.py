@@ -5,7 +5,7 @@ session_id = os.environ['IICS_SESSION_ID']
 pod_url = os.environ['IICS_POD_URL']
 zip_path = os.environ['ZIP_FILE']
 
-url = f"{pod_url}/public/core/v3/import/package"
+url = f"{pod_url}/saas/public/core/v3/import/package"
 
 headers = {
     "INFA-SESSION-ID": session_id
