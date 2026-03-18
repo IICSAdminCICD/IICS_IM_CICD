@@ -28,7 +28,7 @@ stages:
         echo "Commit message:"
         echo "$(Build.SourceVersionMessage)"
 
-        if [[ "$(Build.SourceVersionMessage)" != *"DEPLOY--"* ]]; then
+        if [[ "$(Build.SourceVersionMessage)" != *"DEPLOY_BY_IM--"* ]]; then
           echo "Commit no contiene DEPLOY--. Cancelando pipeline."
           exit 1
         fi
