@@ -150,5 +150,5 @@ stages:
             displayName: "Pull by Commit Hash + Wait"
 
             env:
-              IICS_SESSION_ID: $(iicsLogin.sessionId)
+              IICS_SESSION_ID: $(iicsLogin.qa_sessionId)
               IICS_POD_URL: $(IICS_POD_URL)
