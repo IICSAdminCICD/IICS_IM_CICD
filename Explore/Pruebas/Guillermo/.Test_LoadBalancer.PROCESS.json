@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "47F10NI239VfK2t5u6U94S",
+    "name" : "Test_LoadBalancer",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Vq4pciZBpDUQbgd-gt-3390051-2026-03-31T10:36:50.763Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-03-31T10:37:20.953Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
