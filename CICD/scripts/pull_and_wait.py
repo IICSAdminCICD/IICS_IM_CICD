@@ -21,7 +21,7 @@ headers = {
 # 1. LANZAR PULL
 # ------------------------
 
-pull_url = f"{pod_url}/saas/public/core/v3/objects/pullByCommitHash"
+pull_url = f"{pod_url}/saas/public/core/v3/pullByCommitHash"
 
 payload = {
     "commitHash": commit_hash
