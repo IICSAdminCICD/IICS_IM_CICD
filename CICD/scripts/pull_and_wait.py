@@ -31,6 +31,7 @@ print("====================================")
 print("🚀 INICIO PULL BY COMMIT")
 print("Commit:", commit_hash)
 print("URL:", pull_url)
+print("Session_ID:", session_id)
 print("====================================")
 
 try:
