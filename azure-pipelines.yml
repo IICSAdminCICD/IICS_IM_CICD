@@ -12,66 +12,38 @@ variables:
 stages:
 
 # -----------------------
-# STAGE DEV
+# VALIDATE
 # -----------------------
-- stage: DEV
-  displayName: "Build from DEV"
+- stage: VALIDATE
+  displayName: "Validate commit message"
 
   jobs:
-  - job: Build
-    displayName: "Build using DEV commit"
+  - job: ValidateCommit
 
     steps:
-
     - checkout: self
-      persistCredentials: true
-      clean: true
 
-    # -----------------------
-    # Instalar Python
-    # -----------------------
-    - task: UsePythonVersion@0
-      inputs:
-        versionSpec: '3.x'
-      displayName: "Use Python 3"
-
-    # -----------------------
-    # Login en IICS
-    # -----------------------
     - script: |
-        pip install requests
-        python CICD/scripts/infa_login.py
-      displayName: "Login to IICS"
-      env:
-        IICS_LOGIN_URL: $(IICS_LOGIN_URL)
-        DEV_IICS_USERNAME: $(DEV_IICS_USERNAME)
-        DEV_IICS_PASSWORD: $(DEV_IICS_PASSWORD)
-        UAT_IICS_USERNAME: $(QA_IICS_USERNAME)
-        UAT_IICS_PASSWORD: $(QA_IICS_PASSWORD)
 
-    # -----------------------
-    # Capturar commit
-    # -----------------------
-    - script: |
-        echo "Pipeline disparado por commit:"
-        echo $(Build.SourceVersion)
+        echo "Commit message:"
+        echo "$(Build.SourceVersionMessage)"
 
-        echo "Autor:"
-        git log -1 --pretty=format:'%an'
+        if [[ "$(Build.SourceVersionMessage)" != *"DEPLOY_BY_IM--"* ]]; then
+          echo "Commit no contiene DEPLOY--. Cancelando pipeline."
+          exit 1
+        fi
 
-        echo "Guardando commit para promoción"
+        echo "Commit válido para deploy"
+
         echo $(Build.SourceVersion) > commit.txt
-      displayName: "Capturar commit"
 
-    # -----------------------
-    # Publicar artifact
-    # -----------------------
+      displayName: "Validate DEPLOY trigger"
+
     - task: PublishPipelineArtifact@1
       inputs:
         targetPath: commit.txt
         artifact: commitinfo
         publishLocation: pipeline
-      displayName: "Publicar commit a promover"
 
 
 # -----------------------
@@ -79,7 +51,7 @@ stages:
 # -----------------------
 - stage: QA
   displayName: "Promote commit to QA"
-  dependsOn: DEV
+  dependsOn: VALIDATE
   condition: succeeded()
 
   jobs:
@@ -95,61 +67,88 @@ stages:
           - checkout: self
             persistCredentials: true
             clean: true
+            fetchDepth: 0
 
-          # -----------------------
-          # Instalar Python
-          # -----------------------
-          - task: UsePythonVersion@0
-            inputs:
-              versionSpec: '3.x'
-            displayName: "Use Python 3"
-
-          # -----------------------
-          # Descargar commit
-          # -----------------------
           - task: DownloadPipelineArtifact@2
             inputs:
               artifact: commitinfo
               path: $(Pipeline.Workspace)
-            displayName: "Descargar commit"
 
-          # -----------------------
-          # Promoción del commit
-          # -----------------------
           - script: |
 
               COMMIT=$(cat $(Pipeline.Workspace)/commit.txt)
 
-              echo "Commit que disparó el pipeline:"
+              echo "Commit DEV a promover:"
               echo $COMMIT
 
-              git config --global user.email "dl-GlobalMasterIICSAdmin@ppg.com"
-              git config --global user.name "IICSAdminCICD"
+              git config --global user.email "pipeline@devops"
+              git config --global user.name "Azure DevOps Pipeline"
 
-              echo "Fetch completo del repo"
-              git fetch --all --prune --unshallow || git fetch --all
+              git fetch --all
 
-              echo "Checkout QA"
               git checkout QA
               git pull origin QA
 
-              echo "Archivos modificados en el commit:"
-              CHANGED_FILES=$(git show --pretty="" --name-only $COMMIT)
+              echo "Detectando archivos modificados"
+
+              CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r --diff-filter=AM $COMMIT)
 
               echo "$CHANGED_FILES"
 
+              COUNT=$(echo "$CHANGED_FILES" | wc -l)
+
+              if [ "$COUNT" -eq 0 ]; then
+                echo "No hay archivos válidos para deploy"
+                exit 1
+              fi
+
+              echo "Promoviendo archivos"
+
               for file in $CHANGED_FILES
               do
-                  echo "Promoviendo archivo $file"
                   git checkout $COMMIT -- "$file"
                   git add "$file"
               done
 
-              echo "Creando commit de promoción"
-
               git diff --cached --quiet || git commit -m "Promote files from DEV commit $COMMIT to QA"
 
-              echo "Push a QA"
               git push origin QA
 
-            displayName: "Promote files changed in commit"
+            displayName: "Promote files to QA"
+
+          # ------------------------
+          # LOGIN IICS
+          # ------------------------
+
+          - script: |
+              python3 CICD/scripts/infa_login.py
+            name: iicsLogin
+            displayName: "Login to IICS"
+
+            env:
+              IICS_LOGIN_URL: $(IICS_LOGIN_URL)
+              QA_IICS_USERNAME: $(QA_IICS_USERNAME)
+              QA_IICS_PASSWORD: $(QA_IICS_PASSWORD)
+
+          # ------------------------
+          # PULL BY COMMIT + WAIT
+          # ------------------------
+
+          - script: |
+
+              echo "Executing PullByCommitHash + Polling"
+
+              COMMIT=$(cat $(Pipeline.Workspace)/commit.txt)
+
+              echo "Commit recibido:"
+              echo $COMMIT
+
+              export COMMIT_HASH=$COMMIT
+
+              python3 CICD/scripts/pull_and_wait.py
+
+            displayName: "Pull by Commit Hash + Wait"
+
+            env:
+              IICS_SESSION_ID: $(iicsLogin.qa_sessionId)
+              IICS_POD_URL: $(IICS_POD_URL)
