@@ -57,7 +57,7 @@ except Exception:
 print("📦 Respuesta del Pull:")
 print(json.dumps(data, indent=2))
 
-action_id = data.get("actionId") or data.get("id")
+action_id = data.get("pullActionId")
 
 if not action_id:
     print("❌ No se recibió actionId en la respuesta")
@@ -69,7 +69,7 @@ print(f"✅ Pull lanzado correctamente. Action ID: {action_id}")
 # 2. POLLING STATUS
 # ------------------------
 
-status_url = f"{pod_url}/public/core/v3/activity/logs/{action_id}"
+status_url = f"{pod_url}/saas/public/core/v3/sourceControlAction/{action_id}"
 
 MAX_RETRIES = 30
 BASE_SLEEP = 5  # segundos
@@ -99,7 +99,7 @@ for attempt in range(MAX_RETRIES):
         print(response.text)
         sys.exit(1)
 
-    status = data.get("status") or data.get("state") or "UNKNOWN"
+    status = data.get("status", {}).get("state")
 
     print("------------------------------------")
     print(f"🔁 Intento {attempt + 1}/{MAX_RETRIES}")
@@ -114,7 +114,7 @@ for attempt in range(MAX_RETRIES):
 
     print("------------------------------------")
 
-    if status.upper() in ["SUCCESS", "SUCCEEDED", "COMPLETED"]:
+    if status.upper() in ["SUCCESS", "SUCCESSFUL", "SUCCEEDED", "COMPLETED"]:
         print("✅ Pull completado correctamente")
         sys.exit(0)
 
