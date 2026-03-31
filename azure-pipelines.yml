@@ -127,8 +127,6 @@ stages:
 
             env:
               IICS_LOGIN_URL: $(IICS_LOGIN_URL)
-              DEV_IICS_USERNAME: $(DEV_IICS_USERNAME)
-              DEV_IICS_PASSWORD: $(DEV_IICS_PASSWORD)
               QA_IICS_USERNAME: $(QA_IICS_USERNAME)
               QA_IICS_PASSWORD: $(QA_IICS_PASSWORD)
 
