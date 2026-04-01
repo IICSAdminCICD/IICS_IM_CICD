@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "80GKjRR6t2wenufxzW2sKB",
+    "name" : "SDasGetCatalogSharepointHST",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "6zsuQgabcjk91pq-gt-3173766-2026-03-30T10:09:49.934Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=ip-10-17-247-40.ec2.internal",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-01T22:10:59.486Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

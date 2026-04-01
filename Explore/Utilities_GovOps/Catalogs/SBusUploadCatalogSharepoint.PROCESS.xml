@@ -1,0 +1,993 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>YICf5GkeHy2uI5C-gt-3173788-2026-03-30T10:09:50.821Z::pd.xml</types1:EntryId>
+      <types1:Name>SBusUploadCatalogSharepoint</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description>@operation= UploadCatalogs, @dataType=Message, @source=IICSCatalogs, @target=Sharepoint, @additionalText=Upload IICSCatalogs into Sharepoint, @prcRunOn=Cloud Server</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
+      <types1:CreationDate>2026-03-30T10:09:51Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  GUID="aP3IInHH8iCh2PgpcMhL0r"
+                  displayName="SBusUploadCatalogSharepoint"
+                  name="SBusUploadCatalogSharepoint"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description>@operation= UploadCatalogs, @dataType=Message, @source=IICSCatalogs, @target=Sharepoint, @additionalText=Upload IICSCatalogs into Sharepoint, @prcRunOn=Cloud Server</description>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="tmp_host" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_tenant_id" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_token_path" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_client_id" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_client_secret" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_scope" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_grant_type" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_MSGraph_API_data" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_site" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_graph_host" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_catalog_config_data" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_AgentCounter" type="int">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">1</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_catalog" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_environment" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_AgentCounterMax" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_AgentGroup" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_AgentGroupCDI" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_AgentGroupCAI" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_AgentGroupCloud" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_AgentGroupCMX" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_AgentGroupHST" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_AgentGroupDTI" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_AgentGroupSLF" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_EMaxErrorNumber" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_ErrorCount" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">true</nvpair>
+            </extData>
+            <flow id="a">
+               <start id="b">
+                  <link id="mkxamf2t" targetId="mkxamf2s"/>
+               </start>
+               <assignment id="mkxamf2s">
+                  <title>AssignGetVariablesFromCatalogParameters</title>
+                  <operation source="formula" to="temp.tmp_MSGraph_API_data">
+                     <expression language="XQuery">util:getCatalogResource(util:resolveURN('urn:ppg-catalog-users'))/*:Parameter[name/text() ='GovOps-Sharepoint-Data']</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_host">
+                     <expression language="XQuery">$temp.tmp_MSGraph_API_data/value/login_host</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_token_path">
+                     <expression language="XQuery">$temp.tmp_MSGraph_API_data/value/token_path</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_client_id">
+                     <expression language="XQuery">$temp.tmp_MSGraph_API_data/value/client_id</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_client_secret">
+                     <expression language="XQuery">$temp.tmp_MSGraph_API_data/value/client_secret</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_grant_type">
+                     <expression language="XQuery">$temp.tmp_MSGraph_API_data/value/grant_type</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_tenant_id">
+                     <expression language="XQuery">$temp.tmp_MSGraph_API_data/value/tenant_id</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_scope">
+                     <expression language="XQuery">$temp.tmp_MSGraph_API_data/value/scope</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_site">
+                     <expression language="XQuery">$temp.tmp_MSGraph_API_data/value/site</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_graph_host">
+                     <expression language="XQuery">$temp.tmp_MSGraph_API_data/value/graph_host</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_catalog_config_data">
+                     <expression language="XQuery">util:getCatalogResource(util:resolveURN('urn:ppg-catalog-parameters'))/*:Parameter[name/text() ='GovOps-Catalogs-Config']</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_AgentCounterMax">
+                     <expression language="XQuery">fn:count($temp.tmp_catalog_config_data/value/data/Catalogs/AgentGroup)</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_AgentGroupCDI">
+                     <expression language="XQuery">$temp.tmp_catalog_config_data/value/data/AgentsGroup/CDI</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_AgentGroupCAI">
+                     <expression language="XQuery">$temp.tmp_catalog_config_data/value/data/AgentsGroup/CAI</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_AgentGroupCloud">
+                     <expression language="XQuery">$temp.tmp_catalog_config_data/value/data/AgentsGroup/Cloud</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_AgentGroupCMX">
+                     <expression language="XQuery">$temp.tmp_catalog_config_data/value/data/AgentsGroup/CMX</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_AgentGroupDTI">
+                     <expression language="XQuery">$temp.tmp_catalog_config_data/value/data/AgentsGroup/DTI</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_AgentGroupHST">
+                     <expression language="XQuery">$temp.tmp_catalog_config_data/value/data/AgentsGroup/HST</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_AgentGroupSLF">
+                     <expression language="XQuery">$temp.tmp_catalog_config_data/value/data/AgentsGroup/SLF</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_EMaxErrorNumber">
+                     <expression language="XQuery">3</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_ErrorCount">
+                     <expression language="XQuery">0</expression>
+                  </operation>
+                  <link id="mkxzhwt3" targetId="mlsmp9ey"/>
+               </assignment>
+               <assignment id="mlsmpc80">
+                  <title>AssignInitCounter</title>
+                  <operation source="formula" to="temp.tmp_ErrorCount">
+                     <expression language="XQuery">0</expression>
+                  </operation>
+                  <link id="mlsmpc82" targetId="mlsmpcwd"/>
+               </assignment>
+               <assignment id="ml9dhfd8">
+                  <title>AssignCatalogs</title>
+                  <operation source="formula" to="temp.tmp_environment">
+                     <expression language="XQuery">$temp.tmp_catalog_config_data/value/data/Environment</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_catalog">
+                     <expression language="XQuery">$temp.tmp_catalog_config_data/value/data/Catalogs/AgentGroup[$temp.tmp_AgentCounter]/Catalog</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_AgentGroup">
+                     <expression language="XQuery">$temp.tmp_catalog_config_data/value/data/Catalogs/AgentGroup[$temp.tmp_AgentCounter]/Name</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_ErrorCount">
+                     <expression language="XQuery">0</expression>
+                  </operation>
+                  <link id="ml9dhfda" targetId="ml86t8fq"/>
+               </assignment>
+               <eventContainer id="mlsmp9ey">
+                  <service id="mkxzhwt2">
+                     <title>SvcGetMSGraphAPIToken</title>
+                     <serviceName>Conn-SC-ConsumeGovOpsSharepointAPI:getToken</serviceName>
+                     <serviceGUID>80NYCVNMgqPbhRBqOXPJ6Q</serviceGUID>
+                     <serviceInput>
+                        <parameter name="in_host" source="constant">{$temp.tmp_host}</parameter>
+                        <parameter name="in_tenant_id" source="constant">{$temp.tmp_tenant_id}</parameter>
+                        <parameter name="in_token_path" source="constant">{$temp.tmp_token_path}</parameter>
+                        <parameter name="in_client_id" source="constant">{$temp.tmp_client_id}</parameter>
+                        <parameter name="in_client_secret" source="constant">{$temp.tmp_client_secret}</parameter>
+                        <parameter name="in_scope" source="constant">{$temp.tmp_scope}</parameter>
+                        <parameter name="in_grant_type" source="constant">{$temp.tmp_grant_type}</parameter>
+                     </serviceInput>
+                  </service>
+                  <flow id="mlsmp9f0">
+                     <assignment id="mlsmpbxy">
+                        <title>AssignInitCounter</title>
+                        <operation source="formula" to="temp.tmp_ErrorCount">
+                           <expression language="XQuery">0</expression>
+                        </operation>
+                     </assignment>
+                     <link id="mlsmp9f1" targetId="mlsmp9ey" type="containerLink"/>
+                  </flow>
+                  <flow id="mlsmp9f3">
+                     <container id="mlsmpab3" type="exclusive">
+                        <title>CheckErrorCount</title>
+                        <flow id="mlsmpab5">
+                           <wait id="mlsmpb50">
+                              <title>Wait5Sec</title>
+                              <duration source="formula">
+                                 <function name="duration_expression">
+                                    <arg name="value">5</arg>
+                                    <arg name="scale">S</arg>
+                                    <arg name="businessDays"/>
+                                 </function>
+                              </duration>
+                              <link id="mlsmpb51" targetId="mlsmparr"/>
+                           </wait>
+                           <assignment id="mlsmparr">
+                              <title>AssignIncreaseRetryCounter</title>
+                              <operation source="formula" to="temp.tmp_ErrorCount">
+                                 <expression language="XQuery">$temp.tmp_ErrorCount + 1</expression>
+                              </operation>
+                              <link id="mlsmpars" targetId="mlsmpaer"/>
+                           </assignment>
+                           <jumpTo id="mlsmpaer">
+                              <link id="mlsmpaes" targetId="mlsmp9ey"/>
+                           </jumpTo>
+                        </flow>
+                        <flow id="mlsmpab8">
+                           <throw id="mlsmpad1">
+                              <title>ThrowGetMSGraphAPIToken</title>
+                              <throwInput>
+                                 <parameter name="code" source="formula" updatable="true">
+                                    <expression language="XQuery">$output.faultIICSAPI_Login[1]/code </expression>
+                                 </parameter>
+                                 <parameter name="detail" source="formula" updatable="true">
+                                    <expression language="XQuery">$output.faultIICSAPI_Login[1]/detail </expression>
+                                 </parameter>
+                                 <parameter name="reason" source="formula" updatable="true">
+                                    <expression language="XQuery">$output.faultIICSAPI_Login[1]/reason </expression>
+                                 </parameter>
+                              </throwInput>
+                           </throw>
+                        </flow>
+                        <link id="mlsmpab4" targetId="mlsmpab5" type="containerLink">
+                           <condition source="formula">
+                              <function name="equals">
+                                 <arg name="left">{$temp.tmp_ErrorCount}</arg>
+                                 <arg name="right">{$temp.tmp_EMaxErrorNumber }</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="mlsmpab7" targetId="mlsmpab8" type="containerLink"/>
+                     </container>
+                  </flow>
+                  <link id="mlsmp9ez" targetId="mlsmp9f0" type="containerLink"/>
+                  <link id="mlsmpc7h" targetId="mlsmpcml"/>
+                  <events>
+                     <catch faultField="faultIICSAPI_Login" id="mlsmp9ex" interrupting="true">
+                        <link id="mlsmp9f2" targetId="mlsmp9f3" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <eventContainer id="mlsmpcml">
+                  <service id="mkznspje">
+                     <title>SvcGetSiteId</title>
+                     <serviceName>Conn-SC-ConsumeGovOpsSharepointAPI:getSiteId</serviceName>
+                     <serviceGUID>80NYCVNMgqPbhRBqOXPJ6Q</serviceGUID>
+                     <serviceInput>
+                        <parameter name="in_token" source="formula">
+                           <expression language="XQuery">$output.out_getToken/access_token</expression>
+                        </parameter>
+                        <parameter name="in_site" source="formula">
+                           <expression language="XQuery">$temp.tmp_site </expression>
+                        </parameter>
+                        <parameter name="in_graph_host" source="formula">
+                           <expression language="XQuery">$temp.tmp_graph_host </expression>
+                        </parameter>
+                     </serviceInput>
+                  </service>
+                  <flow id="mlsmpcmn">
+                     <link id="mlsmpcmo" targetId="mlsmpcml" type="containerLink"/>
+                  </flow>
+                  <flow id="mlsmpcmq">
+                     <container id="mlsmpctj" type="exclusive">
+                        <title>CheckErrorCount</title>
+                        <flow id="mlsmpctk">
+                           <wait id="mlsmpctl">
+                              <title>Wait5Sec</title>
+                              <duration source="formula">
+                                 <function name="duration_expression">
+                                    <arg name="value">5</arg>
+                                    <arg name="scale">S</arg>
+                                    <arg name="businessDays"/>
+                                 </function>
+                              </duration>
+                              <link id="mlsmpctt" targetId="mlsmpctm"/>
+                           </wait>
+                           <assignment id="mlsmpctm">
+                              <title>AssignIncreaseRetryCounter</title>
+                              <operation source="formula" to="temp.tmp_ErrorCount">
+                                 <expression language="XQuery">$temp.tmp_ErrorCount + 1</expression>
+                              </operation>
+                              <link id="mlsmpctu" targetId="mlsmpctn"/>
+                           </assignment>
+                           <jumpTo id="mlsmpctn">
+                              <link id="mlsmpctv" targetId="mlsmp9ey"/>
+                           </jumpTo>
+                        </flow>
+                        <flow id="mlsmpcto">
+                           <throw id="mlsmpctp">
+                              <title>ThrowGetSideId</title>
+                              <throwInput>
+                                 <parameter name="code" source="formula" updatable="true">
+                                    <expression language="XQuery">$output.faultIICSGetSiteId[1]/code </expression>
+                                 </parameter>
+                                 <parameter name="detail" source="formula" updatable="true">
+                                    <expression language="XQuery">$output.faultIICSGetSiteId[1]/detail </expression>
+                                 </parameter>
+                                 <parameter name="reason" source="formula" updatable="true">
+                                    <expression language="XQuery">$output.faultIICSGetSiteId[1]/reason </expression>
+                                 </parameter>
+                              </throwInput>
+                           </throw>
+                        </flow>
+                        <link id="mlsmpctr" targetId="mlsmpctk" type="containerLink">
+                           <condition source="formula">
+                              <function name="equals">
+                                 <arg name="left">{$temp.tmp_ErrorCount}</arg>
+                                 <arg name="right">{$temp.tmp_EMaxErrorNumber }</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="mlsmpcts" targetId="mlsmpcto" type="containerLink"/>
+                     </container>
+                  </flow>
+                  <link id="mlsmpcmm" targetId="mlsmpcmn" type="containerLink"/>
+                  <link id="mlsmpc81" targetId="mlsmpc80"/>
+                  <events>
+                     <catch faultField="faultIICSGetSiteId" id="mlsmpcmk" interrupting="true">
+                        <link id="mlsmpcmp" targetId="mlsmpcmq" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <eventContainer id="mlsmpcwd">
+                  <service id="mkznspk7">
+                     <title>SvcGetDriveId</title>
+                     <serviceName>Conn-SC-ConsumeGovOpsSharepointAPI:getDriveId</serviceName>
+                     <serviceGUID>80NYCVNMgqPbhRBqOXPJ6Q</serviceGUID>
+                     <serviceInput>
+                        <parameter name="in_token" source="formula">
+                           <expression language="XQuery">$output.out_getToken/access_token</expression>
+                        </parameter>
+                        <parameter name="in_graph_host " source="constant">{$temp.tmp_graph_host}</parameter>
+                        <parameter name="in_site" source="constant">{$temp.tmp_site}</parameter>
+                     </serviceInput>
+                  </service>
+                  <flow id="mlsmpcwf">
+                     <link id="mlsmpcwg" targetId="mlsmpcwd" type="containerLink"/>
+                  </flow>
+                  <flow id="mlsmpcwi">
+                     <container id="mlsmpd3u" type="exclusive">
+                        <title>CheckErrorCount</title>
+                        <flow id="mlsmpd3v">
+                           <wait id="mlsmpd3w">
+                              <title>Wait5Sec</title>
+                              <duration source="formula">
+                                 <function name="duration_expression">
+                                    <arg name="value">5</arg>
+                                    <arg name="scale">S</arg>
+                                    <arg name="businessDays"/>
+                                 </function>
+                              </duration>
+                              <link id="mlsmpd44" targetId="mlsmpd3x"/>
+                           </wait>
+                           <assignment id="mlsmpd3x">
+                              <title>AssignIncreaseRetryCounter</title>
+                              <operation source="formula" to="temp.tmp_ErrorCount">
+                                 <expression language="XQuery">$temp.tmp_ErrorCount + 1</expression>
+                              </operation>
+                              <link id="mlsmpd45" targetId="mlsmpd3y"/>
+                           </assignment>
+                           <jumpTo id="mlsmpd3y">
+                              <link id="mlsmpd46" targetId="mlsmp9ey"/>
+                           </jumpTo>
+                        </flow>
+                        <flow id="mlsmpd3z">
+                           <throw id="mlsmpd40">
+                              <title>ThrowGetDriveId</title>
+                              <throwInput>
+                                 <parameter name="code" source="formula" updatable="true">
+                                    <expression language="XQuery">$output.faultIICSGetDriveId[1]/code </expression>
+                                 </parameter>
+                                 <parameter name="detail" source="formula" updatable="true">
+                                    <expression language="XQuery">$output.faultIICSGetDriveId[1]/detail </expression>
+                                 </parameter>
+                                 <parameter name="reason" source="formula" updatable="true">
+                                    <expression language="XQuery">$output.faultIICSGetDriveId[1]/reason </expression>
+                                 </parameter>
+                              </throwInput>
+                           </throw>
+                        </flow>
+                        <link id="mlsmpd42" targetId="mlsmpd3v" type="containerLink">
+                           <condition source="formula">
+                              <function name="equals">
+                                 <arg name="left">{$temp.tmp_ErrorCount}</arg>
+                                 <arg name="right">{$temp.tmp_EMaxErrorNumber }</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="mlsmpd43" targetId="mlsmpd3z" type="containerLink"/>
+                     </container>
+                  </flow>
+                  <link id="mlsmpcwe" targetId="mlsmpcwf" type="containerLink"/>
+                  <link id="ml9dhfmc" targetId="ml9dhfd8"/>
+                  <events>
+                     <catch faultField="faultIICSGetDriveId" id="mlsmpcwc" interrupting="true">
+                        <link id="mlsmpcwh" targetId="mlsmpcwi" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <container id="ml86t8fq" type="exclusive">
+                  <title>Check Agent Group</title>
+                  <flow id="ml86t8fu">
+                     <container id="ml9fziz3" type="exclusive">
+                        <title>SalesforceCatalog</title>
+                        <flow id="ml9fziz6">
+                           <subflow id="ml9fzizn">
+                              <title>SubSDasGetCatalogSharepointSLF</title>
+                              <subflowGUID>9eQyFARwmMzjFB7bBfBEer</subflowGUID>
+                              <subflowPath>SDasGetCatalogSharepointSLF</subflowPath>
+                              <runForEach>false</runForEach>
+                              <input>
+                                 <parameter name="in_catalog" source="field" updatable="true">temp.tmp_catalog</parameter>
+                                 <parameter name="in_environment" source="field" updatable="true">temp.tmp_environment</parameter>
+                                 <parameter name="in_agent_group" source="field" updatable="true">temp.tmp_AgentGroup</parameter>
+                              </input>
+                              <outputDef>
+                                 <field name="out_catalog_attachment" type="attachment">
+                                    <options>
+                                       <option hide="true" name="count">1</option>
+                                       <option name="maxsize">5242880</option>
+                                       <option name="required">false</option>
+                                    </options>
+                                 </field>
+                                 <field name="out_sharepoint_target_path" type="string">
+                                    <options>
+                                       <option name="required">false</option>
+                                    </options>
+                                 </field>
+                                 <field name="out_sharepoint_file_name" type="string">
+                                    <options>
+                                       <option name="required">false</option>
+                                    </options>
+                                 </field>
+                              </outputDef>
+                           </subflow>
+                           <link id="ml9fziz7" targetId="ml9fziz3" type="containerLink"/>
+                        </flow>
+                        <flow id="ml9fziz9">
+                           <container id="mlatc320" type="exclusive">
+                              <title>CloudCatalog</title>
+                              <flow id="mlatc321">
+                                 <subflow id="mlatc322">
+                                    <title>SubSDasGetCatalogSharepointCloud</title>
+                                    <subflowGUID>5vowd0pvZYThuB0xlNKzEY</subflowGUID>
+                                    <subflowPath>SDasGetCatalogSharepointCloud</subflowPath>
+                                    <runForEach>false</runForEach>
+                                    <input>
+                                       <parameter name="in_catalog" source="field" updatable="true">temp.tmp_catalog</parameter>
+                                       <parameter name="in_environment" source="field" updatable="true">temp.tmp_environment</parameter>
+                                       <parameter name="in_agent_group" source="field" updatable="true">temp.tmp_AgentGroup</parameter>
+                                    </input>
+                                    <outputDef>
+                                       <field name="out_catalog_attachment" type="attachment">
+                                          <options>
+                                             <option hide="true" name="count">1</option>
+                                             <option name="maxsize">5242880</option>
+                                             <option name="required">false</option>
+                                          </options>
+                                       </field>
+                                       <field name="out_sharepoint_target_path" type="string">
+                                          <options>
+                                             <option name="required">false</option>
+                                          </options>
+                                       </field>
+                                       <field name="out_sharepoint_file_name" type="string">
+                                          <options>
+                                             <option name="required">false</option>
+                                          </options>
+                                       </field>
+                                    </outputDef>
+                                 </subflow>
+                                 <link id="mlatc328" targetId="mlatc320" type="containerLink"/>
+                              </flow>
+                              <flow id="mlatc324">
+                                 <container id="mlatc3cv" type="exclusive">
+                                    <title>CAICatalog</title>
+                                    <flow id="mlatc3cw">
+                                       <subflow id="mlatc3cx">
+                                          <title>SubSDasGetCatalogSharepointCAI</title>
+                                          <subflowGUID>d7IS2nKEVKKhBaWxUwyZki</subflowGUID>
+                                          <subflowPath>SDasGetCatalogSharepointCAI</subflowPath>
+                                          <runForEach>false</runForEach>
+                                          <input>
+                                             <parameter name="in_catalog" source="field" updatable="true">temp.tmp_catalog</parameter>
+                                             <parameter name="in_environment" source="field" updatable="true">temp.tmp_environment</parameter>
+                                             <parameter name="in_agent_group" source="field" updatable="true">temp.tmp_AgentGroup</parameter>
+                                          </input>
+                                          <outputDef>
+                                             <field name="out_catalog_attachment" type="attachment">
+                                                <options>
+                                                   <option hide="true" name="count">1</option>
+                                                   <option name="maxsize">5242880</option>
+                                                   <option name="required">false</option>
+                                                </options>
+                                             </field>
+                                             <field name="out_sharepoint_target_path" type="string">
+                                                <options>
+                                                   <option name="required">false</option>
+                                                </options>
+                                             </field>
+                                             <field name="out_sharepoint_file_name" type="string">
+                                                <options>
+                                                   <option name="required">false</option>
+                                                </options>
+                                             </field>
+                                          </outputDef>
+                                       </subflow>
+                                       <link id="mlatc3d4" targetId="mlatc3cv" type="containerLink"/>
+                                    </flow>
+                                    <flow id="mlatc3d0">
+                                       <container id="mlatc3g6" type="exclusive">
+                                          <title>ComexCatalog</title>
+                                          <flow id="mlatc3g7">
+                                             <subflow id="mlatc3g8">
+                                                <title>SubSDasGetCatalogSharepointCMX</title>
+                                                <subflowGUID>6wKqugonZ0Ej8GULOunWIG</subflowGUID>
+                                                <subflowPath>SDasGetCatalogSharepointCMX</subflowPath>
+                                                <runForEach>false</runForEach>
+                                                <input>
+                                                   <parameter name="in_catalog" source="field" updatable="true">temp.tmp_catalog</parameter>
+                                                   <parameter name="in_environment" source="field" updatable="true">temp.tmp_environment</parameter>
+                                                   <parameter name="in_agent_group" source="field" updatable="true">temp.tmp_AgentGroup</parameter>
+                                                </input>
+                                                <outputDef>
+                                                   <field name="out_catalog_attachment" type="attachment">
+                                                      <options>
+                                                         <option hide="true" name="count">1</option>
+                                                         <option name="maxsize">5242880</option>
+                                                         <option name="required">false</option>
+                                                      </options>
+                                                   </field>
+                                                   <field name="out_sharepoint_target_path" type="string">
+                                                      <options>
+                                                         <option name="required">false</option>
+                                                      </options>
+                                                   </field>
+                                                   <field name="out_sharepoint_file_name" type="string">
+                                                      <options>
+                                                         <option name="required">false</option>
+                                                      </options>
+                                                   </field>
+                                                </outputDef>
+                                             </subflow>
+                                             <link id="mlatc3gf" targetId="mlatc3g6" type="containerLink"/>
+                                          </flow>
+                                          <flow id="mlatc3gb">
+                                             <container id="mlatc3k6" type="exclusive">
+                                                <title>DTICatalog</title>
+                                                <flow id="mlatc3k7">
+                                                   <subflow id="mlatc3k8">
+                                                      <title>SubSDasGetCatalogSharepointDTI</title>
+                                                      <subflowGUID>60nabxHxyyTlfffdB1g6A5</subflowGUID>
+                                                      <subflowPath>SDasGetCatalogSharepointDTI</subflowPath>
+                                                      <runForEach>false</runForEach>
+                                                      <input>
+                                                         <parameter name="in_catalog" source="field" updatable="true">temp.tmp_catalog</parameter>
+                                                         <parameter name="in_environment" source="field" updatable="true">temp.tmp_environment</parameter>
+                                                         <parameter name="in_agent_group" source="field" updatable="true">temp.tmp_AgentGroup</parameter>
+                                                      </input>
+                                                      <outputDef>
+                                                         <field name="out_catalog_attachment" type="attachment">
+                                                            <options>
+                                                               <option hide="true" name="count">1</option>
+                                                               <option name="maxsize">5242880</option>
+                                                               <option name="required">false</option>
+                                                            </options>
+                                                         </field>
+                                                         <field name="out_sharepoint_target_path" type="string">
+                                                            <options>
+                                                               <option name="required">false</option>
+                                                            </options>
+                                                         </field>
+                                                         <field name="out_sharepoint_file_name" type="string">
+                                                            <options>
+                                                               <option name="required">false</option>
+                                                            </options>
+                                                         </field>
+                                                      </outputDef>
+                                                   </subflow>
+                                                   <link id="mlatc3kf" targetId="mlatc3k6" type="containerLink"/>
+                                                </flow>
+                                                <flow id="mlatc3kb">
+                                                   <container id="mlb4sgvt" type="exclusive">
+                                                      <title>CDICatalog</title>
+                                                      <flow id="mlb4sgvu">
+                                                         <subflow id="mlb4sgvv">
+                                                            <title>SubSDasGetCatalogSharepointCDI</title>
+                                                            <subflowGUID>7KCR6YoP8MTeRNae1PEAUw</subflowGUID>
+                                                            <subflowPath>SDasGetCatalogSharepointCDI</subflowPath>
+                                                            <runForEach>false</runForEach>
+                                                            <input>
+                                                               <parameter name="in_catalog" source="field" updatable="true">temp.tmp_catalog</parameter>
+                                                               <parameter name="in_environment" source="field" updatable="true">temp.tmp_environment</parameter>
+                                                               <parameter name="in_agent_group" source="field" updatable="true">temp.tmp_AgentGroup</parameter>
+                                                            </input>
+                                                            <outputDef>
+                                                               <field name="out_catalog_attachment" type="attachment">
+                                                                  <options>
+                                                                     <option hide="true" name="count">1</option>
+                                                                     <option name="maxsize">5242880</option>
+                                                                     <option name="required">false</option>
+                                                                  </options>
+                                                               </field>
+                                                               <field name="out_sharepoint_target_path" type="string">
+                                                                  <options>
+                                                                     <option name="required">false</option>
+                                                                  </options>
+                                                               </field>
+                                                               <field name="out_sharepoint_file_name" type="string">
+                                                                  <options>
+                                                                     <option name="required">false</option>
+                                                                  </options>
+                                                               </field>
+                                                            </outputDef>
+                                                         </subflow>
+                                                         <link id="mlb4sgw1" targetId="mlb4sgvt" type="containerLink"/>
+                                                      </flow>
+                                                      <flow id="mlb4sgvw">
+                                                         <container id="mlb4sgy2" type="exclusive">
+                                                            <title>HostedCatalog</title>
+                                                            <flow id="mlb4sgy3">
+                                                               <subflow id="mlb4sgy4">
+                                                                  <title>SubSDasGetCatalogSharepointHST</title>
+                                                                  <subflowGUID>80GKjRR6t2wenufxzW2sKB</subflowGUID>
+                                                                  <subflowPath>SDasGetCatalogSharepointHST</subflowPath>
+                                                                  <runForEach>false</runForEach>
+                                                                  <input>
+                                                                     <parameter name="in_catalog" source="field" updatable="true">temp.tmp_catalog</parameter>
+                                                                     <parameter name="in_environment" source="field" updatable="true">temp.tmp_environment</parameter>
+                                                                     <parameter name="in_agent_group" source="field" updatable="true">temp.tmp_AgentGroup</parameter>
+                                                                  </input>
+                                                                  <outputDef>
+                                                                     <field name="out_catalog_attachment" type="attachment">
+                                                                        <options>
+                                                                           <option hide="true" name="count">1</option>
+                                                                           <option name="maxsize">5242880</option>
+                                                                           <option name="required">false</option>
+                                                                        </options>
+                                                                     </field>
+                                                                     <field name="out_sharepoint_target_path" type="string">
+                                                                        <options>
+                                                                           <option name="required">false</option>
+                                                                        </options>
+                                                                     </field>
+                                                                     <field name="out_sharepoint_file_name" type="string">
+                                                                        <options>
+                                                                           <option name="required">false</option>
+                                                                        </options>
+                                                                     </field>
+                                                                  </outputDef>
+                                                               </subflow>
+                                                               <link id="mlb4sgya" targetId="mlb4sgy2" type="containerLink"/>
+                                                            </flow>
+                                                            <flow id="mlb4sgy5">
+                                                               <assignment id="mlb4sgy6">
+                                                                  <title>AssignIncreaseCounter</title>
+                                                                  <operation source="formula" to="temp.tmp_AgentCounter">
+                                                                     <expression language="XQuery">$temp.tmp_AgentCounter + 1</expression>
+                                                                  </operation>
+                                                                  <link id="mlb4sgyb" targetId="mlb4sgy7"/>
+                                                               </assignment>
+                                                               <jumpTo id="mlb4sgy7">
+                                                                  <link id="mlb4sgyc" targetId="ml9dhfd8"/>
+                                                               </jumpTo>
+                                                            </flow>
+                                                            <link id="mlb4sgy8" targetId="mlb4sgy3" type="containerLink">
+                                                               <condition source="formula">
+                                                                  <function name="string-equals">
+                                                                     <arg name="left">{$temp.tmp_AgentGroup}</arg>
+                                                                     <arg name="right">{$temp.tmp_AgentGroupHST}</arg>
+                                                                  </function>
+                                                               </condition>
+                                                            </link>
+                                                            <link id="mlb4sgy9" targetId="mlb4sgy5" type="containerLink"/>
+                                                         </container>
+                                                         <link id="mlb4sh8z" targetId="mlb4sgvt" type="containerLink"/>
+                                                      </flow>
+                                                      <link id="mlb4sgvz" targetId="mlb4sgvu" type="containerLink">
+                                                         <condition source="formula">
+                                                            <function name="string-equals">
+                                                               <arg name="left">{$temp.tmp_AgentGroup}</arg>
+                                                               <arg name="right">{$temp.tmp_AgentGroupCDI}</arg>
+                                                            </function>
+                                                         </condition>
+                                                      </link>
+                                                      <link id="mlb4sgw0" targetId="mlb4sgvw" type="containerLink"/>
+                                                   </container>
+                                                   <link id="mlatc3ki" targetId="mlatc3k6" type="containerLink"/>
+                                                </flow>
+                                                <link id="mlatc3kd" targetId="mlatc3k7" type="containerLink">
+                                                   <condition source="formula">
+                                                      <function name="string-equals">
+                                                         <arg name="left">{$temp.tmp_AgentGroup}</arg>
+                                                         <arg name="right">{$temp.tmp_AgentGroupDTI}</arg>
+                                                      </function>
+                                                   </condition>
+                                                </link>
+                                                <link id="mlatc3ke" targetId="mlatc3kb" type="containerLink"/>
+                                             </container>
+                                             <link id="mlatc3gi" targetId="mlatc3g6" type="containerLink"/>
+                                          </flow>
+                                          <link id="mlatc3gd" targetId="mlatc3g7" type="containerLink">
+                                             <condition source="formula">
+                                                <function name="string-equals">
+                                                   <arg name="left">{$temp.tmp_AgentGroup}</arg>
+                                                   <arg name="right">{$temp.tmp_AgentGroupCMX}</arg>
+                                                </function>
+                                             </condition>
+                                          </link>
+                                          <link id="mlatc3ge" targetId="mlatc3gb" type="containerLink"/>
+                                       </container>
+                                       <link id="mlatc3d7" targetId="mlatc3cv" type="containerLink"/>
+                                    </flow>
+                                    <link id="mlatc3d2" targetId="mlatc3cw" type="containerLink">
+                                       <condition source="formula">
+                                          <function name="string-equals">
+                                             <arg name="left">{$temp.tmp_AgentGroup}</arg>
+                                             <arg name="right">{$temp.tmp_AgentGroupCAI} </arg>
+                                          </function>
+                                       </condition>
+                                    </link>
+                                    <link id="mlatc3d3" targetId="mlatc3d0" type="containerLink"/>
+                                 </container>
+                                 <link id="mlatc32a" targetId="mlatc320" type="containerLink"/>
+                              </flow>
+                              <link id="mlatc326" targetId="mlatc321" type="containerLink">
+                                 <condition source="formula">
+                                    <function name="string-equals">
+                                       <arg name="left">{$temp.tmp_AgentGroup}</arg>
+                                       <arg name="right">{$temp.tmp_AgentGroupCloud} </arg>
+                                    </function>
+                                 </condition>
+                              </link>
+                              <link id="mlatc327" targetId="mlatc324" type="containerLink"/>
+                           </container>
+                           <link id="ml9fziza" targetId="ml9fziz3" type="containerLink"/>
+                        </flow>
+                        <link id="ml9fziz5" targetId="ml9fziz6" type="containerLink">
+                           <condition source="formula">
+                              <function name="string-equals">
+                                 <arg name="left">{$temp.tmp_AgentGroup}</arg>
+                                 <arg name="right">{$temp.tmp_AgentGroupSLF} </arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="ml9fziz8" targetId="ml9fziz9" type="containerLink"/>
+                        <link id="mlatc42k" targetId="mlsmpdiz"/>
+                     </container>
+                     <eventContainer id="mlsmpdiz">
+                        <service id="mlatc42j">
+                           <title>SvcUploadFileInSharePoint</title>
+                           <serviceName>Conn-SC-ConsumeGovOpsSharepointAPI:uploadFileInSharePoint</serviceName>
+                           <serviceGUID>80NYCVNMgqPbhRBqOXPJ6Q</serviceGUID>
+                           <serviceInput>
+                              <parameter name="in_token" source="formula">
+                                 <expression language="XQuery">$output.out_getToken/access_token</expression>
+                              </parameter>
+                              <parameter name="in_graph_host" source="formula">
+                                 <expression language="XQuery">$temp.tmp_graph_host </expression>
+                              </parameter>
+                              <parameter name="in_idSite" source="formula">
+                                 <expression language="XQuery">$output.out_siteId/id</expression>
+                              </parameter>
+                              <parameter name="in_idDrive" source="formula">
+                                 <expression language="XQuery">$output.out_driveId/value/id</expression>
+                              </parameter>
+                              <parameter name="in_sharePointFileName" source="formula">
+                                 <expression language="XQuery">$output.out_sharepoint_file_name </expression>
+                              </parameter>
+                              <parameter name="in_sharePointTargetPath" source="formula">
+                                 <expression language="XQuery">$output.out_sharepoint_target_path </expression>
+                              </parameter>
+                              <parameter name="in_attachment" source="field" updatable="true">output.out_catalog_attachment</parameter>
+                           </serviceInput>
+                        </service>
+                        <flow id="mlsmpdj1">
+                           <link id="mlsmpdj2" targetId="mlsmpdiz" type="containerLink"/>
+                        </flow>
+                        <flow id="mlsmpdj4">
+                           <container id="mlsmpdoc" type="exclusive">
+                              <title>CheckErrorCount</title>
+                              <flow id="mlsmpdod">
+                                 <wait id="mlsmpdoe">
+                                    <title>Wait5Sec</title>
+                                    <duration source="formula">
+                                       <function name="duration_expression">
+                                          <arg name="value">5</arg>
+                                          <arg name="scale">S</arg>
+                                          <arg name="businessDays"/>
+                                       </function>
+                                    </duration>
+                                    <link id="mlsmpdom" targetId="mlsmpdof"/>
+                                 </wait>
+                                 <assignment id="mlsmpdof">
+                                    <title>AssignIncreaseRetryCounter</title>
+                                    <operation source="formula" to="temp.tmp_ErrorCount">
+                                       <expression language="XQuery">$temp.tmp_ErrorCount + 1</expression>
+                                    </operation>
+                                    <link id="mlsmpdon" targetId="mlsmpdog"/>
+                                 </assignment>
+                                 <jumpTo id="mlsmpdog">
+                                    <link id="mlsmpdoo" targetId="mlsmp9ey"/>
+                                 </jumpTo>
+                              </flow>
+                              <flow id="mlsmpdoh">
+                                 <throw id="mlsmpdoi">
+                                    <title>ThrowUploadFileInSharePoint</title>
+                                    <throwInput>
+                                       <parameter name="code" source="formula" updatable="true">
+                                          <expression language="XQuery">$output.faultIICSUploadFileInSharepoint[1]/code </expression>
+                                       </parameter>
+                                       <parameter name="detail" source="formula" updatable="true">
+                                          <expression language="XQuery">$output.faultIICSUploadFileInSharepoint[1]/detail </expression>
+                                       </parameter>
+                                       <parameter name="reason" source="formula" updatable="true">
+                                          <expression language="XQuery">$output.faultIICSUploadFileInSharepoint[1]/reason </expression>
+                                       </parameter>
+                                    </throwInput>
+                                 </throw>
+                              </flow>
+                              <link id="mlsmpdok" targetId="mlsmpdod" type="containerLink">
+                                 <condition source="formula">
+                                    <function name="equals">
+                                       <arg name="left">{$temp.tmp_ErrorCount}</arg>
+                                       <arg name="right">{$temp.tmp_EMaxErrorNumber }</arg>
+                                    </function>
+                                 </condition>
+                              </link>
+                              <link id="mlsmpdol" targetId="mlsmpdoh" type="containerLink"/>
+                           </container>
+                        </flow>
+                        <link id="mlsmpdj0" targetId="mlsmpdj1" type="containerLink"/>
+                        <link id="mlatc42l" targetId="mlatc3va"/>
+                        <events>
+                           <catch faultField="faultIICSUploadFileInSharepoint"
+                                  id="mlsmpdiy"
+                                  interrupting="true">
+                              <link id="mlsmpdj3" targetId="mlsmpdj4" type="containerLink"/>
+                           </catch>
+                        </events>
+                     </eventContainer>
+                     <assignment id="mlatc3va">
+                        <title>AssignIncreaseCounter</title>
+                        <operation source="formula" to="temp.tmp_AgentCounter">
+                           <expression language="XQuery">$temp.tmp_AgentCounter + 1</expression>
+                        </operation>
+                        <link id="mlatc3vc" targetId="ml86t8gz"/>
+                     </assignment>
+                     <jumpTo id="ml86t8gz">
+                        <link id="ml86t8h0" targetId="ml9dhfd8"/>
+                     </jumpTo>
+                  </flow>
+                  <flow id="ml86t8fx">
+                     <link id="ml86t8fy" targetId="ml86t8fq" type="containerLink"/>
+                  </flow>
+                  <link id="ml86t8ft" targetId="ml86t8fu" type="containerLink">
+                     <condition source="formula">
+                        <function name="less-or-equals">
+                           <arg name="left">{$temp.tmp_AgentCounter}</arg>
+                           <arg name="right">{$temp.tmp_AgentCounterMax }</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="ml86t8fw" targetId="ml86t8fx" type="containerLink"/>
+                  <link id="ml86t8gd" targetId="c"/>
+               </container>
+               <end id="c">
+                  <title>EndSDasUploadCatalogSharepoint</title>
+               </end>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>e51113ec-30f0-4030-a0ec-0387596f3095</ns1:Id>
+               <ns1:Name>test</ns1:Name>
+               <ns1:CreatedBy>gchico@ppg.com</ns1:CreatedBy>
+               <ns1:CreationDate>2026-03-30T10:09:51Z</ns1:CreationDate>
+               <ns1:ModifiedBy>gchico@ppg.com</ns1:ModifiedBy>
+               <ns1:ModificationDate>2026-03-30T10:09:51Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>aP3IInHH8iCh2PgpcMhL0r</types1:GUID>
+      <types1:DisplayName>SBusUploadCatalogSharepoint</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-04-01T22:10:59.102Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
