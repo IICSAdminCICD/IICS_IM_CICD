@@ -13,7 +13,7 @@
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
       <types1:CreationDate>2026-03-30T10:09:50Z</types1:CreationDate>
       <types1:ModifiedBy>gchico@ppg.com</types1:ModifiedBy>
-      <types1:ModificationDate>2026-04-01T22:19:27Z</types1:ModificationDate>
+      <types1:ModificationDate>2026-04-01T22:20:52Z</types1:ModificationDate>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
          <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
@@ -26,12 +26,42 @@
             <description/>
             <tags/>
             <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
-            <actions/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="getToken"
+                       maxRedirects="100"
+                       name="getToken"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter description=""
+                                label="test"
+                                name="test"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="test" verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="test" property="test" type="string"/>
+                  </output>
+               </action>
+            </actions>
             <objects/>
          </businessConnector>
       </types1:Entry>
       <types1:GUID>7tpvN0TUlh7hpneGuwpcyg</types1:GUID>
       <types1:DisplayName>SC-ConsumeGovOpsSharepointAPI</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-01T22:19:38.562Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-01T22:21:00.338Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
