@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "80NYCVNMgqPbhRBqOXPJ6Q",
+    "name" : "Conn-SC-ConsumeGovOpsSharepointAPI",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "HXf66vfXjISUXL8-gt-3173778-2026-03-30T10:09:50.545Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType= Service Connector, @application=Conn-SC-ConsumeGovOpsSharepointAPI, @additionalText= This App connection upload a archive to sharePoint, @appSCName=SC-ConsumeGovOpsSharepointAPI",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-01T22:11:32.377Z",
+  "objectRefs" : [ {
+    "id" : "7tpvN0TUlh7hpneGuwpcyg",
+    "name" : "SC-ConsumeGovOpsSharepointAPI",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "7WHK80FIRi92qBb-gt-3197602-2026-03-30T10:09:49.936Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@scType= REST and SOAP, @application=SC-ConsumeGovOpsSharepointAPI, @additionalText=Service connector that upload a archive to sharePoint",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/Catalogs"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
