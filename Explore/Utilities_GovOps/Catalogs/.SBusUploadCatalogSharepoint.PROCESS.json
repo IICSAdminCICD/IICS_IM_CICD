@@ -1,0 +1,187 @@
+{
+  "objectInfo" : {
+    "id" : "aP3IInHH8iCh2PgpcMhL0r",
+    "name" : "SBusUploadCatalogSharepoint",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "YICf5GkeHy2uI5C-gt-3173788-2026-03-30T10:09:50.821Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation= UploadCatalogs, @dataType=Message, @source=IICSCatalogs, @target=Sharepoint, @additionalText=Upload IICSCatalogs into Sharepoint, @prcRunOn=Cloud Server",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-01T22:25:14.959Z",
+  "objectRefs" : [ {
+    "id" : "6wKqugonZ0Ej8GULOunWIG",
+    "name" : "SDasGetCatalogSharepointCMX",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0aa-gt-3173756-2026-03-30T10:09:49.84Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=AG_IICS_QA_CMX",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/Catalogs"
+  }, {
+    "id" : "60nabxHxyyTlfffdB1g6A5",
+    "name" : "SDasGetCatalogSharepointDTI",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "dyOoMdtlI20hELl-gt-3197620-2026-03-30T10:09:50.062Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=SDCMMDMSA_DTI",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/Catalogs"
+  }, {
+    "id" : "7KCR6YoP8MTeRNae1PEAUw",
+    "name" : "SDasGetCatalogSharepointCDI",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ZHck5qbbfUryzfY-gt-3197592-2026-03-30T10:09:49.833Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=AG_IICS_QA_CDI",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/Catalogs"
+  }, {
+    "id" : "d7IS2nKEVKKhBaWxUwyZki",
+    "name" : "SDasGetCatalogSharepointCAI",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "00dpdqfUmm7O2ht-gt-3197610-2026-03-30T10:09:49.989Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=SGOFMDMSA_CAI",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/Catalogs"
+  }, {
+    "id" : "9eQyFARwmMzjFB7bBfBEer",
+    "name" : "SDasGetCatalogSharepointSLF",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Q3hJvsGRvDINciZ-gt-3173746-2026-03-30T10:09:49.691Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=AG_IICS_QA_AZU_SLF",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/Catalogs"
+  }, {
+    "id" : "80NYCVNMgqPbhRBqOXPJ6Q",
+    "name" : "Conn-SC-ConsumeGovOpsSharepointAPI",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "HXf66vfXjISUXL8-gt-3173778-2026-03-30T10:09:50.545Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType= Service Connector, @application=Conn-SC-ConsumeGovOpsSharepointAPI, @additionalText= This App connection upload a archive to sharePoint, @appSCName=SC-ConsumeGovOpsSharepointAPI",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/Catalogs"
+  }, {
+    "id" : "5vowd0pvZYThuB0xlNKzEY",
+    "name" : "SDasGetCatalogSharepointCloud",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "SHbf13ErhNzUzeA-gt-3197582-2026-03-30T10:09:49.724Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=Cloud Server",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/Catalogs"
+  }, {
+    "id" : "80GKjRR6t2wenufxzW2sKB",
+    "name" : "SDasGetCatalogSharepointHST",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "6zsuQgabcjk91pq-gt-3173766-2026-03-30T10:09:49.934Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=ip-10-17-247-40.ec2.internal",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/Catalogs"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

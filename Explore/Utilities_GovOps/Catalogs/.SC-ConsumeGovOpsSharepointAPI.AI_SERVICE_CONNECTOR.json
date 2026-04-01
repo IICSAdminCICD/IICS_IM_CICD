@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "7tpvN0TUlh7hpneGuwpcyg",
+    "name" : "SC-ConsumeGovOpsSharepointAPI",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "7WHK80FIRi92qBb-gt-3197602-2026-03-30T10:09:49.936Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-01T22:25:14.958Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
