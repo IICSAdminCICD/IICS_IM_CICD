@@ -20,7 +20,7 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-01T22:11:32.377Z",
+  "updateTime" : "2026-04-01T22:25:14.964Z",
   "objectRefs" : [ {
     "id" : "7tpvN0TUlh7hpneGuwpcyg",
     "name" : "SC-ConsumeGovOpsSharepointAPI",
@@ -35,7 +35,7 @@
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "@scType= REST and SOAP, @application=SC-ConsumeGovOpsSharepointAPI, @additionalText=Service connector that upload a archive to sharePoint",
+        "description" : "",
         "contentType" : "application/json; charset=utf-8",
         "documentState" : "VALID"
       }
