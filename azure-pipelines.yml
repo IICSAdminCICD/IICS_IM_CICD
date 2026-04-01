@@ -36,7 +36,7 @@ stages:
         echo "Autor del commit:"
         echo "$(Build.SourceVersionAuthor)"
 
-        if [[ "$(Build.SourceVersionAuthor)" != *"IICSAdminCICD"* ]]; then
+        if [[ "$(Build.SourceVersionAuthor)" != *"GChicoPPG"* ]]; then
           echo "El commit no fue realizado por el usuario autorizado. Cancelando pipeline."
           exit 1
         fi
