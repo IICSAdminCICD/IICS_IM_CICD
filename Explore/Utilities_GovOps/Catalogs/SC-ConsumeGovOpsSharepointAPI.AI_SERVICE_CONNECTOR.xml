@@ -1,0 +1,37 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>7WHK80FIRi92qBb-gt-3197602-2026-03-30T10:09:49.936Z::svc.xml</types1:EntryId>
+      <types1:Name>SC-ConsumeGovOpsSharepointAPI</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
+      <types1:CreationDate>2026-03-30T10:09:50Z</types1:CreationDate>
+      <types1:ModifiedBy>gchico@ppg.com</types1:ModifiedBy>
+      <types1:ModificationDate>2026-04-01T22:19:27Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="SC-ConsumeGovOpsSharepointAPI"
+                            label=""
+                            name="SC-ConsumeGovOpsSharepointAPI"
+                            uuid="52c3e7be-a27a-46db-b918-e1e2840232e5">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions/>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>7tpvN0TUlh7hpneGuwpcyg</types1:GUID>
+      <types1:DisplayName>SC-ConsumeGovOpsSharepointAPI</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-04-01T22:19:38.562Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
