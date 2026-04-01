@@ -28,11 +28,16 @@ stages:
         echo "Commit message:"
         echo "$(Build.SourceVersionMessage)"
 
-        echo "Autor del commit:"
-        echo "$(Build.SourceVersionAuthor)"
-
         if [[ "$(Build.SourceVersionMessage)" != *"DEPLOY_BY_IM--"* ]]; then
           echo "Commit no contiene DEPLOY--. Cancelando pipeline."
+          exit 1
+        fi
+
+        echo "Autor del commit:"
+        echo "$(Build.SourceVersionAuthor)"        
+
+        if [[ "$(Build.SourceVersionAuthor)" != *"IICSAdminCICD"* ]]; then
+          echo "El commit no fue realizado por el usuario autorizado. Cancelando pipeline."
           exit 1
         fi
 
