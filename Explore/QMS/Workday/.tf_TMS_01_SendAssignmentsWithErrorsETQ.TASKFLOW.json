@@ -1,0 +1,90 @@
+{
+  "objectInfo" : {
+    "id" : "0EtS9CTlY4RjbfXjyJ0HeT",
+    "name" : "tf_TMS_01_SendAssignmentsWithErrorsETQ",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "5FeN8jIw8jIw8jI-gt-3710150-2026-04-07T09:31:24.908Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation=Send Trainings, @dataType= Workday Trainings, @source= SQL Server DB, @target= ETQ, @tfLocalPath= QMS\\Workday, @additionalText= Process that runs every 5 minutes and processes cases that ended in error.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-07T09:46:50.681Z",
+  "objectRefs" : [ {
+    "id" : "7nuqLCLn4z6hL2MZmzpCWi",
+    "name" : "tf_UtiGenerateTicketGovOps",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "DqZF3a-gt-3478487-2026-04-07T09:31:22.482Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@source=Error detail, @operation=Generate ticket GovOps, @dataType=Error details, @target=Generate ticket GovOps, @additionalText=Generate ticket GovOps from error details, @tfLocalPath=\\Explore\\Utilities_GovOps\\InfraTickets",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/InfraTickets"
+  }, {
+    "id" : "0OzFGQIyJCZiIL22KtXvMv",
+    "name" : "SDasWorkDayTrainingSQL",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Jg7Gaaa-gt-694181-2026-04-07T09:31:23.575Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation= Insert/Update LogTraining, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText= Insert and Update training records into table, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  }, {
+    "id" : "lidLEOxCR4qipnMUZijA06",
+    "name" : "mt_TMS_01_SendTrainingsETQ",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "011EE90Z000000000002"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "@connectionSource= SQL Server, @connection Target= SQL Server, @sources= [@connection1=SQL_Wdy_ETQ_TMS], @targets= [@connection1= SQL_Wdy_ETQ_TMS], @transformation= select, @dataType= JSON Training Records, @additionalText= select the first record inserted and send the records to ETQ",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

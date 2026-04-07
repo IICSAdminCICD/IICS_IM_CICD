@@ -1,0 +1,65 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>jk3zx6i4tciSrZM-gt-696127-2026-04-07T09:31:21.47Z::svc.xml</types1:EntryId>
+      <types1:Name>SC-ETQTaskflow</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>@scType=Trainings Workday, @application= Workday/ETQ</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
+      <types1:CreationDate>2026-04-07T09:31:21Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="SC-ETQTaskflow"
+                            label=""
+                            name="SC-ETQTaskflow"
+                            uuid="c057ef70-cca5-46ab-ae68-d3a1ea350242">
+            <description>@scType=Trainings Workday, @application= Workday/ETQ</description>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category="QMS/WorkDay"
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetTaskflow"
+                       maxRedirects="100"
+                       name="GetTaskflow"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{let $URL:=util:getCatalogResource(util:resolveURN('urn:ppg-catalog-parameters'))/Parameter[name/text() ='DataTaskflow-Workday']/value/URL/text()&#xA;return $URL}"
+                                        verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Authorization">{util:getCatalogResource(util:resolveURN('urn:ppg-catalog-users'))/*:Parameter[name/text() ='AuthConsumer-Global-Jobs']/*:value/text()}</header>
+                        </httpHeaders>
+                        <body generateUsing="JSON" preserveJsonStringFormatting="true"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="out_RunId" property="RunId" type="string"/>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>73fKAM1PHEAd8IBOkpggSa</types1:GUID>
+      <types1:DisplayName>SC-ETQTaskflow</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-04-07T09:46:49.57Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

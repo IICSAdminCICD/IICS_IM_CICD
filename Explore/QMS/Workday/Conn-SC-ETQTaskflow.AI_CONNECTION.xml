@@ -1,0 +1,40 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>3m7iUQbgdwUiQLn-gt-694160-2026-04-07T09:31:22.884Z::conn.xml</types1:EntryId>
+      <types1:Name>Conn-SC-ETQTaskflow</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC-ETQTaskflow</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:SDCAMDMSA01</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
+      <types1:CreationDate>2026-04-07T09:31:23Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="Conn-SC-ETQTaskflow"
+                     label="Conn-SC-ETQTaskflow"
+                     name="Conn-SC-ETQTaskflow">
+            <description>@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC-ETQTaskflow</description>
+            <tags>.agent:SDCAMDMSA01</tags>
+            <agent>SDCAMDMSA01</agent>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/SC_ETQTaskflow/SC_ETQTaskflow_svcDef.xml"
+                               guid="73fKAM1PHEAd8IBOkpggSa"
+                               name="SC-ETQTaskflow"
+                               supportsConnectionTest="false"
+                               uuid="c057ef70-cca5-46ab-ae68-d3a1ea350242">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>hEO3KNjVZgNhbuUVIWmD48</types1:GUID>
+      <types1:DisplayName>Conn-SC-ETQTaskflow</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-04-07T09:46:49.667Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

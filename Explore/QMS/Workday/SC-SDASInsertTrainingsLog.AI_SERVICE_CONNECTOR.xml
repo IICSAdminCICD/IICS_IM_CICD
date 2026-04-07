@@ -1,0 +1,237 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>R3DnHrWLU6S6fPA-gt-696159-2026-04-07T09:31:21.706Z::svc.xml</types1:EntryId>
+      <types1:Name>SC-SDASInsertTrainingsLog</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>@scType= Workday Trainings, @application= Workday / ETQ
+
+</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
+      <types1:CreationDate>2026-04-07T09:31:22Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="SC-SDASInsertTrainingsLog"
+                            label=""
+                            name="SC-SDASInsertTrainingsLog"
+                            uuid="b07cba10-dffd-47b0-a601-f92d66753e9c">
+            <description>@scType= Workday Trainings, @application= Workday / ETQ
+
+</description>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category="QMS/WorkDay"
+                       failOnError="true"
+                       forSearch="false"
+                       label="InsertLogWorkdaySP"
+                       maxRedirects="100"
+                       name="InsertLogWorkdaySP"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Insert the main log with the date time of the message. </description>
+                  <input>
+                     <parameter description="Status to be Updated in the table"
+                                label=""
+                                name="in_scStatus"
+                                nogen="true"
+                                required="false"
+                                testWith="New"
+                                type="string"/>
+                     <parameter description="Date time of arrival&#xA;"
+                                label=""
+                                name="in_scDateTime"
+                                nogen="true"
+                                required="false"
+                                testWith="2025-07-29T21:45:27.389Z"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{fn:concat(util:resolveURN('urn:host-https'),'/process-engine/services/InsertLogSP')}"
+                                        verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Content-Type">text/xml;charset=UTF-8</header>
+                           <header name="Authorization">{let $l_authorization :='Basic '||util:getCatalogResource(util:resolveURN('urn:ppg-catalog-users'))/*:Parameter[name/text() ='AuthConsumer-Workday']/*:value/text() 
+return $l_authorization}</header>
+                        </httpHeaders>
+                        <body>{&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://www.ppg.org/ws_InsertLogSP"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;ws:InsertLogRequest&gt;
+         &lt;ws:inStatus&gt;{ $in_scStatus }&lt;/ws:inStatus&gt;
+         &lt;ws:inDateTime&gt; {$in_scDateTime }&lt;/ws:inDateTime&gt;
+      &lt;/ws:InsertLogRequest&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Response Message" name="sc_outMessage" type="string">
+                        <xquery>{$RESTResponse/*:payload/*:Envelope/*:Body/*:InsertLogResponse/*:ResponseStatus/*:ErrorMessage/text()}</xquery>
+                     </field>
+                     <field description="Response Code" name="sc_outCode" type="string">
+                        <xquery>{$RESTResponse/*:payload/*:Envelope/*:Body/*:InsertLogResponse/*:ResponseStatus/*:ErrorCode/text()}</xquery>
+                     </field>
+                     <field description="Selected ID" name="sc_outLogID" type="string">
+                        <xquery>{$RESTResponse/*:payload/*:Envelope/*:Body/*:InsertLogResponse/*:LogID/text()}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category="QMS/Workday"
+                       failOnError="true"
+                       forSearch="false"
+                       label="InsertRecordsSQL"
+                       maxRedirects="100"
+                       name="InsertRecordsSQL"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Each massage from the data base will be inserted into the database. </description>
+                  <input>
+                     <parameter description="LogID relationated to the Message"
+                                label=""
+                                name="sc_InLogID"
+                                nogen="true"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                     <parameter description="Json Message as String"
+                                label=""
+                                name="sc_PayLoadRest"
+                                nogen="true"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://use6.dm-us.informaticacloud.com/active-bpel/rt/tf_TMS_00_InsertRecordsSQL&#xA;"
+                                        verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Content-Type">application/json	</header>
+                           <header name="Authorization">{util:getCatalogResource(util:resolveURN('urn:ppg-catalog-users'))/*:Parameter[name/text() ='AuthConsumer-Global-Jobs']/*:value/text()}</header>
+                        </httpHeaders>
+                        <body>{{
+"in_tfLogID": "{ $sc_InLogID }",
+  "in_tfPayloadJson": "{ $sc_PayLoadRest }"
+  }}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Response ID as XML"
+                            entireResponse="true"
+                            name="out_tfResponse"
+                            type="string"/>
+                  </output>
+               </action>
+               <action category="QMS/WorkDay"
+                       failOnError="true"
+                       forSearch="false"
+                       label="InsertTrainingSQL"
+                       maxRedirects="100"
+                       name="InsertTrainingSQL"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Insert each part from the main massage. </description>
+                  <input>
+                     <parameter description="Id from log to associate the message"
+                                label=""
+                                name="in_scPayloadID"
+                                nogen="true"
+                                required="false"
+                                testWith="4015"
+                                type="string"/>
+                     <parameter description="DateTime of Arrival to IICS"
+                                label=""
+                                name="in_scInsertDateTime"
+                                nogen="true"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                     <parameter description="Current Status for the current message"
+                                label=""
+                                name="in_scRecordStatus"
+                                nogen="true"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                     <parameter description="Message to be saved in the data base"
+                                label=""
+                                name="in_scRecordMessage"
+                                nogen="true"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                     <parameter description="Status message if the message has been proceed successfully. "
+                                label=""
+                                name="in_scStatusMessage"
+                                nogen="true"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{fn:concat(util:resolveURN('urn:host-https'),'/process-engine/services/InsertLogSP')}"
+                                        verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Content-Type">text/xml;charset=UTF-8</header>
+                           <header name="Authorization">{let $l_authorization :='Basic '||util:getCatalogResource(util:resolveURN('urn:ppg-catalog-users'))/*:Parameter[name/text() ='AuthConsumer-Workday']/*:value/text() 
+return $l_authorization}</header>
+                        </httpHeaders>
+                        <body>{&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins="http://www.ppg.org/InsertTrainingRecord"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;ins:InsertTrainingRequest&gt;
+         &lt;ins:payloadID&gt; {$in_scPayloadID} &lt;/ins:payloadID&gt;
+         &lt;ins:insertDateTime&gt; {$in_scInsertDateTime }&lt;/ins:insertDateTime&gt;
+         &lt;ins:recordStatus&gt; {$in_scRecordStatus} &lt;/ins:recordStatus&gt;
+         &lt;ins:recordMessage&gt; {$in_scRecordMessage} &lt;/ins:recordMessage&gt;
+         &lt;ins:statusMessage&gt; {$in_scStatusMessage }&lt;/ins:statusMessage&gt;
+      &lt;/ins:InsertTrainingRequest&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Response Message" name="out_scMessage" type="string">
+                        <xquery>{$RESTResponse/*:payload/*:Envelope/*:Body/*:InsertTrainingResponse/*:ResponseStatus/*:ErrorMessage/text()}</xquery>
+                     </field>
+                     <field description="Response Code " name="out_scCode" type="string">
+                        <xquery>{$RESTResponse/*:payload/*:Envelope/*:Body/*:InsertTrainingResponse/*:ResponseStatus/*:ErrorCode/text()}</xquery>
+                     </field>
+                     <field description="Inserted ID" name="out_scLogID" type="string">
+                        <xquery>{$RESTResponse/*:payload/*:Envelope/*:Body/*:InsertTrainingResponse/*:LogID/text()}</xquery>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>dXtWZmfkpEDja44f6zYzCi</types1:GUID>
+      <types1:DisplayName>SC-SDASInsertTrainingsLog</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-04-07T09:46:49.461Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

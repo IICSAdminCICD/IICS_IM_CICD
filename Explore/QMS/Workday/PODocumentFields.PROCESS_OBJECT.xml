@@ -1,0 +1,65 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>7X2FNBeNTYglxbd-gt-694170-2026-04-07T09:31:22.942Z::po.xml</types1:EntryId>
+      <types1:Name>PODocumentFields</types1:Name>
+      <types1:ParentFlowIds>Sk72VR4109cjIw8-gt-694227-2026-04-07T09:31:24.722Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description>@operation= DocumentAssignments, @dataType= Documents Structure, @application= WorkdayETQ</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
+      <types1:CreationDate>2026-04-07T09:31:23Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="PODocumentFields"
+                        isByCopy="true"
+                        name="PODocumentFields">
+            <description>@operation= DocumentAssignments, @dataType= Documents Structure, @application= WorkdayETQ</description>
+            <tags/>
+            <detail>
+               <field label="applicationName"
+                      name="applicationName"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+               <field label="formName"
+                      name="formName"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+               <field label="phase"
+                      name="phase"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+               <field label=""
+                      name="Fields"
+                      nullable="true"
+                      required="false"
+                      type="objectlist">
+                  <options>
+                     <option name="relationshipName">Child</option>
+                     <option name="referenceTo">$po:POFieldRows</option>
+                     <option name="guid">7MokX86CDsQi9UQu1LqvKw</option>
+                  </options>
+               </field>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>5mQigb7QdmmedpbaCfrZYW</types1:GUID>
+      <types1:DisplayName>PODocumentFields</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-04-07T09:46:49.707Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

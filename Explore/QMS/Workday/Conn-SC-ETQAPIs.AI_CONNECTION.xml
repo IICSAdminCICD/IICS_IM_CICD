@@ -1,0 +1,40 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>TDbf13ErhNzUzeA-gt-694130-2026-04-07T09:31:22.731Z::conn.xml</types1:EntryId>
+      <types1:Name>Conn-SC-ETQAPIs</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>@appType=ETQ System, @application= ETQ TMS, @additionalText= AppConnection to Select Update and create trainings in ETQ, @appSCName= SC-ETQAPIs</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:SDCAMDMSA01</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
+      <types1:CreationDate>2026-04-07T09:31:23Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="Conn-SC-ETQAPIs"
+                     label="Conn-SC-ETQAPIs"
+                     name="Conn-SC-ETQAPIs">
+            <description>@appType=ETQ System, @application= ETQ TMS, @additionalText= AppConnection to Select Update and create trainings in ETQ, @appSCName= SC-ETQAPIs</description>
+            <tags>.agent:SDCAMDMSA01</tags>
+            <agent>SDCAMDMSA01</agent>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/SC_ETQAPIs/SC_ETQAPIs_svcDef.xml"
+                               guid="7lGx5h9nlNpgYLboHqGoEe"
+                               name="SC-ETQAPIs"
+                               supportsConnectionTest="false"
+                               uuid="fad7c8a6-d7bc-4b7c-a9c6-40e01b4d3568">
+               <description>@scType=ETQ APIs, @application=ETQ, @additionalText=Group of APIs from ETQ </description>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>5SnD1xFsci2eoHNtuZMF0n</types1:GUID>
+      <types1:DisplayName>Conn-SC-ETQAPIs</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-04-07T09:46:49.764Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

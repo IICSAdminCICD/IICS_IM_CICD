@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "aP3IInHH8iCh2PgpcMhL0r",
+    "id" : "4RJxFldO1UGezTqHa2v0uy",
     "name" : "SBusUploadCatalogSharepoint",
     "type" : "PROCESS",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "YICf5GkeHy2uI5C-gt-3173788-2026-03-30T10:09:50.821Z::pd.xml"
+        "repoHandle" : "OurMZgpDqotxGom-gt-109833-2026-04-01T22:30:55.658Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,49 +20,9 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-01T22:25:14.959Z",
+  "updateTime" : "2026-04-07T09:46:50.685Z",
   "objectRefs" : [ {
-    "id" : "6wKqugonZ0Ej8GULOunWIG",
-    "name" : "SDasGetCatalogSharepointCMX",
-    "type" : "PROCESS",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 1,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "0aa-gt-3173756-2026-03-30T10:09:49.84Z::pd.xml"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=AG_IICS_QA_CMX",
-        "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/Utilities_GovOps/Catalogs"
-  }, {
-    "id" : "60nabxHxyyTlfffdB1g6A5",
-    "name" : "SDasGetCatalogSharepointDTI",
-    "type" : "PROCESS",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 1,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "dyOoMdtlI20hELl-gt-3197620-2026-03-30T10:09:50.062Z::pd.xml"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=SDCMMDMSA_DTI",
-        "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/Utilities_GovOps/Catalogs"
-  }, {
-    "id" : "7KCR6YoP8MTeRNae1PEAUw",
+    "id" : "5q3cm66WIhskK0iNih6dmP",
     "name" : "SDasGetCatalogSharepointCDI",
     "type" : "PROCESS",
     "metadata" : {
@@ -71,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "ZHck5qbbfUryzfY-gt-3197592-2026-03-30T10:09:49.833Z::pd.xml"
+        "repoHandle" : "GKrclvAhrswVYx8-gt-106124-2026-04-01T22:30:54.525Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -82,7 +42,7 @@
     },
     "path" : "/Explore/Utilities_GovOps/Catalogs"
   }, {
-    "id" : "d7IS2nKEVKKhBaWxUwyZki",
+    "id" : "hO6YJiAZT41kJQDaQoRza7",
     "name" : "SDasGetCatalogSharepointCAI",
     "type" : "PROCESS",
     "metadata" : {
@@ -91,7 +51,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "00dpdqfUmm7O2ht-gt-3197610-2026-03-30T10:09:49.989Z::pd.xml"
+        "repoHandle" : "Um8zbgdwUiQLnzY-gt-109811-2026-04-01T22:30:54.756Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -102,7 +62,7 @@
     },
     "path" : "/Explore/Utilities_GovOps/Catalogs"
   }, {
-    "id" : "9eQyFARwmMzjFB7bBfBEer",
+    "id" : "cwvbvZ6Fd6wlwXdiyrEyIa",
     "name" : "SDasGetCatalogSharepointSLF",
     "type" : "PROCESS",
     "metadata" : {
@@ -111,7 +71,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "Q3hJvsGRvDINciZ-gt-3173746-2026-03-30T10:09:49.691Z::pd.xml"
+        "repoHandle" : "GR3ybdsMkdypKwK-gt-109783-2026-04-01T22:30:54.526Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -122,7 +82,7 @@
     },
     "path" : "/Explore/Utilities_GovOps/Catalogs"
   }, {
-    "id" : "80NYCVNMgqPbhRBqOXPJ6Q",
+    "id" : "5iSXpRF7uhQhEm0r5fJvwe",
     "name" : "Conn-SC-ConsumeGovOpsSharepointAPI",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -131,7 +91,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "HXf66vfXjISUXL8-gt-3173778-2026-03-30T10:09:50.545Z::conn.xml"
+        "repoHandle" : "qpw0VPNzUzeA8rJ-gt-106156-2026-04-01T22:30:55.269Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -142,7 +102,47 @@
     },
     "path" : "/Explore/Utilities_GovOps/Catalogs"
   }, {
-    "id" : "5vowd0pvZYThuB0xlNKzEY",
+    "id" : "anjIPWExHPTgFV2dOahkWj",
+    "name" : "SDasGetCatalogSharepointHST",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "MDOp7jvpppppppp-gt-106134-2026-04-01T22:30:54.628Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=ip-10-17-247-40.ec2.internal",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/Catalogs"
+  }, {
+    "id" : "9ENHDQ44nv3cVQ2Sk5fUWx",
+    "name" : "SDasGetCatalogSharepointDTI",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "1CHdqwx8R8WrY1S-gt-109821-2026-04-01T22:30:54.845Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=SDCMMDMSA_DTI",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/Catalogs"
+  }, {
+    "id" : "8vZzSiqDe9SeJ9oOj8PaCU",
     "name" : "SDasGetCatalogSharepointCloud",
     "type" : "PROCESS",
     "metadata" : {
@@ -151,7 +151,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "SHbf13ErhNzUzeA-gt-3197582-2026-03-30T10:09:49.724Z::pd.xml"
+        "repoHandle" : "TeBPWrRfRW8UBM7-gt-106144-2026-04-01T22:30:54.735Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -162,8 +162,8 @@
     },
     "path" : "/Explore/Utilities_GovOps/Catalogs"
   }, {
-    "id" : "80GKjRR6t2wenufxzW2sKB",
-    "name" : "SDasGetCatalogSharepointHST",
+    "id" : "46wm98vY6OShyRkD41KFgx",
+    "name" : "SDasGetCatalogSharepointCMX",
     "type" : "PROCESS",
     "metadata" : {
       "modelVersion" : {
@@ -171,11 +171,11 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "6zsuQgabcjk91pq-gt-3173766-2026-03-30T10:09:49.934Z::pd.xml"
+        "repoHandle" : "NLnQciSrZMSPfXB-gt-109793-2026-04-01T22:30:54.629Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=ip-10-17-247-40.ec2.internal",
+        "description" : "@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=AG_IICS_QA_CMX",
         "contentType" : "application/json; charset=utf-8",
         "documentState" : "VALID"
       }

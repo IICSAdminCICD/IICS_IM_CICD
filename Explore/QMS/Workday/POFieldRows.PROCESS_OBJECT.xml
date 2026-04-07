@@ -1,0 +1,50 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>GXShOeCFk4AdypK-gt-696135-2026-04-07T09:31:21.527Z::po.xml</types1:EntryId>
+      <types1:Name>POFieldRows</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description>@operation= AssignmentsRows, @dataType= Assignments, @application= WorkdayETQ 
+</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
+      <types1:CreationDate>2026-04-07T09:31:22Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="POFieldRows"
+                        isByCopy="true"
+                        name="POFieldRows">
+            <description>@operation= AssignmentsRows, @dataType= Assignments, @application= WorkdayETQ 
+</description>
+            <tags/>
+            <detail>
+               <field label=""
+                      name="fieldName"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+               <field label=""
+                      name="Values"
+                      nullable="true"
+                      required="false"
+                      type="objectlist">
+                  <options>
+                     <option name="referenceTo">$type:string</option>
+                  </options>
+               </field>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>7MokX86CDsQi9UQu1LqvKw</types1:GUID>
+      <types1:DisplayName>POFieldRows</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-04-07T09:46:49.492Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,262 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>OzI1dq2ME9paabd-gt-696151-2026-04-07T09:31:21.651Z::svc.xml</types1:EntryId>
+      <types1:Name>SC-SDasWorkDayTrainingSQL</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>@scType=Trainings Workday, @application= Workday/ETQ
+
+</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
+      <types1:CreationDate>2026-04-07T09:31:22Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="true"
+                            debug="false"
+                            displayName="SC-SDasWorkDayTrainingSQL"
+                            label=""
+                            name="SC-SDasWorkDayTrainingSQL"
+                            plugin="DAS"
+                            uuid="81ca4827-7d26-4c29-8eef-fabf13f2dd04">
+            <description>@scType=Trainings Workday, @application= Workday/ETQ
+
+</description>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description="The fully qualified Java class name of the JDBC driver."
+                                    label="JDBC Driver"
+                                    masked="false"
+                                    name="driver"
+                                    required="true"
+                                    testWith="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                                    type="string"/>
+               <connectionAttribute description="The JDBC connection URL to connect to the database."
+                                    label="JDBC Connection URL"
+                                    masked="false"
+                                    name="jdbcUrl"
+                                    required="true"
+                                    testWith="jdbc:sqlserver://SVU2QMSSQLD1.nac.ppg.com:1433;databaseName=ETQTMSIntegration"
+                                    type="string"/>
+               <connectionAttribute description="The user name to log in to the database."
+                                    label="User Name"
+                                    masked="false"
+                                    name="username"
+                                    required="true"
+                                    testWith="qms_etq_iics_user"
+                                    type="string"/>
+               <connectionAttribute description="The password to log in to the database."
+                                    label="Password"
+                                    masked="true"
+                                    name="password"
+                                    required="true"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description="Enter the name of the schema that contains the tables to be included or excluded in the query response."
+                                    label="Schema"
+                                    masked="false"
+                                    name="schema"
+                                    required="false"
+                                    testWith="dbo"
+                                    type="string"/>
+               <connectionAttribute description="Enter the names of the tables that need to be included in the query response. Use a comma to separate multiple table names. You can use ‘.*’ for pattern matching."
+                                    label="Include Tables"
+                                    masked="false"
+                                    name="includeTables"
+                                    required="false"
+                                    testWith="payload,payloadLog"
+                                    type="string"/>
+               <connectionAttribute description="Enter the names of tables that need to be excluded from the query response. Use a comma to separate multiple table names. You can use ‘.*’ for pattern matching. The values specified in the Exclude Tables field take precedence."
+                                    label="Exclude Tables:"
+                                    masked="false"
+                                    name="excludeTables"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description="Check input parameters to prevent an SQL injection attack."
+                                    group="Advanced"
+                                    label="Check SQL Injection:"
+                                    masked="false"
+                                    name="checkSqlInjection"
+                                    required="false"
+                                    testWith="false"
+                                    type="boolean"/>
+               <connectionAttribute description="The number of connections created when the pool is started."
+                                    group="Advanced"
+                                    label="Initial Connection Pool Size:"
+                                    masked="false"
+                                    name="initialSize"
+                                    required="false"
+                                    testWith="5"
+                                    type="number"/>
+               <connectionAttribute description="The maximum number of active connections that can be allocated from the pool simultaneously.(-1 = unlimited)"
+                                    group="Advanced"
+                                    label="Max Active Connections:"
+                                    masked="false"
+                                    name="maxActive"
+                                    required="false"
+                                    testWith="10"
+                                    type="number"/>
+               <connectionAttribute description="The minimum number of connections that can remain idle in the pool without additional connections being created.(0 disables pooling)"
+                                    group="Advanced"
+                                    label="Min Idle Connections:"
+                                    masked="false"
+                                    name="minIdle"
+                                    required="false"
+                                    testWith="1"
+                                    type="number"/>
+               <connectionAttribute description="The maximum number of connections that can remain idle in the pool without additional connections being released.(-1 = unlimited)"
+                                    group="Advanced"
+                                    label="Max Idle Connections:"
+                                    masked="false"
+                                    name="maxIdle"
+                                    required="false"
+                                    testWith="5"
+                                    type="number"/>
+               <connectionAttribute description="The maximum number of milliseconds that the pool waits for a connection if there are none available.(-1 = wait indefinitely)"
+                                    group="Advanced"
+                                    label="Max Wait (ms):"
+                                    masked="false"
+                                    name="maxWait"
+                                    required="false"
+                                    testWith=""
+                                    type="number"/>
+               <connectionAttribute description="The default state of connections created by this pool, which is one of the following:    0 - NONE;    1 - READ_UNCOMMITTED;    2 - READ_COMMITTED;    4 - REPEATABLE_READ;    8 - SERIALIZABLE"
+                                    group="Advanced"
+                                    label="Default Transaction Isolation Level:"
+                                    masked="false"
+                                    name="defaultTransactionIsolation"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description="The minimum amount of time an connection may sit idle in the pool before it is evicted."
+                                    group="Advanced"
+                                    label="Min Evictable Idle Time (ms):"
+                                    masked="false"
+                                    name="minEvictableIdleTimeMillis"
+                                    required="false"
+                                    testWith=""
+                                    type="number"/>
+               <connectionAttribute description="The number of objects to test during each eviction run."
+                                    group="Advanced"
+                                    label="Number of Objects per Eviction Run:"
+                                    masked="false"
+                                    name="numTestsPerEvictionRun"
+                                    required="false"
+                                    testWith=""
+                                    type="number"/>
+               <connectionAttribute description="Test the validity of objects before borrowing them from the pool."
+                                    group="Advanced"
+                                    label="Test on Borrow:"
+                                    masked="false"
+                                    name="testOnBorrow"
+                                    required="false"
+                                    testWith="false"
+                                    type="boolean"/>
+               <connectionAttribute description="Test the validity of borrowed objects before returning them to the pool."
+                                    group="Advanced"
+                                    label="Test on Return:"
+                                    masked="false"
+                                    name="testOnReturn"
+                                    required="false"
+                                    testWith="false"
+                                    type="boolean"/>
+               <connectionAttribute description="Test the validity of idle objects."
+                                    group="Advanced"
+                                    label="Test while Idle:"
+                                    masked="false"
+                                    name="testWhileIdle"
+                                    required="false"
+                                    testWith="false"
+                                    type="boolean"/>
+               <connectionAttribute description="A valid SQL SELECT statement query that validates connections from the pool before returning them to the caller."
+                                    group="Advanced"
+                                    label="SQL Validation Query:"
+                                    masked="false"
+                                    name="validationQuery"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+            </connectionAttributes>
+            <dasActions>
+               <action category="QMS/WorkDay" label="SelectNewLogID" name="SelectNewLogID">
+                  <description>Select the first record with status new from the database. </description>
+                  <input/>
+                  <binding>
+                     <sqlStatement columnCase="lowercase" statementId="InsertTriningRecord">
+                        <statement>SELECT TOP 1 * FROM payload WHERE payloadStatus = 'NEW' ORDER BY arrivalDate ASC;</statement>
+                     </sqlStatement>
+                  </binding>
+                  <output>
+                     <field description="Payload identification number"
+                            name="sc_outPayloadID"
+                            property="payloadid"
+                            type="string"/>
+                     <field description="Date and time of Arrival"
+                            name="sc_outArrivaldate"
+                            property="arrivaldate"
+                            type="string"/>
+                  </output>
+               </action>
+               <action category="QMS/WorkDay"
+                       label="UpdateRecordSQLPayloadLog"
+                       name="UpdateRecordSQLPayloadLog">
+                  <description>Update the record with the message response from ETQ</description>
+                  <input>
+                     <parameter description="Id to identify with record is going to be updated "
+                                label=""
+                                name="in_scPayloadID"
+                                required="false"
+                                testWith="127"
+                                type="string"/>
+                     <parameter description="Current status to update the record in the database"
+                                label=""
+                                name="in_scPayloadStatus"
+                                required="false"
+                                testWith="Proccesing"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <sqlStatement columnCase="lowercase" statementId="SQL Name 1">
+                        <statement>UPDATE dbo.payload SET payloadStatus = '{$in_scPayloadStatus}' where payloadID = {$in_scPayloadID }</statement>
+                     </sqlStatement>
+                  </binding>
+                  <output>
+                     <field description="Number of rows updated"
+                            name="out_RowsUpdated"
+                            property="updatedRows"
+                            type="string"/>
+                  </output>
+               </action>
+               <action category="QMS/WorkDay"
+                       label="SelectLogIdWithError"
+                       name="SelectLogIdWithError">
+                  <description>Select the record with errors</description>
+                  <input/>
+                  <binding>
+                     <sqlStatement columnCase="lowercase" statementId="SelectLogWithError">
+                        <statement> SELECT TOP 1 * FROM payload WHERE payloadStatus = 'Error' ORDER BY arrivalDate ASC;</statement>
+                     </sqlStatement>
+                  </binding>
+                  <output>
+                     <field description="Payload identification number"
+                            name="sc_outPayloadID"
+                            property="payloadid"
+                            type="string"/>
+                  </output>
+               </action>
+            </dasActions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>0XtYFQe9Q9Dbb7Pojq7qKO</types1:GUID>
+      <types1:DisplayName>SC-SDasWorkDayTrainingSQL</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-04-07T09:46:49.441Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

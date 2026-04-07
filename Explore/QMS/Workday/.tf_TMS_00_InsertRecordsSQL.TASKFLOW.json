@@ -1,0 +1,67 @@
+{
+  "objectInfo" : {
+    "id" : "hYFVALtX8OQlgv2vnSFX40",
+    "name" : "tf_TMS_00_InsertRecordsSQL",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "dp53nQciSrZMSPf-gt-3710160-2026-04-07T09:31:25.049Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation=Insert data into buffer, @dataType=Workday Courses, @source= WorkDay, @target= SQL Server, @tfLocalPath= Explore/QMS/Workday, @additionalText=Process to insert data into SQL server buffer",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-07T09:46:50.688Z",
+  "objectRefs" : [ {
+    "id" : "7nuqLCLn4z6hL2MZmzpCWi",
+    "name" : "tf_UtiGenerateTicketGovOps",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "DqZF3a-gt-3478487-2026-04-07T09:31:22.482Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@source=Error detail, @operation=Generate ticket GovOps, @dataType=Error details, @target=Generate ticket GovOps, @additionalText=Generate ticket GovOps from error details, @tfLocalPath=\\Explore\\Utilities_GovOps\\InfraTickets",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/InfraTickets"
+  }, {
+    "id" : "0OzFGQIyJCZiIL22KtXvMv",
+    "name" : "SDasWorkDayTrainingSQL",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Jg7Gaaa-gt-694181-2026-04-07T09:31:23.575Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation= Insert/Update LogTraining, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText= Insert and Update training records into table, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

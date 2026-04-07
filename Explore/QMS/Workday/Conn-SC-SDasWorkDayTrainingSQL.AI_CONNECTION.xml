@@ -1,0 +1,69 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>17PYWiaaa-gt-694150-2026-04-07T09:31:22.842Z::conn.xml</types1:EntryId>
+      <types1:Name>Conn-SC-SDasWorkDayTrainingSQL</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC_SDasWordDayTrainingSQL</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:SDCAMDMSA01</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
+      <types1:CreationDate>2026-04-07T09:31:23Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="Conn-SC-SDasWorkDayTrainingSQL"
+                     label="Conn-SC-SDasWorkDayTrainingSQL"
+                     name="Conn-SC-SDasWorkDayTrainingSQL">
+            <description>@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC_SDasWordDayTrainingSQL</description>
+            <tags>.agent:SDCAMDMSA01</tags>
+            <agent>SDCAMDMSA01</agent>
+            <attributes>
+               <attribute encrypted="false"
+                          name="driver"
+                          value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+               <attribute encrypted="false"
+                          name="jdbcUrl"
+                          value="jdbc:sqlserver://SVU2QMSSQLD1.nac.ppg.com:1433;databaseName=ETQTMSIntegration"/>
+               <attribute encrypted="false" name="username" value="qms_etq_iics_user"/>
+               <attribute encrypted="true" name="password" value=""/>
+               <attribute encrypted="false" name="schema" value="dbo"/>
+               <attribute encrypted="false" name="includeTables" value="payload,payloadLog"/>
+               <attribute encrypted="false" name="excludeTables" value=""/>
+               <attribute encrypted="false" name="checkSqlInjection" value=""/>
+               <attribute encrypted="false" name="initialSize" value=""/>
+               <attribute encrypted="false" name="maxActive" value=""/>
+               <attribute encrypted="false" name="minIdle" value=""/>
+               <attribute encrypted="false" name="maxIdle" value=""/>
+               <attribute encrypted="false" name="maxWait" value=""/>
+               <attribute encrypted="false" name="defaultTransactionIsolation" value=""/>
+               <attribute encrypted="false" name="minEvictableIdleTimeMillis" value=""/>
+               <attribute encrypted="false" name="numTestsPerEvictionRun" value=""/>
+               <attribute encrypted="false" name="testOnBorrow" value=""/>
+               <attribute encrypted="false" name="testOnReturn" value=""/>
+               <attribute encrypted="false" name="testWhileIdle" value=""/>
+               <attribute encrypted="false" name="validationQuery" value=""/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="true"
+                               connectorPath="project:/rt.connector/SC_SDasWorkDayTrainingSQL/SC_SDasWorkDayTrainingSQL_svcDef.xml"
+                               guid="0XtYFQe9Q9Dbb7Pojq7qKO"
+                               name="SC-SDasWorkDayTrainingSQL"
+                               plugin="DAS"
+                               supportsConnectionTest="true"
+                               uuid="81ca4827-7d26-4c29-8eef-fabf13f2dd04">
+               <description>@scType=Trainings Workday, @application= Workday/ETQ
+
+</description>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>5gFK6hTji1xkCoZEmSZlki</types1:GUID>
+      <types1:DisplayName>Conn-SC-SDasWorkDayTrainingSQL</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-04-07T09:46:49.725Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

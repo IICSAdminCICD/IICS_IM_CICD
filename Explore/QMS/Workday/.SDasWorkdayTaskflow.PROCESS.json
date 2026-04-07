@@ -1,0 +1,67 @@
+{
+  "objectInfo" : {
+    "id" : "0xFqlxWjxAfg2aTRn81PKa",
+    "name" : "SDasWorkdayTaskflow",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Wq9bdsreK8ZAZf5-gt-694203-2026-04-07T09:31:23.776Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation= Recursion taskflow, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText=Recursion taskflow, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-07T09:46:50.675Z",
+  "objectRefs" : [ {
+    "id" : "hEO3KNjVZgNhbuUVIWmD48",
+    "name" : "Conn-SC-ETQTaskflow",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "3m7iUQbgdwUiQLn-gt-694160-2026-04-07T09:31:22.884Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC-ETQTaskflow",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  }, {
+    "id" : "jJjU3D0eEm0lMjUXe6yJ4w",
+    "name" : "Conn-File-LogGovOps",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "FHyabdvhxiQLnzY-gt-688022-2026-04-07T09:31:21.505Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType=File, @application=OnTap, @additionalText=This app connection writes log files and monitors a directory in OnTap",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/InfraTickets"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
