@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "hEO3KNjVZgNhbuUVIWmD48",
+    "name" : "Conn-SC-ETQTaskflow",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "3m7iUQbgdwUiQLn-gt-694160-2026-04-07T09:31:22.884Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC-ETQTaskflow",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-07T11:18:14.342Z",
+  "objectRefs" : [ {
+    "id" : "73fKAM1PHEAd8IBOkpggSa",
+    "name" : "SC-ETQTaskflow",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "jk3zx6i4tciSrZM-gt-696127-2026-04-07T09:31:21.47Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@scType=Trainings Workday, @application= Workday/ETQ",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

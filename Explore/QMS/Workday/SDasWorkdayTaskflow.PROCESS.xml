@@ -1,0 +1,276 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Wq9bdsreK8ZAZf5-gt-694203-2026-04-07T09:31:23.776Z::pd.xml</types1:EntryId>
+      <types1:Name>SDasWorkdayTaskflow</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description>@operation= Recursion taskflow, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText=Recursion taskflow, @prcRunOn = SDCAMDMSA01,
+@prcAllowedGroups= ServiceConsumer</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:SDCAMDMSA01</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
+      <types1:CreationDate>2026-04-07T09:31:24Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  GUID="0xFqlxWjxAfg2aTRn81PKa"
+                  displayName="SDasWorkdayTaskflow"
+                  name="SDasWorkdayTaskflow"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description>@operation= Recursion taskflow, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText=Recursion taskflow, @prcRunOn = SDCAMDMSA01,
+@prcAllowedGroups= ServiceConsumer</description>
+            <tags>.agent:SDCAMDMSA01</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="vTempCountRetries" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempMaxRetries" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempDetailError" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempMessageWD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempMessageIICS" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempErrorFileName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempMessage" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempWait5Seg" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>SDCAMDMSA01</targetLocation>
+               <rest>
+                  <allowedGroups>
+                     <group>ServiceConsumer</group>
+                  </allowedGroups>
+               </rest>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">true</nvpair>
+            </extData>
+            <flow id="a">
+               <start id="b">
+                  <link id="mgv03qru" targetId="mgv03qrt"/>
+               </start>
+               <milestone id="mgv03qrt">
+                  <title>Terminatetf_TMS_01_SendAssignmentsETQ</title>
+                  <link id="mgvc1mz8" targetId="mgvc1mz7"/>
+               </milestone>
+               <assignment id="mgvc1mz7">
+                  <title>AssignInitialValues</title>
+                  <operation source="formula" to="temp.vTempCountRetries">
+                     <expression language="XQuery">0</expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempMaxRetries">
+                     <expression language="XQuery">3</expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempWait5Seg">
+                     <expression language="XQuery">5</expression>
+                  </operation>
+                  <link id="mgvc1mz9" targetId="mgva32rh"/>
+               </assignment>
+               <wait id="mgva32rh">
+                  <title>Wait5Seg</title>
+                  <duration source="formula">
+                     <function name="duration_expression">
+                        <arg name="value">5</arg>
+                        <arg name="scale">S</arg>
+                        <arg name="businessDays"/>
+                     </function>
+                  </duration>
+                  <link id="mgva32rj" targetId="mgva32rm"/>
+               </wait>
+               <eventContainer id="mgva32rm">
+                  <service id="mgqlxbik">
+                     <title>SvcRunTaskflow</title>
+                     <serviceName>Conn-SC-ETQTaskflow:GetTaskflow</serviceName>
+                     <serviceGUID>hEO3KNjVZgNhbuUVIWmD48</serviceGUID>
+                     <serviceInput/>
+                  </service>
+                  <flow id="mgva32ro">
+                     <end id="mgvc1n2w">
+                        <title>EndSDasWorkdayTaskflow</title>
+                     </end>
+                  </flow>
+                  <flow id="mgva32rr">
+                     <container id="mgvc1n35" type="exclusive">
+                        <title>Validate Reason</title>
+                        <flow id="mgvc1n38">
+                           <end id="mgvc1n3n">
+                              <title>EndSDasWorkdayTaskflowRunning</title>
+                           </end>
+                        </flow>
+                        <flow id="mgvc1n3b">
+                           <assignment id="mgvhoqzq">
+                              <title>AssignIncrementCountRetrys</title>
+                              <operation source="formula" to="temp.vTempCountRetries">
+                                 <expression language="XQuery">$temp.vTempCountRetries +1</expression>
+                              </operation>
+                              <link id="mgvhor0e" targetId="mgvhor04"/>
+                           </assignment>
+                           <container id="mgvhor04" type="exclusive">
+                              <title>Validate Retries</title>
+                              <flow id="mgvhor05">
+                                 <wait id="mgvhor06">
+                                    <title>WaitRetriesRunTask</title>
+                                    <duration source="formula">
+                                       <function name="duration_expression">
+                                          <arg name="value">{$temp.vTempWait5Seg}</arg>
+                                          <arg name="scale">S</arg>
+                                          <arg name="businessDays"/>
+                                       </function>
+                                    </duration>
+                                    <link id="mgvhor0c" targetId="mgvhor07"/>
+                                 </wait>
+                                 <jumpTo id="mgvhor07">
+                                    <link id="mgvhor0d" targetId="mgva32rm"/>
+                                 </jumpTo>
+                              </flow>
+                              <flow id="mgvhor08">
+                                 <assignment id="mgvhor35">
+                                    <title>AssignErrorMessage</title>
+                                    <operation source="formula" to="temp.vTempMessageWD">
+                                       <expression language="XQuery">fn:concat(
+'Project: WorkDay, Process: SDasWorkdayTaskflow, Error General: unexpected error executing, CodeError:', $output.faulSvcRunTaskflow[1]/code , ', Detail Error: ',$output.faulSvcRunTaskflow[1]/detail  ,
+', Reason: ', $output.faulSvcRunTaskflow[1]/reason )</expression>
+                                    </operation>
+                                    <operation source="formula" to="temp.vTempMessageIICS">
+                                       <expression language="XQuery">fn:concat(
+'Project: WorkDay, Process: SDasWorkdayTaskflow, Error General: unexpected error executing, CodeError:', $output.faulSvcRunTaskflow[1]/code , ', Detail Error: ',$output.faulSvcRunTaskflow[1]/detail  ,
+', Reason: ', $output.faulSvcRunTaskflow[1]/reason )</expression>
+                                    </operation>
+                                    <operation source="formula" to="temp.vTempMessage">
+                                       <expression language="XQuery">fn:concat($temp.vTempMessageWD,' PipeMessage ',$temp.vTempMessageIICS)</expression>
+                                    </operation>
+                                    <operation source="formula" to="temp.vTempErrorFileName">
+                                       <expression language="XQuery">fn:concat('Log_WorkDay-Ticket_', fn:translate(fn:substring(fn:string(fn:current-dateTime()), 0, 24), '-T:.', ''), '.txt')</expression>
+                                    </operation>
+                                    <link id="mgvhor36" targetId="mgvhor0p"/>
+                                 </assignment>
+                                 <eventContainer id="mgvhor0p">
+                                    <service id="mgvhor0k">
+                                       <title>SvcFileWriter</title>
+                                       <serviceName>Conn-File-LogGovOps:FileWriter</serviceName>
+                                       <serviceGUID>jJjU3D0eEm0lMjUXe6yJ4w</serviceGUID>
+                                       <serviceInput>
+                                          <parameter name="fileWriteTask" source="formula">
+                                             <expression language="XQuery">&lt;FileWriteTask&gt;
+   &lt;fileName&gt;{$temp.vTempErrorFileName }&lt;/fileName&gt;
+   &lt;content&gt;{$temp.vTempMessage}&lt;/content&gt;
+&lt;/FileWriteTask&gt;</expression>
+                                          </parameter>
+                                       </serviceInput>
+                                    </service>
+                                    <flow id="mgvhor0r">
+                                       <end id="mgvhor2y">
+                                          <title>EndSvcFileWriter</title>
+                                       </end>
+                                    </flow>
+                                    <flow id="mgvhor0u">
+                                       <throw id="mgvhor2a">
+                                          <title>ThrowSvcFileWriter</title>
+                                          <throwInput>
+                                             <parameter name="code" source="formula" updatable="true">
+                                                <expression language="XQuery">$output.faulSvcRunTaskflow[1]/code </expression>
+                                             </parameter>
+                                             <parameter name="detail" source="formula" updatable="true">
+                                                <expression language="XQuery">$output.faulSvcRunTaskflow[1]/detail </expression>
+                                             </parameter>
+                                             <parameter name="reason" source="formula" updatable="true">
+                                                <expression language="XQuery">$output.faulSvcRunTaskflow[1]/reason </expression>
+                                             </parameter>
+                                          </throwInput>
+                                       </throw>
+                                    </flow>
+                                    <link id="mgvhor0q" targetId="mgvhor0r" type="containerLink"/>
+                                    <events>
+                                       <catch faultField="faultSvcFileWriter" id="mgvhor0n" interrupting="true">
+                                          <link id="mgvhor0t" targetId="mgvhor0u" type="containerLink"/>
+                                       </catch>
+                                    </events>
+                                 </eventContainer>
+                              </flow>
+                              <link id="mgvhor0a" targetId="mgvhor05" type="containerLink">
+                                 <condition source="formula">
+                                    <function name="less-or-equals">
+                                       <arg name="left">{$temp.vTempCountRetries}</arg>
+                                       <arg name="right">{$temp.vTempMaxRetries }</arg>
+                                    </function>
+                                 </condition>
+                              </link>
+                              <link id="mgvhor0b" targetId="mgvhor08" type="containerLink"/>
+                           </container>
+                        </flow>
+                        <link id="mgvc1n37" targetId="mgvc1n38" type="containerLink">
+                           <condition source="formula">
+                              <function name="string-equals">
+                                 <arg name="left">{$output.faulSvcRunTaskflow[1]/reason}</arg>
+                                 <arg name="right">Taskflow already running</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="mgvc1n3a" targetId="mgvc1n3b" type="containerLink"/>
+                     </container>
+                  </flow>
+                  <link id="mgva32rn" targetId="mgva32ro" type="containerLink"/>
+                  <events>
+                     <catch faultField="faulSvcRunTaskflow" id="mgva32rl" interrupting="true">
+                        <link id="mgva32rq" targetId="mgva32rr" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>fe5893ba-c776-4631-83fc-c571e0b9066d</ns1:Id>
+               <ns1:Name>test</ns1:Name>
+               <ns1:CreatedBy>gchico@ppg.com</ns1:CreatedBy>
+               <ns1:CreationDate>2026-04-07T09:31:24Z</ns1:CreationDate>
+               <ns1:ModifiedBy>gchico@ppg.com</ns1:ModifiedBy>
+               <ns1:ModificationDate>2026-04-07T09:31:24Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>0xFqlxWjxAfg2aTRn81PKa</types1:GUID>
+      <types1:DisplayName>SDasWorkdayTaskflow</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-04-07T11:18:13.638Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

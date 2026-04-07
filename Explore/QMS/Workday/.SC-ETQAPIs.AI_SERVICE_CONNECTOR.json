@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "7lGx5h9nlNpgYLboHqGoEe",
+    "name" : "SC-ETQAPIs",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "JInf3eIsoZduD2L-gt-696143-2026-04-07T09:31:21.579Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@scType=ETQ APIs to create validate and update, @application=ETQ System, @additionalText=Group of APIs from ETQ ",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-07T11:18:14.348Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

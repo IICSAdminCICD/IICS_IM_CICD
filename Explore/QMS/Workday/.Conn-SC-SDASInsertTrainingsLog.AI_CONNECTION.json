@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "1W490Gwy8yAd2lZyX6ucy1",
+    "name" : "Conn-SC-SDASInsertTrainingsLog",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "WZvWMOxBchzt1Y6-gt-694140-2026-04-07T09:31:22.786Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType= Trainings Workday, @application= Workday/ETQ, @appSCName= SC_SDASInsertTrainingsLog",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-07T11:18:14.342Z",
+  "objectRefs" : [ {
+    "id" : "dXtWZmfkpEDja44f6zYzCi",
+    "name" : "SC-SDASInsertTrainingsLog",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "R3DnHrWLU6S6fPA-gt-696159-2026-04-07T09:31:21.706Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@scType= Workday Trainings, @application= Workday / ETQ\n\n",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

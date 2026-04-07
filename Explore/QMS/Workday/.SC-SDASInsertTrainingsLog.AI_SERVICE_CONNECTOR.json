@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "dXtWZmfkpEDja44f6zYzCi",
+    "name" : "SC-SDASInsertTrainingsLog",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "R3DnHrWLU6S6fPA-gt-696159-2026-04-07T09:31:21.706Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@scType= Workday Trainings, @application= Workday / ETQ\n\n",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-07T11:18:14.344Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

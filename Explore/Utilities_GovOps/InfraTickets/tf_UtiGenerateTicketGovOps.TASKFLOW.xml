@@ -1,0 +1,308 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>DqZF3a-gt-3478487-2026-04-07T09:31:22.482Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_UtiGenerateTicketGovOps</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description>@source=Error detail, @operation=Generate ticket GovOps, @dataType=Error details, @target=Generate ticket GovOps, @additionalText=Generate ticket GovOps from error details, @tfLocalPath=\Explore\Utilities_GovOps\InfraTickets</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
+      <types1:CreationDate>2026-04-07T09:31:22Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_UtiGenerateTicketGovOps"
+                   name="tf_UtiGenerateTicketGovOps"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description>@source=Error detail, @operation=Generate ticket GovOps, @dataType=Error details, @target=Generate ticket GovOps, @additionalText=Generate ticket GovOps from error details, @tfLocalPath=\Explore\Utilities_GovOps\InfraTickets</description>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="in_ECode" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="in_EDetail" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="in_EReason" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="in_EProcess" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="in_EProjectName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="in_EAssetName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="in_ELogName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="in_EGeneralWaitSecsToRetries" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="in_EMaxErrorNumber" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="vTempGeneralWaitSecsToRetries" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempMaxErrorNumber" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempErrorCount" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempPathIsl" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempScriptName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="ct_TicketErrorGovOps" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:INFA-commandTask</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">false</nvpair>
+            </extData>
+            <flow id="a">
+               <start id="b">
+                  <link id="lc87j6pt" targetId="lc87j6k1"/>
+               </start>
+               <assignment id="lc87j6k1">
+                  <title>AssignTicketInitValues</title>
+                  <operation source="constant" to="temp.vTempErrorCount">0</operation>
+                  <operation source="formula" to="temp.vTempGeneralWaitSecsToRetries">
+                     <expression language="XQuery">$input.in_EGeneralWaitSecsToRetries </expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempMaxErrorNumber">
+                     <expression language="XQuery">$input.in_EMaxErrorNumber </expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempPathIsl">
+                     <expression language="XQuery">'//nac.ppg.com/dfs/wu1/nas/it/IICS/Dev/Admin/cmd/GovOps/InfraTickets/'</expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempScriptName">
+                     <expression language="XQuery">'script_error_ticket_UtiGenerateTicketGovOps.cmd'</expression>
+                  </operation>
+                  <link id="m3hs2wvd" targetId="m3hs2wxj"/>
+               </assignment>
+               <eventContainer id="m3hs2wxj">
+                  <service id="m3hs2wvc">
+                     <title>ct_TicketErrorGovOps</title>
+                     <serviceName>ICSExecuteCommandTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Task Name" source="constant">ct_TicketErrorGovOps</parameter>
+                        <parameter name="Wait for Task to Complete" source="constant">true</parameter>
+                        <parameter name="Runtime Environment" source="constant">011EE925000000000002:SZU1IICSSA01</parameter>
+                        <parameter name="Max Wait" source="constant">86400</parameter>
+                        <parameter name="Script Name" source="constant"/>
+                        <parameter name="Input Arguments" source="constant"/>
+                        <parameter name="Work Directory" source="constant"/>
+                        <parameter name="RuntimeEnvGUID" source="constant">2SwhqkOxXnzdvof9oxXaU6</parameter>
+                        <parameter name="FailTaskIfAnyScriptFails" source="constant">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="INFA-commandTask">temp.ct_TicketErrorGovOps</operation>
+                           <operation source="constant" to="INFA-commandTask/input[1]/script-1/name">Script1</operation>
+                           <operation source="formula" to="INFA-commandTask/input[1]/script-1/scriptName">
+                              <expression language="XQuery">fn:concat($temp.vTempPathIsl, $temp.vTempScriptName )</expression>
+                           </operation>
+                           <operation source="formula" to="INFA-commandTask/input[1]/script-1/inputArguments">
+                              <expression language="XQuery">fn:concat('"',
+fn:normalize-space(fn:replace(
+fn:replace(fn:replace(fn:replace($input.in_EProjectName  ,'[&lt;&gt;]',""),'(\r?\n|\r)',""),"""","'")
+,'\\','/')) ,'"',',','"',
+fn:normalize-space(fn:replace(fn:replace(fn:replace(fn:replace($input.in_EAssetName ,'[&lt;&gt;]',""),'(\r?\n|\r)',""),"""","'")
+,'\\','/')) ,'"',',','"',
+fn:normalize-space(fn:replace(fn:replace(fn:replace(fn:replace($input.in_EProcess ,'[&lt;&gt;]',""),'(\r?\n|\r)',""),"""","'")
+,'\\','/')) ,'"',',','"',
+fn:normalize-space(fn:replace(fn:replace(fn:replace(fn:replace($input.in_ECode ,'[&lt;&gt;]',""),'(\r?\n|\r)',""),"""","'")
+,'\\','/')) ,'"',',','"',
+fn:normalize-space(fn:replace(fn:replace(fn:replace(fn:replace($input.in_EDetail ,'[&lt;&gt;]',""),'(\r?\n|\r)',""),"""","'")
+,'\\','/')),'"',',','"',
+fn:normalize-space(fn:replace(fn:replace(fn:replace(fn:replace($input.in_EReason ,'[&lt;&gt;]',""),'(\r?\n|\r)',""),"""","'")
+,'\\','/')),'"',',','"',
+fn:normalize-space(fn:replace(fn:replace(fn:replace(fn:replace($input.in_ELogName ,'[&lt;&gt;]',""),'(\r?\n|\r)',""),"""","'")
+,'\\','/')) ,'"')</expression>
+                           </operation>
+                           <operation source="constant" to="INFA-commandTask/input[1]/script-1/workDir"/>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.ct_TicketErrorGovOps/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.ct_TicketErrorGovOps/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.ct_TicketErrorGovOps/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.ct_TicketErrorGovOps/output/Exit_Code">Exit Code</operation>
+                        <operation source="field" to="temp.ct_TicketErrorGovOps/output/Execution_Status">Execution Status</operation>
+                        <operation source="field" to="temp.ct_TicketErrorGovOps/output/Std_Error">Std Error</operation>
+                     </serviceOutput>
+                  </service>
+                  <flow id="m3hs2x17">
+                     <link id="m3hs2x18" targetId="m3hs2wxj" type="containerLink"/>
+                  </flow>
+                  <flow id="m3hs2x1a">
+                     <container id="m3hs2x1g" type="exclusive">
+                        <title>IsilonError?</title>
+                        <flow id="m3hs2x1h">
+                           <wait id="m3hs2x1i">
+                              <title>WaitTicketGeneration</title>
+                              <duration source="formula">
+                                 <function name="duration_expression">
+                                    <arg name="value">{$temp.vTempGeneralWaitSecsToRetries} {$input.in_EGeneralWaitSecsToRetries} 1</arg>
+                                    <arg name="scale">S</arg>
+                                    <arg name="businessDays"/>
+                                 </function>
+                              </duration>
+                              <link id="m3hs2x1s" targetId="m3hs2x1j"/>
+                           </wait>
+                           <assignment id="m3hs2x1j">
+                              <title>AssignErrorCountTicketGeneration</title>
+                              <operation source="formula" to="temp.vTempErrorCount">
+                                 <expression language="XQuery">$temp.vTempErrorCount + 1</expression>
+                              </operation>
+                              <link id="m3hs2x1t" targetId="m3hs2x1k"/>
+                           </assignment>
+                           <container id="m3hs2x1k" type="exclusive">
+                              <title>ErrorEvalTicketGeneration?</title>
+                              <flow id="m3hs2x1l">
+                                 <jumpTo id="m3hs2x1m">
+                                    <link id="m3hs2x1w" targetId="m3hs2wxj"/>
+                                 </jumpTo>
+                              </flow>
+                              <flow id="m3hs2x1n">
+                                 <end id="m3hs2x1o">
+                                    <title>EndUtiGenerateTicketGovOps</title>
+                                    <httpStatus>500</httpStatus>
+                                 </end>
+                              </flow>
+                              <link id="m3hs2x1u" targetId="m3hs2x1l" type="containerLink">
+                                 <condition source="formula">
+                                    <function name="less-or-equals">
+                                       <arg name="left">{$temp.vTempErrorCount}</arg>
+                                       <arg name="right">{$temp.vTempMaxErrorNumber }</arg>
+                                    </function>
+                                 </condition>
+                              </link>
+                              <link id="m3hs2x1v" targetId="m3hs2x1n" type="containerLink"/>
+                           </container>
+                        </flow>
+                        <flow id="m3hs2x1p">
+                           <throw id="m3hs2x2n">
+                              <title>ThrowTicketErrorGovOps</title>
+                              <throwInput>
+                                 <parameter name="code" source="formula" updatable="true">
+                                    <expression language="XQuery">$temp.ct_TicketErrorGovOps[1]/fault[1]/code </expression>
+                                 </parameter>
+                                 <parameter name="detail" source="formula" updatable="true">
+                                    <expression language="XQuery">$temp.ct_TicketErrorGovOps[1]/fault[1]/detail </expression>
+                                 </parameter>
+                                 <parameter name="reason" source="formula" updatable="true">
+                                    <expression language="XQuery">$temp.ct_TicketErrorGovOps[1]/fault[1]/reason </expression>
+                                 </parameter>
+                              </throwInput>
+                           </throw>
+                        </flow>
+                        <link id="m3hs2x1q" targetId="m3hs2x1h" type="containerLink">
+                           <condition source="formula">
+                              <function name="contains">
+                                 <arg name="left" source="formula">{$temp.ct_TicketErrorGovOps[1]/fault[1]/detail }</arg>
+                                 <arg name="right">Isilon</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="m3hs2x1r" targetId="m3hs2x1p" type="containerLink"/>
+                     </container>
+                  </flow>
+                  <link id="m3hs2x16" targetId="m3hs2x17" type="containerLink"/>
+                  <link id="m3hs2x4d" targetId="lc89jc69"/>
+                  <events>
+                     <catch faultField="temp.ct_TicketErrorGovOps/fault"
+                            id="m3hs2wxi"
+                            interrupting="true"
+                            name="error">
+                        <link id="m3hs2x19" targetId="m3hs2x1a" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <end id="lc89jc69">
+                  <title>EndUtiGenerateTicketGovOps</title>
+               </end>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="INFA-commandTask"
+                              isByCopy="true"
+                              name="INFA-commandTask">
+                  <description>This process object represents a taskflow specific command task output field details.</description>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>7nuqLCLn4z6hL2MZmzpCWi</types1:GUID>
+      <types1:DisplayName>tf_UtiGenerateTicketGovOps</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-04-07T11:18:13.122Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

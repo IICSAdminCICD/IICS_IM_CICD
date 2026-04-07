@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "7MokX86CDsQi9UQu1LqvKw",
+    "name" : "POFieldRows",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "GXShOeCFk4AdypK-gt-696135-2026-04-07T09:31:21.527Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation= AssignmentsRows, @dataType= Assignments, @application= WorkdayETQ \n",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-07T11:18:14.341Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

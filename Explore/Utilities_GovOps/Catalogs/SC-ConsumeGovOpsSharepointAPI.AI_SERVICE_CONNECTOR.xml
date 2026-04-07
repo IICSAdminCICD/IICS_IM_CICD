@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>7WHK80FIRi92qBb-gt-3197602-2026-03-30T10:09:49.936Z::svc.xml</types1:EntryId>
+      <types1:EntryId>Rlt0i98C1LOwD0w-gt-109803-2026-04-01T22:30:54.701Z::svc.xml</types1:EntryId>
       <types1:Name>SC-ConsumeGovOpsSharepointAPI</types1:Name>
       <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
       <types1:Description/>
@@ -11,9 +11,8 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-03-30T10:09:50Z</types1:CreationDate>
-      <types1:ModifiedBy>gchico@ppg.com</types1:ModifiedBy>
-      <types1:ModificationDate>2026-04-01T22:20:52Z</types1:ModificationDate>
+      <types1:CreationDate>2026-04-01T22:30:55Z</types1:CreationDate>
+      <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
          <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
@@ -60,8 +59,8 @@
             <objects/>
          </businessConnector>
       </types1:Entry>
-      <types1:GUID>7tpvN0TUlh7hpneGuwpcyg</types1:GUID>
+      <types1:GUID>7AwA9h0EJATk5SLuSkwL0y</types1:GUID>
       <types1:DisplayName>SC-ConsumeGovOpsSharepointAPI</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-01T22:25:14.513Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-07T11:18:13.3Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

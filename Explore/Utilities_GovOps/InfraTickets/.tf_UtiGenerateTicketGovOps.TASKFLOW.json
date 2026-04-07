@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "7nuqLCLn4z6hL2MZmzpCWi",
+    "name" : "tf_UtiGenerateTicketGovOps",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "DqZF3a-gt-3478487-2026-04-07T09:31:22.482Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@source=Error detail, @operation=Generate ticket GovOps, @dataType=Error details, @target=Generate ticket GovOps, @additionalText=Generate ticket GovOps from error details, @tfLocalPath=\\Explore\\Utilities_GovOps\\InfraTickets",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-07T11:18:14.336Z",
+  "objectRefs" : [ {
+    "id" : "2SwhqkOxXnzdvof9oxXaU6",
+    "name" : "SZU1IICSSA01",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "011EE925000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

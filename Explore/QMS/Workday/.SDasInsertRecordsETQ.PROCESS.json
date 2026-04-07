@@ -1,0 +1,87 @@
+{
+  "objectInfo" : {
+    "id" : "7VdnXiwiX4xjikhmJubxoO",
+    "name" : "SDasInsertRecordsETQ",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "GomUhGdwOLIFvuk-gt-694215-2026-04-07T09:31:24.531Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation=Send Assignments from Workday to ETQ, @dataType=Workday Trainings, @source=WorkDay, @target=ETQ, @apiName=SIntSendAssignmentsETQREST, @additionalText=API used to send assignment courses to ETQ, @prcRunOn=SDCAMDMSA01, @prcAllowedGroups=ServiceConsumer",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-07T11:18:14.352Z",
+  "objectRefs" : [ {
+    "id" : "jJjU3D0eEm0lMjUXe6yJ4w",
+    "name" : "Conn-File-LogGovOps",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "FHyabdvhxiQLnzY-gt-688022-2026-04-07T09:31:21.505Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType=File, @application=OnTap, @additionalText=This app connection writes log files and monitors a directory in OnTap",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/InfraTickets"
+  }, {
+    "id" : "5tJuZN1e2mDkCGMViEmbcL",
+    "name" : "PODocumentParts",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "QoPVm5Y6tMFygls-gt-694193-2026-04-07T09:31:23.687Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation= Parse Json into Segments, @dataType=Workday Trainings, @application= Workday - ETQ",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  }, {
+    "id" : "5SnD1xFsci2eoHNtuZMF0n",
+    "name" : "Conn-SC-ETQAPIs",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "TDbf13ErhNzUzeA-gt-694130-2026-04-07T09:31:22.731Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType=ETQ System, @application= ETQ TMS, @additionalText= AppConnection to Select Update and create trainings in ETQ, @appSCName= SC-ETQAPIs",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

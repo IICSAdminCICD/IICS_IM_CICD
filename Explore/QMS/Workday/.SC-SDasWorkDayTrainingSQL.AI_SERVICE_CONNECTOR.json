@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "0XtYFQe9Q9Dbb7Pojq7qKO",
+    "name" : "SC-SDasWorkDayTrainingSQL",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "OzI1dq2ME9paabd-gt-696151-2026-04-07T09:31:21.651Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@scType=Trainings Workday, @application= Workday/ETQ\n\n",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-07T11:18:14.351Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

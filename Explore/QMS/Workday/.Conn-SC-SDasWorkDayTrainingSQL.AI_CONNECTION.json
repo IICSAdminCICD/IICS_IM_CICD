@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "5gFK6hTji1xkCoZEmSZlki",
+    "name" : "Conn-SC-SDasWorkDayTrainingSQL",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "17PYWiaaa-gt-694150-2026-04-07T09:31:22.842Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC_SDasWordDayTrainingSQL",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-07T11:18:14.332Z",
+  "objectRefs" : [ {
+    "id" : "0XtYFQe9Q9Dbb7Pojq7qKO",
+    "name" : "SC-SDasWorkDayTrainingSQL",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "OzI1dq2ME9paabd-gt-696151-2026-04-07T09:31:21.651Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@scType=Trainings Workday, @application= Workday/ETQ\n\n",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "jJjU3D0eEm0lMjUXe6yJ4w",
+    "name" : "Conn-File-LogGovOps",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "FHyabdvhxiQLnzY-gt-688022-2026-04-07T09:31:21.505Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType=File, @application=OnTap, @additionalText=This app connection writes log files and monitors a directory in OnTap",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-04-07T11:18:14.350Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
