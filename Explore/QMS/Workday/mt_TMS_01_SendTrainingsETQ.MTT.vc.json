@@ -45,9 +45,9 @@
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
       },
-      "restmodernSource" : true,
       "unspecified" : false,
-      "fileList" : false
+      "fileList" : false,
+      "restmodernSource" : true
     },
     {
       "name" : "$TGT_ETQ_TMS$",
@@ -98,9 +98,9 @@
         "objectRuntimeParameter" : false
       },
       "dbSchema" : "dbo",
-      "restmodernSource" : true,
       "unspecified" : false,
-      "fileList" : false
+      "fileList" : false,
+      "restmodernSource" : true
     }
   ],
   "verbose" : false,
@@ -170,5 +170,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2026-04-09 06:02:09 PDT"
+  "vcsExportTime" : "2026-04-09 06:13:12 PDT"
 }
