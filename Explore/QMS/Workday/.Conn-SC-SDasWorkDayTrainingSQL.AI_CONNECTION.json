@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "5gFK6hTji1xkCoZEmSZlki",
+    "id" : "8zG9bLGQEWtbWc66Ty7OOC",
     "name" : "Conn-SC-SDasWorkDayTrainingSQL",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "17PYWiaaa-gt-694150-2026-04-07T09:31:22.842Z::conn.xml"
+        "repoHandle" : "Af6S3wOLIFvukNX-gt-694042-2026-04-07T11:41:48.425Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,9 +20,9 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-07T11:18:14.332Z",
+  "updateTime" : "2026-04-09T13:13:13.388Z",
   "objectRefs" : [ {
-    "id" : "0XtYFQe9Q9Dbb7Pojq7qKO",
+    "id" : "89FxQr7aFbvlYdqMetMUK3",
     "name" : "SC-SDasWorkDayTrainingSQL",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -31,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "OzI1dq2ME9paabd-gt-696151-2026-04-07T09:31:21.651Z::svc.xml"
+        "repoHandle" : "lKDeDyf6riX2FNB-gt-693948-2026-04-07T11:41:47.189Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

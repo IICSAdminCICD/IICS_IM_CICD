@@ -104,7 +104,7 @@
     }
   ],
   "verbose" : false,
-  "mappingId" : "@a6ChKj47eP8hNN6Y1uqoWR",
+  "mappingId" : "@8X8Scg51pePc7xsEyaMX05",
   "mappingTemplateName" : "m_TMS_01_SendTrainingsETQ",
   "sessionPropertiesList" : [
     {
@@ -170,5 +170,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2026-04-07 04:18:13 PDT"
+  "vcsExportTime" : "2026-04-09 06:13:12 PDT"
 }

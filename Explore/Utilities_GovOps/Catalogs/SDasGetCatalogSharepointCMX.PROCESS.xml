@@ -1,9 +1,9 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>NLnQciSrZMSPfXB-gt-109793-2026-04-01T22:30:54.629Z::pd.xml</types1:EntryId>
+      <types1:EntryId>sEi4tciSrZMSPfX-gt-700487-2026-04-07T11:41:47.291Z::pd.xml</types1:EntryId>
       <types1:Name>SDasGetCatalogSharepointCMX</types1:Name>
-      <types1:ParentFlowIds>OurMZgpDqotxGom-gt-109833-2026-04-01T22:30:55.658Z::pd.xml</types1:ParentFlowIds>
+      <types1:ParentFlowIds>dyjznKKvvNtLSVM-gt-694070-2026-04-07T11:41:49.062Z::pd.xml</types1:ParentFlowIds>
       <types1:MimeType>application/xml+process</types1:MimeType>
       <types1:Description>@operation=GetCatalogs, @dataType=Message, @source=IICSCatalogs, @additionalText=Get IICSCatalogs from URN, @prcRunOn=AG_IICS_QA_CMX</types1:Description>
       <types1:AppliesTo/>
@@ -12,14 +12,14 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-01T22:30:55Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-07T11:41:47Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
          <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
                   xmlns:list="urn:activevos:spi:list:functions"
-                  GUID="46wm98vY6OShyRkD41KFgx"
+                  GUID="94J6Q6NRzaclK0NIPvVhip"
                   displayName="SDasGetCatalogSharepointCMX"
                   name="SDasGetCatalogSharepointCMX"
                   overrideAPIName="false">
@@ -137,12 +137,12 @@
          </process>
          <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
             <ns1:SampleData>
-               <ns1:Id>7ec74af5-8bb0-4894-b6be-eb5334e6f55c</ns1:Id>
+               <ns1:Id>5307757c-1dea-40a4-b156-5ae3ace97010</ns1:Id>
                <ns1:Name>test</ns1:Name>
                <ns1:CreatedBy>gchico@ppg.com</ns1:CreatedBy>
-               <ns1:CreationDate>2026-04-01T22:30:55Z</ns1:CreationDate>
+               <ns1:CreationDate>2026-04-07T11:41:47Z</ns1:CreationDate>
                <ns1:ModifiedBy>gchico@ppg.com</ns1:ModifiedBy>
-               <ns1:ModificationDate>2026-04-01T22:30:55Z</ns1:ModificationDate>
+               <ns1:ModificationDate>2026-04-07T11:41:47Z</ns1:ModificationDate>
                <ns1:Data format="json">{
 	"in_catalog": "urn:ppg-catalog-parameters",
 	"in_token": "eyJ0eXAiOiJKV1QiLCJub25jZSI6ImlqeWNoZTNYUU5VWllHQnNkWFRkdVdELUlIQUtDUEt2V2NTUlVGdWF0X0EiLCJhbGciOiJSUzI1NiIsIng1dCI6IlBjWDk4R1g0MjBUMVg2c0JEa3poUW1xZ3dNVSIsImtpZCI6IlBjWDk4R1g0MjBUMVg2c0JEa3poUW1xZ3dNVSJ9.eyJhdWQiOiJodHRwczovL2dyYXBoLm1pY3Jvc29mdC5jb20iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC85ZGZkMWU1ZS1iYjA2LTQwZGYtOGVlYi0yYTI5NWZlNGRkYTUvIiwiaWF0IjoxNzcwMzA1MDE1LCJuYmYiOjE3NzAzMDUwMTUsImV4cCI6MTc3MDMwODkxNSwiYWlvIjoiazJaZ1lDZ1dtL0hJejJZMW8zMjFlUHo4SmF1UEF3QT0iLCJhcHBfZGlzcGxheW5hbWUiOiJJSUNTIC0gR292T3BzIiwiYXBwaWQiOiJjMWQ1NmViMS00MDU0LTQ5ZTgtYjNjZC1iZGQwNDE0Y2UzOTciLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC85ZGZkMWU1ZS1iYjA2LTQwZGYtOGVlYi0yYTI5NWZlNGRkYTUvIiwiaWR0eXAiOiJhcHAiLCJvaWQiOiI5MTlkZDU1Yi00MzUwLTRhOWMtOGNjZS1kM2NjMGU2Y2RkMDciLCJyaCI6IjEuQVFnQVhoNzluUWE3MzBDTzZ5b3BYLVRkcFFNQUFBQUFBQUFBd0FBQUFBQUFBQUFBQUFBSUFBLiIsInJvbGVzIjpbIlNpdGVzLlNlbGVjdGVkIl0sInN1YiI6IjkxOWRkNTViLTQzNTAtNGE5Yy04Y2NlLWQzY2MwZTZjZGQwNyIsInRlbmFudF9yZWdpb25fc2NvcGUiOiJOQSIsInRpZCI6IjlkZmQxZTVlLWJiMDYtNDBkZi04ZWViLTJhMjk1ZmU0ZGRhNSIsInV0aSI6IjV3MnRJZGs1ZjBDMFNCQlRoczRFQUEiLCJ2ZXIiOiIxLjAiLCJ3aWRzIjpbIjA5OTdhMWQwLTBkMWQtNGFjYi1iNDA4LWQ1Y2E3MzEyMWU5MCJdLCJ4bXNfYWNkIjoxNzY4MjI4ODU4LCJ4bXNfYWN0X2ZjdCI6IjkgMyIsInhtc19mdGQiOiJiZkRRWEFVcHhVaWgwMXU4VHFReW5EdHd2VlU1bGFkcTlaSXZnaVhCc2IwQmRYTnpiM1YwYUMxa2MyMXoiLCJ4bXNfaWRyZWwiOiI3IDMyIiwieG1zX3JkIjoiMC40MkxsWUJKaTVCQVM0V0FYRXBpNWlzUFFkT2R5NzBXMnFZSVNhdGFXUUZGT0lZSDdMdkZIZHFTd3V5NDJFSDdOdkNubE9WQ1VRMGlBbVFFQ0RrQnBvQ2kza0FCSC1EZWh0bTJfTjNzRVRfN0FsUGdnRXdBIiwieG1zX3N1Yl9mY3QiOiI5IDMiLCJ4bXNfdGNkdCI6MTM0ODAwMTc3MywieG1zX3RudF9mY3QiOiIxMCAzIn0.DWS8YN0bu4eCDH2Z0Ossrs8xWckkmxFhLZnyX7SEpvTA54RhgLfKVXN7Wv5UhRK2UXEEt1WGjDEWAlROE-JfZAFqKvFgj5-7bgDABOXxYsfkUHgmd9fEQgECD6gfTjy2UBO2aOPu7dx_Uc8Mn5ruiNcohrZCLPOToBN-ZeHFupJEUVjvksJqComEGGxX7HrcP_q5GLlZJnJHOunGJ4TaM6BzAPdlGtnE6Sc7Gg7GNdjvY6Ii_CpPc6yJhThYYad0rLzxsISfEnKZlWF5_ewBmyHdxYkXuLJ7-xj4ael5pfTqu7kdzwO76A_t9ln7hm5BCeTqimEmTag3ndVPx-3yJw",
@@ -155,8 +155,8 @@
             </ns1:SampleData>
          </ns1:sample-data-sets>
       </types1:Entry>
-      <types1:GUID>46wm98vY6OShyRkD41KFgx</types1:GUID>
+      <types1:GUID>94J6Q6NRzaclK0NIPvVhip</types1:GUID>
       <types1:DisplayName>SDasGetCatalogSharepointCMX</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-07T11:18:13.167Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-09T13:13:12.187Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

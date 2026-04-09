@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>3m7iUQbgdwUiQLn-gt-694160-2026-04-07T09:31:22.884Z::conn.xml</types1:EntryId>
+      <types1:EntryId>mnXQeK8ZAZf5kck-gt-694002-2026-04-07T11:41:48.205Z::conn.xml</types1:EntryId>
       <types1:Name>Conn-SC-ETQTaskflow</types1:Name>
       <types1:MimeType>application/xml+connection</types1:MimeType>
       <types1:Description>@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC-ETQTaskflow</types1:Description>
@@ -11,7 +11,7 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-07T09:31:23Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-07T11:41:48Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
@@ -25,7 +25,7 @@
             <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
                                agentOnly="false"
                                connectorPath="project:/rt.connector/SC_ETQTaskflow/SC_ETQTaskflow_svcDef.xml"
-                               guid="73fKAM1PHEAd8IBOkpggSa"
+                               guid="kNtjgvC3Kehg6TqeJoeusw"
                                name="SC-ETQTaskflow"
                                supportsConnectionTest="false"
                                uuid="c057ef70-cca5-46ab-ae68-d3a1ea350242">
@@ -33,8 +33,8 @@
             </businessConnector>
          </connection>
       </types1:Entry>
-      <types1:GUID>hEO3KNjVZgNhbuUVIWmD48</types1:GUID>
+      <types1:GUID>76JxDo0HkSJcfAyZQRG98k</types1:GUID>
       <types1:DisplayName>Conn-SC-ETQTaskflow</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-07T11:18:13.402Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-09T13:13:12.336Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

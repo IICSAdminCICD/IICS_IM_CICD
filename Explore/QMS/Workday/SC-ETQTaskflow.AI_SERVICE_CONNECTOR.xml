@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>jk3zx6i4tciSrZM-gt-696127-2026-04-07T09:31:21.47Z::svc.xml</types1:EntryId>
+      <types1:EntryId>aa-gt-693922-2026-04-07T11:41:47.002Z::svc.xml</types1:EntryId>
       <types1:Name>SC-ETQTaskflow</types1:Name>
       <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
       <types1:Description>@scType=Trainings Workday, @application= Workday/ETQ</types1:Description>
@@ -11,7 +11,7 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-07T09:31:21Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-07T11:41:47Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
@@ -58,8 +58,8 @@
             <objects/>
          </businessConnector>
       </types1:Entry>
-      <types1:GUID>73fKAM1PHEAd8IBOkpggSa</types1:GUID>
+      <types1:GUID>kNtjgvC3Kehg6TqeJoeusw</types1:GUID>
       <types1:DisplayName>SC-ETQTaskflow</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-07T11:18:13.182Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-09T13:13:12.205Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
