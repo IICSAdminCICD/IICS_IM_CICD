@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>17PYWiaaa-gt-694150-2026-04-07T09:31:22.842Z::conn.xml</types1:EntryId>
+      <types1:EntryId>Af6S3wOLIFvukNX-gt-694042-2026-04-07T11:41:48.425Z::conn.xml</types1:EntryId>
       <types1:Name>Conn-SC-SDasWorkDayTrainingSQL</types1:Name>
       <types1:MimeType>application/xml+connection</types1:MimeType>
       <types1:Description>@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC_SDasWordDayTrainingSQL</types1:Description>
@@ -11,7 +11,7 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-07T09:31:23Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-07T11:41:48Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
@@ -51,7 +51,7 @@
             <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
                                agentOnly="true"
                                connectorPath="project:/rt.connector/SC_SDasWorkDayTrainingSQL/SC_SDasWorkDayTrainingSQL_svcDef.xml"
-                               guid="0XtYFQe9Q9Dbb7Pojq7qKO"
+                               guid="89FxQr7aFbvlYdqMetMUK3"
                                name="SC-SDasWorkDayTrainingSQL"
                                plugin="DAS"
                                supportsConnectionTest="true"
@@ -62,8 +62,8 @@
             </businessConnector>
          </connection>
       </types1:Entry>
-      <types1:GUID>5gFK6hTji1xkCoZEmSZlki</types1:GUID>
+      <types1:GUID>8zG9bLGQEWtbWc66Ty7OOC</types1:GUID>
       <types1:DisplayName>Conn-SC-SDasWorkDayTrainingSQL</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-07T11:18:13.456Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-09T13:02:09.233Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

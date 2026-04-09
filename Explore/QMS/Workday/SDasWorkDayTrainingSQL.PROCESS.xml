@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>Jg7Gaaa-gt-694181-2026-04-07T09:31:23.575Z::pd.xml</types1:EntryId>
+      <types1:EntryId>3Yn5Smbduaa-gt-694058-2026-04-07T11:41:48.876Z::pd.xml</types1:EntryId>
       <types1:Name>SDasWorkDayTrainingSQL</types1:Name>
       <types1:MimeType>application/xml+process</types1:MimeType>
       <types1:Description>@operation= Insert/Update LogTraining, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText= Insert and Update training records into table, @prcRunOn = SDCAMDMSA01,
@@ -12,14 +12,14 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-07T09:31:24Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-07T11:41:49Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
          <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
                   xmlns:list="urn:activevos:spi:list:functions"
-                  GUID="0OzFGQIyJCZiIL22KtXvMv"
+                  GUID="kbTfNouYLgghhMQNBdpdIC"
                   displayName="SDasWorkDayTrainingSQL"
                   name="SDasWorkDayTrainingSQL"
                   overrideAPIName="false">
@@ -141,7 +141,7 @@
                         <service id="mdqh42cx">
                            <title>SvcInsertNewRecord</title>
                            <serviceName>Conn-SC-SDASInsertTrainingsLog:InsertTrainingSQL</serviceName>
-                           <serviceGUID>1W490Gwy8yAd2lZyX6ucy1</serviceGUID>
+                           <serviceGUID>35bBc4tXcA0dvcsj9e3CGf</serviceGUID>
                            <serviceInput>
                               <parameter name="in_scPayloadID" source="formula">
                                  <expression language="XQuery">$input.in_PayloadID </expression>
@@ -201,7 +201,7 @@
                         <service id="mdrzcypi">
                            <title>SvcSelectLogID</title>
                            <serviceName>Conn-SC-SDasWorkDayTrainingSQL:SelectNewLogID</serviceName>
-                           <serviceGUID>5gFK6hTji1xkCoZEmSZlki</serviceGUID>
+                           <serviceGUID>8zG9bLGQEWtbWc66Ty7OOC</serviceGUID>
                            <serviceInput/>
                         </service>
                         <flow id="mdrzcyrb">
@@ -245,7 +245,7 @@
                         <service id="mgu206t8">
                            <title>SvcSelectLogIDWithError</title>
                            <serviceName>Conn-SC-SDasWorkDayTrainingSQL:SelectLogIdWithError</serviceName>
-                           <serviceGUID>5gFK6hTji1xkCoZEmSZlki</serviceGUID>
+                           <serviceGUID>8zG9bLGQEWtbWc66Ty7OOC</serviceGUID>
                            <serviceInput/>
                         </service>
                         <flow id="mgu206t4">
@@ -291,7 +291,7 @@
                         <service id="mdqh42fl">
                            <title>SvcUpdateTrainingRecord</title>
                            <serviceName>Conn-SC-SDasWorkDayTrainingSQL:UpdateRecordSQLPayloadLog</serviceName>
-                           <serviceGUID>5gFK6hTji1xkCoZEmSZlki</serviceGUID>
+                           <serviceGUID>8zG9bLGQEWtbWc66Ty7OOC</serviceGUID>
                            <serviceInput>
                               <parameter name="in_scPayloadID" source="formula">
                                  <expression language="XQuery">$input.in_PayloadID </expression>
@@ -371,12 +371,12 @@
          </process>
          <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
             <ns1:SampleData>
-               <ns1:Id>546ce83b-0879-45bf-8b47-f90d4f0d8863</ns1:Id>
+               <ns1:Id>74a84a47-cc9e-4df3-b0a6-2f405ffb1917</ns1:Id>
                <ns1:Name>test</ns1:Name>
                <ns1:CreatedBy>gchico@ppg.com</ns1:CreatedBy>
-               <ns1:CreationDate>2026-04-07T09:31:24Z</ns1:CreationDate>
+               <ns1:CreationDate>2026-04-07T11:41:49Z</ns1:CreationDate>
                <ns1:ModifiedBy>gchico@ppg.com</ns1:ModifiedBy>
-               <ns1:ModificationDate>2026-04-07T09:31:24Z</ns1:ModificationDate>
+               <ns1:ModificationDate>2026-04-07T11:41:49Z</ns1:ModificationDate>
                <ns1:Data format="json">{
 	 "in_Action": "Insert",
 	 "in_PayloadID": "1",
@@ -386,12 +386,12 @@
 }</ns1:Data>
             </ns1:SampleData>
             <ns1:SampleData>
-               <ns1:Id>8b529d3b-7b74-4062-a740-29edc4f52f49</ns1:Id>
+               <ns1:Id>cec4dfa5-5d92-4b58-9d6c-b2f6fd7ab340</ns1:Id>
                <ns1:Name>Test2</ns1:Name>
                <ns1:CreatedBy>gchico@ppg.com</ns1:CreatedBy>
-               <ns1:CreationDate>2026-04-07T09:31:24Z</ns1:CreationDate>
+               <ns1:CreationDate>2026-04-07T11:41:49Z</ns1:CreationDate>
                <ns1:ModifiedBy>gchico@ppg.com</ns1:ModifiedBy>
-               <ns1:ModificationDate>2026-04-07T09:31:24Z</ns1:ModificationDate>
+               <ns1:ModificationDate>2026-04-07T11:41:49Z</ns1:ModificationDate>
                <ns1:Data format="json">{
 	 "in_Action": "Insert",
 	 "in_PayloadID": "8383",
@@ -402,8 +402,8 @@
             </ns1:SampleData>
          </ns1:sample-data-sets>
       </types1:Entry>
-      <types1:GUID>0OzFGQIyJCZiIL22KtXvMv</types1:GUID>
+      <types1:GUID>kbTfNouYLgghhMQNBdpdIC</types1:GUID>
       <types1:DisplayName>SDasWorkDayTrainingSQL</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-07T11:18:13.678Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-09T13:02:09.609Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

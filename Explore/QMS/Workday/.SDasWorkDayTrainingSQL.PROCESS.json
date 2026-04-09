@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "0OzFGQIyJCZiIL22KtXvMv",
+    "id" : "kbTfNouYLgghhMQNBdpdIC",
     "name" : "SDasWorkDayTrainingSQL",
     "type" : "PROCESS",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "Jg7Gaaa-gt-694181-2026-04-07T09:31:23.575Z::pd.xml"
+        "repoHandle" : "3Yn5Smbduaa-gt-694058-2026-04-07T11:41:48.876Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,9 +20,9 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-07T11:18:14.340Z",
+  "updateTime" : "2026-04-09T13:02:10.147Z",
   "objectRefs" : [ {
-    "id" : "5gFK6hTji1xkCoZEmSZlki",
+    "id" : "8zG9bLGQEWtbWc66Ty7OOC",
     "name" : "Conn-SC-SDasWorkDayTrainingSQL",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -31,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "17PYWiaaa-gt-694150-2026-04-07T09:31:22.842Z::conn.xml"
+        "repoHandle" : "Af6S3wOLIFvukNX-gt-694042-2026-04-07T11:41:48.425Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -42,7 +42,7 @@
     },
     "path" : "/Explore/QMS/Workday"
   }, {
-    "id" : "1W490Gwy8yAd2lZyX6ucy1",
+    "id" : "35bBc4tXcA0dvcsj9e3CGf",
     "name" : "Conn-SC-SDASInsertTrainingsLog",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -51,7 +51,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "WZvWMOxBchzt1Y6-gt-694140-2026-04-07T09:31:22.786Z::conn.xml"
+        "repoHandle" : "mY6pkTjFIMeINci-gt-700499-2026-04-07T11:41:48.195Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

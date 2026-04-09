@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "05k5tUfJ2UaeF4sQyOp8cm",
+    "id" : "66PWWN0oy0bfNSz0JypAgr",
     "name" : "SIntSendAssignmentsETQ",
     "type" : "PROCESS",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "Sk72VR4109cjIw8-gt-694227-2026-04-07T09:31:24.722Z::pd.xml"
+        "repoHandle" : "bci0seGbciZBpDU-gt-700529-2026-04-07T11:41:50.019Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,49 +20,9 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-07T11:18:14.338Z",
+  "updateTime" : "2026-04-09T13:02:10.144Z",
   "objectRefs" : [ {
-    "id" : "1W490Gwy8yAd2lZyX6ucy1",
-    "name" : "Conn-SC-SDASInsertTrainingsLog",
-    "type" : "AI_CONNECTION",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 1,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "WZvWMOxBchzt1Y6-gt-694140-2026-04-07T09:31:22.786Z::conn.xml"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "@appType= Trainings Workday, @application= Workday/ETQ, @appSCName= SC_SDASInsertTrainingsLog",
-        "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/QMS/Workday"
-  }, {
-    "id" : "jJjU3D0eEm0lMjUXe6yJ4w",
-    "name" : "Conn-File-LogGovOps",
-    "type" : "AI_CONNECTION",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 1,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "FHyabdvhxiQLnzY-gt-688022-2026-04-07T09:31:21.505Z::conn.xml"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "@appType=File, @application=OnTap, @additionalText=This app connection writes log files and monitors a directory in OnTap",
-        "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/Utilities_GovOps/InfraTickets"
-  }, {
-    "id" : "5tJuZN1e2mDkCGMViEmbcL",
+    "id" : "6sfBFCjXoHAki2PMHreo44",
     "name" : "PODocumentParts",
     "type" : "PROCESS_OBJECT",
     "metadata" : {
@@ -71,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "QoPVm5Y6tMFygls-gt-694193-2026-04-07T09:31:23.687Z::po.xml"
+        "repoHandle" : "kgpbdoPVm5Y6tMF-gt-694082-2026-04-07T11:41:49.176Z::po.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -82,7 +42,7 @@
     },
     "path" : "/Explore/QMS/Workday"
   }, {
-    "id" : "5mQigb7QdmmedpbaCfrZYW",
+    "id" : "6ME5QHErrEah29UHdQHje2",
     "name" : "PODocumentFields",
     "type" : "PROCESS_OBJECT",
     "metadata" : {
@@ -91,11 +51,51 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "7X2FNBeNTYglxbd-gt-694170-2026-04-07T09:31:22.942Z::po.xml"
+        "repoHandle" : "q78oQdpgbcggaaa-gt-694012-2026-04-07T11:41:48.263Z::po.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "@operation= DocumentAssignments, @dataType= Documents Structure, @application= WorkdayETQ",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  }, {
+    "id" : "4wTPBPJWAuhjkF6RPlpEk5",
+    "name" : "Conn-File-LogGovOps",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "iXaabcjw4ARW8UB-gt-693940-2026-04-07T11:41:47.134Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType=File, @application=OnTap, @additionalText=This app connection writes log files and monitors a directory in OnTap",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/InfraTickets"
+  }, {
+    "id" : "35bBc4tXcA0dvcsj9e3CGf",
+    "name" : "Conn-SC-SDASInsertTrainingsLog",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "mY6pkTjFIMeINci-gt-700499-2026-04-07T11:41:48.195Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType= Trainings Workday, @application= Workday/ETQ, @appSCName= SC_SDASInsertTrainingsLog",
         "contentType" : "application/json; charset=utf-8",
         "documentState" : "VALID"
       }

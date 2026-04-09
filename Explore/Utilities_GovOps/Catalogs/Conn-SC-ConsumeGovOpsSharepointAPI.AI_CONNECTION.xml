@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>qpw0VPNzUzeA8rJ-gt-106156-2026-04-01T22:30:55.269Z::conn.xml</types1:EntryId>
+      <types1:EntryId>wvwNXHVOJ2oTVMT-gt-694032-2026-04-07T11:41:48.365Z::conn.xml</types1:EntryId>
       <types1:Name>Conn-SC-ConsumeGovOpsSharepointAPI</types1:Name>
       <types1:MimeType>application/xml+connection</types1:MimeType>
       <types1:Description>@appType= Service Connector, @application=Conn-SC-ConsumeGovOpsSharepointAPI, @additionalText= This App connection upload a archive to sharePoint, @appSCName=SC-ConsumeGovOpsSharepointAPI</types1:Description>
@@ -11,7 +11,7 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-01T22:30:55Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-07T11:41:48Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
@@ -25,7 +25,7 @@
             <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
                                agentOnly="false"
                                connectorPath="project:/rt.connector/SC_ConsumeGovOpsSharepointAPI/SC_ConsumeGovOpsSharepointAPI_svcDef.xml"
-                               guid="7AwA9h0EJATk5SLuSkwL0y"
+                               guid="7W1lihjG8uwlV7oJBgEaM4"
                                name="SC-ConsumeGovOpsSharepointAPI"
                                supportsConnectionTest="false"
                                uuid="52c3e7be-a27a-46db-b918-e1e2840232e5">
@@ -33,8 +33,8 @@
             </businessConnector>
          </connection>
       </types1:Entry>
-      <types1:GUID>5iSXpRF7uhQhEm0r5fJvwe</types1:GUID>
+      <types1:GUID>c1oofiP9k8zemQ4p7mkyKN</types1:GUID>
       <types1:DisplayName>Conn-SC-ConsumeGovOpsSharepointAPI</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-07T11:18:13.474Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-09T13:02:09.291Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

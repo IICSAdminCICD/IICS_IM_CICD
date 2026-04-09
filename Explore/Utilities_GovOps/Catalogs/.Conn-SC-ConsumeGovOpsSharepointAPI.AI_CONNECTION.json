@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "5iSXpRF7uhQhEm0r5fJvwe",
+    "id" : "c1oofiP9k8zemQ4p7mkyKN",
     "name" : "Conn-SC-ConsumeGovOpsSharepointAPI",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "qpw0VPNzUzeA8rJ-gt-106156-2026-04-01T22:30:55.269Z::conn.xml"
+        "repoHandle" : "wvwNXHVOJ2oTVMT-gt-694032-2026-04-07T11:41:48.365Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,9 +20,9 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-07T11:18:14.341Z",
+  "updateTime" : "2026-04-09T13:02:10.139Z",
   "objectRefs" : [ {
-    "id" : "7AwA9h0EJATk5SLuSkwL0y",
+    "id" : "7W1lihjG8uwlV7oJBgEaM4",
     "name" : "SC-ConsumeGovOpsSharepointAPI",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -31,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "Rlt0i98C1LOwD0w-gt-109803-2026-04-01T22:30:54.701Z::svc.xml"
+        "repoHandle" : "O8lwnHUPAZf5kck-gt-693966-2026-04-07T11:41:47.655Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
