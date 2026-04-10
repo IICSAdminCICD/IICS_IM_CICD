@@ -13,14 +13,14 @@
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "@operation=Send Trainings, @dataType= Workday Trainings, @source= SQL Server DB, @target= ETQ, @tfLocalPath= QMS\\Workday, @additionalText= Process that runs every 5 minutes111",
+        "description" : "@operation=Send Trainings, @dataType= Workday Trainings, @source= SQL Server DB, @target= ETQ, @tfLocalPath= QMS\\Workday, @additionalText= Process that runs every 5 minutes",
         "contentType" : "application/json; charset=utf-8",
-        "documentState" : "INVALID"
+        "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-10T12:28:44.929Z",
+  "updateTime" : "2026-04-10T12:21:21.651Z",
   "objectRefs" : [ {
     "id" : "1NyPDjquYiBcn1EKGLilUA",
     "name" : "SDasWorkdayTaskflow",

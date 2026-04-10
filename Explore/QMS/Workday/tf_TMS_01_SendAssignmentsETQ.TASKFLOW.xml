@@ -4,7 +4,7 @@
       <types1:EntryId>5WA6gaabclvAhrs-gt-5859690-2026-04-10T12:03:07.915Z::tf.xml</types1:EntryId>
       <types1:Name>tf_TMS_01_SendAssignmentsETQ</types1:Name>
       <types1:MimeType>application/xml+taskflow</types1:MimeType>
-      <types1:Description>@operation=Send Trainings, @dataType= Workday Trainings, @source= SQL Server DB, @target= ETQ, @tfLocalPath= QMS\Workday, @additionalText= Process that runs every 5 minutes111</types1:Description>
+      <types1:Description>@operation=Send Trainings, @dataType= Workday Trainings, @source= SQL Server DB, @target= ETQ, @tfLocalPath= QMS\Workday, @additionalText= Process that runs every 5 minutes</types1:Description>
       <types1:AppliesTo/>
       <types1:Tags/>
       <types1:VersionLabel>1.0</types1:VersionLabel>
@@ -12,8 +12,7 @@
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
       <types1:CreationDate>2026-04-10T12:03:08Z</types1:CreationDate>
-      <types1:ModifiedBy>gchico@ppg.com</types1:ModifiedBy>
-      <types1:ModificationDate>2026-04-10T12:28:14Z</types1:ModificationDate>
+      <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
          <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
@@ -24,7 +23,7 @@
                    overrideAPIName="false">
             <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
             <appliesTo/>
-            <description>@operation=Send Trainings, @dataType= Workday Trainings, @source= SQL Server DB, @target= ETQ, @tfLocalPath= QMS\Workday, @additionalText= Process that runs every 5 minutes111</description>
+            <description>@operation=Send Trainings, @dataType= Workday Trainings, @source= SQL Server DB, @target= ETQ, @tfLocalPath= QMS\Workday, @additionalText= Process that runs every 5 minutes</description>
             <tags/>
             <generator>Informatica Process Designer 11</generator>
             <tempFields>
@@ -1137,6 +1136,14 @@
                   </detail>
                </processObject>
                <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="InternalInfaSubTaskflowField"
+                              isByCopy="true"
+                              name="InternalInfaSubTaskflowField">
+                  <description>This process object represents a subtaskflow type reference field.</description>
+                  <tags/>
+                  <detail/>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
                               displayName="SDasWorkdayTaskflow"
                               isByCopy="true"
                               name="SDasWorkdayTaskflow">
@@ -1184,5 +1191,5 @@
       <types1:GUID>cazaloILLuZe1GUbWIE28o</types1:GUID>
       <types1:DisplayName>tf_TMS_01_SendAssignmentsETQ</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-10T12:28:44.23Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-10T12:21:21.451Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
