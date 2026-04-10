@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>tdsreK8ZAZf5kck-gt-1010082-2026-04-09T13:17:43.317Z::pd.xml</types1:EntryId>
+      <types1:EntryId>Y8AyNnQMMnGbciZ-gt-1172042-2026-04-10T12:03:06.818Z::pd.xml</types1:EntryId>
       <types1:Name>SDasWorkdayTaskflow</types1:Name>
       <types1:MimeType>application/xml+process</types1:MimeType>
       <types1:Description>@operation= Recursion taskflow, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText=Recursion taskflow, @prcRunOn = SDCAMDMSA01,
@@ -12,14 +12,14 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-09T13:17:43Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-10T12:03:07Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
          <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
                   xmlns:list="urn:activevos:spi:list:functions"
-                  GUID="fXrk6rxdDU0lnqbtKkUzsl"
+                  GUID="1NyPDjquYiBcn1EKGLilUA"
                   displayName="SDasWorkdayTaskflow"
                   name="SDasWorkdayTaskflow"
                   overrideAPIName="false">
@@ -120,7 +120,7 @@
                   <service id="mgqlxbik">
                      <title>SvcRunTaskflow</title>
                      <serviceName>Conn-SC-ETQTaskflow:GetTaskflow</serviceName>
-                     <serviceGUID>aDlfr0GNSZjgATxrV57p41</serviceGUID>
+                     <serviceGUID>5cKBObN86iKeSC4xBNezK3</serviceGUID>
                      <serviceInput/>
                   </service>
                   <flow id="mgva32ro">
@@ -187,7 +187,7 @@
                                     <service id="mgvhor0k">
                                        <title>SvcFileWriter</title>
                                        <serviceName>Conn-File-LogGovOps:FileWriter</serviceName>
-                                       <serviceGUID>88acgWng8njbNsC0fm8Yei</serviceGUID>
+                                       <serviceGUID>aMJnvoUehsEecYGoaGo8Oj</serviceGUID>
                                        <serviceInput>
                                           <parameter name="fileWriteTask" source="formula">
                                              <expression language="XQuery">&lt;FileWriteTask&gt;
@@ -259,18 +259,18 @@
          </process>
          <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
             <ns1:SampleData>
-               <ns1:Id>5fe565eb-99ee-4174-8064-6779efe07ef7</ns1:Id>
+               <ns1:Id>105fc9b3-5144-445a-8336-211f1d965a46</ns1:Id>
                <ns1:Name>test</ns1:Name>
                <ns1:CreatedBy>gchico@ppg.com</ns1:CreatedBy>
-               <ns1:CreationDate>2026-04-09T13:17:43Z</ns1:CreationDate>
+               <ns1:CreationDate>2026-04-10T12:03:07Z</ns1:CreationDate>
                <ns1:ModifiedBy>gchico@ppg.com</ns1:ModifiedBy>
-               <ns1:ModificationDate>2026-04-09T13:17:43Z</ns1:ModificationDate>
+               <ns1:ModificationDate>2026-04-10T12:03:07Z</ns1:ModificationDate>
                <ns1:Data format="json">{}</ns1:Data>
             </ns1:SampleData>
          </ns1:sample-data-sets>
       </types1:Entry>
-      <types1:GUID>fXrk6rxdDU0lnqbtKkUzsl</types1:GUID>
+      <types1:GUID>1NyPDjquYiBcn1EKGLilUA</types1:GUID>
       <types1:DisplayName>SDasWorkdayTaskflow</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-10T10:19:53.66Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-10T12:28:44.14Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

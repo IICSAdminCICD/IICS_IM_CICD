@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
-    "id" : "ehRDZCOxeExeuWp4BQsbKE",
-    "name" : "tf_TMS_01_SendAssignmentsWithErrorsETQ",
+    "id" : "bVlqPtiB52TidR5dbJkYCd",
+    "name" : "tf_TMS_00_InsertRecordsSQL_1",
     "type" : "TASKFLOW",
     "metadata" : {
       "modelVersion" : {
@@ -9,18 +9,18 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "wEg80EKZhHwzZsM-gt-5859720-2026-04-10T12:03:08.367Z::tf.xml"
+        "repoHandle" : "eLRfRW8UBM7zsZv-gt-5859703-2026-04-10T12:03:08.077Z::tf.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "@operation=Send Trainings, @dataType= Workday Trainings, @source= SQL Server DB, @target= ETQ, @tfLocalPath= QMS\\Workday, @additionalText= Process that runs every 5 minutes and processes cases that ended in error.",
+        "description" : "@operation=Insert data into buffer, @dataType=Workday Courses, @source= WorkDay, @target= SQL Server, @tfLocalPath= Explore/QMS/Workday, @additionalText=Process to insert data into SQL server buffer",
         "contentType" : "application/json; charset=utf-8",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-10T12:28:44.927Z",
+  "updateTime" : "2026-04-10T12:28:44.934Z",
   "objectRefs" : [ {
     "id" : "5yLUYpoNkPrgLr3IYQmio2",
     "name" : "SDasWorkDayTrainingSQL",
@@ -37,29 +37,6 @@
       "additionalInfo" : {
         "description" : "@operation= Insert/Update LogTraining, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText= Insert and Update training records into table, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
         "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/QMS/Workday"
-  }, {
-    "id" : "4RW4WoKWOI6kxeRRS1nViU",
-    "name" : "mt_TMS_01_SendTrainingsETQ",
-    "type" : "MTT",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "011EE90Z000000000005"
-      },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
-      "additionalInfo" : {
-        "description" : "@connectionSource= SQL Server, @connection Target= SQL Server, @sources= [@connection1=SQL_Wdy_ETQ_TMS], @targets= [@connection1= SQL_Wdy_ETQ_TMS], @transformation= select, @dataType= JSON Training Records, @additionalText= select the first record inserted and send the records to ETQ",
-        "contentType" : "JSON",
         "documentState" : "VALID"
       }
     },

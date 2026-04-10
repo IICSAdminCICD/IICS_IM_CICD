@@ -1,0 +1,479 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>eLRfRW8UBM7zsZv-gt-5859703-2026-04-10T12:03:08.077Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_TMS_00_InsertRecordsSQL_1</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description>@operation=Insert data into buffer, @dataType=Workday Courses, @source= WorkDay, @target= SQL Server, @tfLocalPath= Explore/QMS/Workday, @additionalText=Process to insert data into SQL server buffer</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
+      <types1:CreationDate>2026-04-10T12:03:08Z</types1:CreationDate>
+      <types1:ModifiedBy>gchico@ppg.com</types1:ModifiedBy>
+      <types1:ModificationDate>2026-04-10T12:27:37Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_TMS_00_InsertRecordsSQL_1"
+                   name="tf_TMS_00_InsertRecordsSQL_1"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description>@operation=Insert data into buffer, @dataType=Workday Courses, @source= WorkDay, @target= SQL Server, @tfLocalPath= Explore/QMS/Workday, @additionalText=Process to insert data into SQL server buffer</description>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="Message json as string"
+                          name="in_tfPayloadJson"
+                          required="true"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="Log id corresponding to the massage"
+                          name="in_tfLogID"
+                          required="true"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="vTempCountRecords" type="double">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempJsonPayload" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempSingleRecord" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempConterRecords" type="double">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="IT_SDasWorkDayTrainingSQL" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:SDasWorkDayTrainingSQL</option>
+                     <option hide="true" name="isAPITaskType">true</option>
+                  </options>
+               </field>
+               <field description="" name="vTempUpdatePayload" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempDocumentTag" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempDocumentTagReplace" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempUpdatePayloadReplaced" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempCloseArrayTag" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempCloseArrayTagReplace" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempErrorCount" type="double">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempFileName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempECode" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempEDetail" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempEReason" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempEProcess" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempELogName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempEProjectName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempEAssetName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempMaxErrorNumber" type="double">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="vTempWaitSecsToRetries" type="double">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tf_UtiGenerateTicketGovOps" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:InternalInfaSubTaskflowField</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowedGroups>
+                     <group>ServiceConsumer</group>
+                  </allowedGroups>
+               </rest>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">false</nvpair>
+            </extData>
+            <flow id="a">
+               <start id="b">
+                  <link id="mdq9ll1s" targetId="mdq9ll1h"/>
+               </start>
+               <assignment id="mdq9ll1h">
+                  <title>Assign_ParsedInput</title>
+                  <operation source="formula" to="temp.vTempJsonPayload">
+                     <expression language="XQuery">util:parseJSON($input.in_tfPayloadJson )</expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempMaxErrorNumber">
+                     <expression language="XQuery">2</expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempWaitSecsToRetries">
+                     <expression language="XQuery">5</expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempErrorCount">
+                     <expression language="XQuery">0</expression>
+                  </operation>
+                  <link id="mdq9ll1v" targetId="mdq9ll1u"/>
+               </assignment>
+               <assignment id="mdq9ll1u">
+                  <title>Assign_NumberOfRecords</title>
+                  <operation source="formula" to="temp.vTempCountRecords">
+                     <expression language="XQuery">count($temp.vTempJsonPayload )</expression>
+                  </operation>
+                  <link id="mdq9ll2g" targetId="mdq9ll2f"/>
+               </assignment>
+               <assignment id="mdq9ll2f">
+                  <title>Assign_CounterRecords</title>
+                  <operation source="formula" to="temp.vTempConterRecords">
+                     <expression language="XQuery">$temp.vTempConterRecords + 1</expression>
+                  </operation>
+                  <link id="mdq9ll2h" targetId="mdq9ll24"/>
+               </assignment>
+               <assignment id="mdq9ll24">
+                  <title>Assign_SingleRecord</title>
+                  <operation source="formula" to="temp.vTempUpdatePayload">
+                     <expression language="XQuery">let $XMLtoJSON := util:toJSON($temp.vTempJsonPayload)
+
+return $XMLtoJSON</expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempDocumentTag">
+                     <expression language="XQuery">'PODocumentFields'</expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempDocumentTagReplace">
+                     <expression language="XQuery">'Document'</expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempUpdatePayloadReplaced">
+                     <expression language="XQuery">fn:replace($temp.vTempUpdatePayload , $temp.vTempDocumentTag , $temp.vTempDocumentTagReplace )</expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempCloseArrayTag">
+                     <expression language="XQuery">string-length($temp.vTempUpdatePayloadReplaced )-2</expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempCloseArrayTagReplace">
+                     <expression language="XQuery">fn:substring($temp.vTempUpdatePayloadReplaced , 1, $temp.vTempCloseArrayTag )||'}]}'</expression>
+                  </operation>
+                  <operation source="formula" to="temp.vTempSingleRecord">
+                     <expression language="XQuery">$temp.vTempCloseArrayTagReplace </expression>
+                  </operation>
+                  <link id="mdqibkct" targetId="mdqibkcs"/>
+               </assignment>
+               <container id="mdqibkcs" type="exclusive">
+                  <title>MoreRecordsToInsert</title>
+                  <flow id="mdqibkcw">
+                     <eventContainer id="mdqibkdk">
+                        <service id="mdqibkdb">
+                           <title>IT_SDasWorkDayTrainingSQL</title>
+                           <serviceName>avTaskflowLocalCalling</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="GUID" source="constant" updatable="true">5yLUYpoNkPrgLr3IYQmio2</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">PROCESS</parameter>
+                              <parameter name="Agent Name" source="constant" updatable="true">SDCAMDMSA01</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">SDasWorkDayTrainingSQL</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="SDasWorkDayTrainingSQL">temp.IT_SDasWorkDayTrainingSQL</operation>
+                                 <operation source="formula" to="SDasWorkDayTrainingSQL/input[1]/in_Action">
+                                    <expression language="XQuery">'Insert'</expression>
+                                 </operation>
+                                 <operation source="formula" to="SDasWorkDayTrainingSQL/input[1]/in_DateTime">
+                                    <expression language="XQuery">fn:current-dateTime() </expression>
+                                 </operation>
+                                 <operation source="formula" to="SDasWorkDayTrainingSQL/input[1]/in_PayloadID">
+                                    <expression language="XQuery">$input.in_tfLogID </expression>
+                                 </operation>
+                                 <operation source="formula" to="SDasWorkDayTrainingSQL/input[1]/in_RecordMessage">
+                                    <expression language="XQuery">$temp.vTempUpdatePayloadReplaced </expression>
+                                 </operation>
+                                 <operation source="formula" to="SDasWorkDayTrainingSQL/input[1]/in_RecordStatus">
+                                    <expression language="XQuery">0</expression>
+                                 </operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.IT_SDasWorkDayTrainingSQL/output/out_scCode">out_scCode</operation>
+                              <operation source="field"
+                                         to="temp.IT_SDasWorkDayTrainingSQL/output/out_scMessageM">out_scMessageM</operation>
+                              <operation source="field" to="temp.IT_SDasWorkDayTrainingSQL/output/out_scID">out_scID</operation>
+                           </serviceOutput>
+                        </service>
+                        <link id="me3hhwfh" targetId="me3hhwbz"/>
+                        <events>
+                           <catch faultField="temp.IT_SDasWorkDayTrainingSQL/fault"
+                                  id="mdqibk9n"
+                                  interrupting="true"
+                                  name="error"/>
+                        </events>
+                     </eventContainer>
+                     <container id="me3hhwbz" type="exclusive">
+                        <title>InsertSuccess</title>
+                        <flow id="me3hhwc0">
+                           <link id="me3hhwc5" targetId="me3hhwbz" type="containerLink"/>
+                        </flow>
+                        <flow id="me3hhwc1">
+                           <wait id="me3hhwfi">
+                              <title>WaitToRetryInsertTrainingLog</title>
+                              <duration source="formula">
+                                 <function name="duration_expression">
+                                    <arg name="value">{$temp.vTempWaitSecsToRetries}</arg>
+                                    <arg name="scale">S</arg>
+                                    <arg name="businessDays"/>
+                                 </function>
+                              </duration>
+                              <link id="me3hhwfj" targetId="me3hhweo"/>
+                           </wait>
+                           <assignment id="me3hhweo">
+                              <title>Assign_SDasWorkInsertTraining</title>
+                              <operation source="formula" to="temp.vTempErrorCount">
+                                 <expression language="XQuery">$temp.vTempErrorCount +1</expression>
+                              </operation>
+                              <link id="me3hhwgo" targetId="me3hhwgc"/>
+                           </assignment>
+                           <container id="me3hhwgc" type="exclusive">
+                              <title>ErrorCountRetriesInsertTraining</title>
+                              <flow id="me3hhwgd">
+                                 <jumpTo id="me3hhwge">
+                                    <link id="me3hhwgl" targetId="mdqibkdk"/>
+                                 </jumpTo>
+                              </flow>
+                              <flow id="me3hhwgf">
+                                 <assignment id="me3hhwgg">
+                                    <title>Assign_TicketInsertTraining</title>
+                                    <operation source="formula" to="temp.vTempFileName">
+                                       <expression language="XQuery">fn:concat('Log_WorkDay-ETQ_Ticket_',fn:format-dateTime(fn:adjust-dateTime-to-timezone(fn:current-dateTime(),xs:dayTimeDuration("-PT5H")),"[Y0001][M01][D01][H01][m01][s01]"))
+</expression>
+                                    </operation>
+                                    <operation source="formula" to="temp.vTempECode">
+                                       <expression language="XQuery">$temp.IT_SDasWorkDayTrainingSQL[1]/output[1]/out_scCode </expression>
+                                    </operation>
+                                    <operation source="formula" to="temp.vTempEDetail">
+                                       <expression language="XQuery">fn:replace(fn:replace(fn:replace($temp.IT_SDasWorkDayTrainingSQL[1]/output[1]/out_scMessage ,'[&lt;&gt;]',""),'(\r?\n|\r)',""),"""","'")</expression>
+                                    </operation>
+                                    <operation source="formula" to="temp.vTempEReason">
+                                       <expression language="XQuery">fn:replace(fn:replace(fn:replace($temp.IT_SDasWorkDayTrainingSQL[1]/output[1]/out_scMessage  ,'[&lt;&gt;]',""),'(\r?\n|\r)',""),"""","'")</expression>
+                                    </operation>
+                                    <operation source="formula" to="temp.vTempEProcess">
+                                       <expression language="XQuery">fn:concat('tf_TMS_00_InsertRecordsSQL',',  Timestamp (EST): ',fn:substring-after($temp.vTempFileName  ,'OLED-Ticket'))</expression>
+                                    </operation>
+                                    <operation source="formula" to="temp.vTempELogName">
+                                       <expression language="XQuery">'Log_WorkDay-ETQ_Ticket'</expression>
+                                    </operation>
+                                    <operation source="formula" to="temp.vTempEProjectName">
+                                       <expression language="XQuery">'QMS-Workday'</expression>
+                                    </operation>
+                                    <operation source="formula" to="temp.vTempEAssetName">
+                                       <expression language="XQuery">'tf_TMS_00_InsertRecordsSQL (IT_SDasWorkDayTrainingSQL)'</expression>
+                                    </operation>
+                                    <link id="me3hhwgm" targetId="me3hhwgh"/>
+                                 </assignment>
+                                 <subflow id="me3hhwgh">
+                                    <title>tf_UtiGenerateTicketGovOps</title>
+                                    <subflowGUID>1o3yzZ9cHFMgZLFdx2fj80</subflowGUID>
+                                    <subflowPath>tf_UtiGenerateTicketGovOps</subflowPath>
+                                    <runForEach>false</runForEach>
+                                    <input>
+                                       <parameter name="in_ECode" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.vTempECode </expression>
+                                       </parameter>
+                                       <parameter name="in_EDetail" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.vTempEDetail </expression>
+                                       </parameter>
+                                       <parameter name="in_EReason" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.vTempEReason </expression>
+                                       </parameter>
+                                       <parameter name="in_EProcess" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.vTempEProcess </expression>
+                                       </parameter>
+                                       <parameter name="in_EProjectName" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.vTempEProjectName </expression>
+                                       </parameter>
+                                       <parameter name="in_EAssetName" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.vTempEAssetName </expression>
+                                       </parameter>
+                                       <parameter name="in_ELogName" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.vTempELogName </expression>
+                                       </parameter>
+                                       <parameter name="in_EGeneralWaitSecsToRetries"
+                                                  source="formula"
+                                                  updatable="true">
+                                          <expression language="XQuery">$temp.vTempWaitSecsToRetries </expression>
+                                       </parameter>
+                                       <parameter name="in_EMaxErrorNumber" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.vTempMaxErrorNumber </expression>
+                                       </parameter>
+                                    </input>
+                                    <outputDef/>
+                                    <link id="me3hhwgn" targetId="me3hhwgi"/>
+                                 </subflow>
+                                 <throw id="me3hhwgi">
+                                    <title>Throw_SDasWorkdayTrainingSQL</title>
+                                    <throwInput>
+                                       <parameter name="code" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.IT_SDasWorkDayTrainingSQL[1]/output[1]/out_scCode </expression>
+                                       </parameter>
+                                       <parameter name="detail" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.IT_SDasWorkDayTrainingSQL[1]/output[1]/out_scMessage </expression>
+                                       </parameter>
+                                       <parameter name="reason" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.IT_SDasWorkDayTrainingSQL[1]/output[1]/out_scMessage </expression>
+                                       </parameter>
+                                    </throwInput>
+                                 </throw>
+                              </flow>
+                              <link id="me3hhwgj" targetId="me3hhwgd" type="containerLink">
+                                 <condition source="formula">
+                                    <function name="less-than">
+                                       <arg name="left">{$temp.vTempErrorCount}</arg>
+                                       <arg name="right">{$temp.vTempMaxErrorNumber }</arg>
+                                    </function>
+                                 </condition>
+                              </link>
+                              <link id="me3hhwgk" targetId="me3hhwgf" type="containerLink"/>
+                           </container>
+                        </flow>
+                        <link id="me3hhwc3" targetId="me3hhwc0" type="containerLink">
+                           <condition source="formula">
+                              <function name="string-equals">
+                                 <arg name="left" source="formula">{$temp.IT_SDasWorkDayTrainingSQL[1]/output[1]/out_scCode }</arg>
+                                 <arg name="right">0</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="me3hhwc4" targetId="me3hhwc1" type="containerLink"/>
+                     </container>
+                     <link id="me3hhwgb" targetId="mdqibkcs" type="containerLink"/>
+                  </flow>
+                  <flow id="mdqibkcz">
+                     <link id="mdqibkd0" targetId="mdqibkcs" type="containerLink"/>
+                  </flow>
+                  <link id="mdqibkcv" targetId="mdqibkcw" type="containerLink">
+                     <condition source="formula">
+                        <function name="less-or-equals">
+                           <arg name="left">{$temp.vTempConterRecords}</arg>
+                           <arg name="right">{$temp.vTempCountRecords }</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="mdqibkcy" targetId="mdqibkcz" type="containerLink"/>
+                  <link id="mdqibkda" targetId="c"/>
+               </container>
+               <end id="c">
+                  <title>End_tf_TMS_00_InsertRecordsSQL</title>
+               </end>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="SDasWorkDayTrainingSQL"
+                              isByCopy="true"
+                              name="SDasWorkDayTrainingSQL">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="InternalInfaSubTaskflowField"
+                              isByCopy="true"
+                              name="InternalInfaSubTaskflowField">
+                  <description>This process object represents a subtaskflow type reference field.</description>
+                  <tags/>
+                  <detail/>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>bVlqPtiB52TidR5dbJkYCd</types1:GUID>
+      <types1:DisplayName>tf_TMS_00_InsertRecordsSQL_1</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-04-10T12:28:44.198Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

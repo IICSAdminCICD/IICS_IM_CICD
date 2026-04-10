@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "hCaU0QOTPwggEtWz5wqLyG",
+    "id" : "4RW4WoKWOI6kxeRRS1nViU",
     "name" : "mt_TMS_01_SendTrainingsETQ",
     "type" : "MTT",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "011EE90Z000000000004"
+        "repoHandle" : "011EE90Z000000000005"
       },
       "contextAttributes" : [ {
         "name" : "id",
@@ -23,8 +23,31 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2026-04-10T10:19:54.287Z",
+  "updateTime" : "2026-04-10T12:28:44.925Z",
   "objectRefs" : [ {
+    "id" : "cPN5l7vQ3MYiRmyTwbL82D",
+    "name" : "m_TMS_01_SendTrainingsETQ",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "011EE91700000000000B"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "@connectionSource= SQL Server, @connection Target= SQL Server, @sources= [@connection1=SQL_Wdy_ETQ_TMS], @targets= [@connection1= SQL_Wdy_ETQ_TMS], @transformation= select, @dataType= JSON Training Records, @additionalText= select the first record inserted and send the records to ETQ",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  }, {
     "id" : "2SwhqkOxXnzdvof9oxXaU6",
     "name" : "SZU1IICSSA01",
     "type" : "AgentGroup",
@@ -64,29 +87,6 @@
       }
     },
     "path" : "/SYS"
-  }, {
-    "id" : "f5dhW2LqZ0Egb3ZSOnxeA0",
-    "name" : "m_TMS_01_SendTrainingsETQ",
-    "type" : "DTEMPLATE",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "011EE91700000000000A"
-      },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
-      "additionalInfo" : {
-        "description" : "@connectionSource= SQL Server, @connection Target= SQL Server, @sources= [@connection1=SQL_Wdy_ETQ_TMS], @targets= [@connection1= SQL_Wdy_ETQ_TMS], @transformation= select, @dataType= JSON Training Records, @additionalText= select the first record inserted and send the records to ETQ",
-        "contentType" : "JSON",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/QMS/Workday"
   } ],
   "readableFileExtension" : "json",
   "readableFilePresent" : true
