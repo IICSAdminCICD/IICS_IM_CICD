@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>n9FkPaaaaaaaaa-gt-1010127-2026-04-09T13:17:44.223Z::pd.xml</types1:EntryId>
+      <types1:EntryId>UUOC074Rpf6JfOM-gt-1168363-2026-04-10T12:03:07.753Z::pd.xml</types1:EntryId>
       <types1:Name>SDasInsertRecordsETQ</types1:Name>
       <types1:MimeType>application/xml+process</types1:MimeType>
       <types1:Description>@operation=Send Assignments from Workday to ETQ, @dataType=Workday Trainings, @source=WorkDay, @target=ETQ, @apiName=SIntSendAssignmentsETQREST, @additionalText=API used to send assignment courses to ETQ, @prcRunOn=SDCAMDMSA01, @prcAllowedGroups=ServiceConsumer</types1:Description>
@@ -11,14 +11,14 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-09T13:17:44Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-10T12:03:08Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
          <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
                   xmlns:list="urn:activevos:spi:list:functions"
-                  GUID="8JyPwnMjpLybUNJ4vOKGAZ"
+                  GUID="6cRTYrqFNoIiUFzMpT7FOI"
                   displayName="SDasInsertRecordsETQ"
                   name="SDasInsertRecordsETQ"
                   overrideAPIName="false">
@@ -182,7 +182,7 @@
                      <option hide="true" name="multiSelect">true</option>
                      <option name="required">false</option>
                      <option name="isCopy">true</option>
-                     <option name="guid">dVvOlC8U1ivdDQ3D6E9NGj</option>
+                     <option name="guid">cku7pUalXsAgLKhtSjiwAb</option>
                   </options>
                </field>
                <field description="" name="vTempNonDuplicatedRecords" type="objectlist">
@@ -191,7 +191,7 @@
                      <option hide="true" name="multiSelect">true</option>
                      <option name="required">false</option>
                      <option name="isCopy">true</option>
-                     <option name="guid">dVvOlC8U1ivdDQ3D6E9NGj</option>
+                     <option name="guid">cku7pUalXsAgLKhtSjiwAb</option>
                   </options>
                </field>
                <field description="" name="vTempDuplicatedRecordsItem" type="objectlist">
@@ -200,7 +200,7 @@
                      <option hide="true" name="multiSelect">true</option>
                      <option name="required">false</option>
                      <option name="isCopy">true</option>
-                     <option name="guid">dVvOlC8U1ivdDQ3D6E9NGj</option>
+                     <option name="guid">cku7pUalXsAgLKhtSjiwAb</option>
                   </options>
                </field>
                <field description="" name="vTempJsonInputDuplicated" type="string">
@@ -302,7 +302,7 @@
                               <service id="me0y96r7">
                                  <title>SvcETQGetToken</title>
                                  <serviceName>Conn-SC-ETQAPIs:getTokenETQ</serviceName>
-                                 <serviceGUID>3SDQRiztzIkjiXuNTNkMOG</serviceGUID>
+                                 <serviceGUID>22TkAKqSVXobeVM95HR2Wh</serviceGUID>
                                  <serviceInput/>
                               </service>
                               <flow id="me0y96qw">
@@ -324,7 +324,7 @@
                                     <service id="me0y96uv">
                                        <title>SvcViewETQAssignments</title>
                                        <serviceName>Conn-SC-ETQAPIs:View_AssignmentsETQ</serviceName>
-                                       <serviceGUID>3SDQRiztzIkjiXuNTNkMOG</serviceGUID>
+                                       <serviceGUID>22TkAKqSVXobeVM95HR2Wh</serviceGUID>
                                        <serviceInput>
                                           <parameter name="in_scVARVAL" source="formula">
                                              <expression language="XQuery">$temp.vTempRefID </expression>
@@ -519,7 +519,7 @@ return
                                              <service id="me0y96ut">
                                                 <title>SvcFileWriterFaultViewETQ</title>
                                                 <serviceName>Conn-File-LogGovOps:FileWriter</serviceName>
-                                                <serviceGUID>88acgWng8njbNsC0fm8Yei</serviceGUID>
+                                                <serviceGUID>aMJnvoUehsEecYGoaGo8Oj</serviceGUID>
                                                 <serviceInput>
                                                    <parameter name="fileWriteTask" source="formula">
                                                       <expression language="XQuery">&lt;FileWriteTask&gt;
@@ -612,7 +612,7 @@ return
                                        <service id="me0y96r5">
                                           <title>SvcFileWriterFaultSelectResults</title>
                                           <serviceName>Conn-File-LogGovOps:FileWriter</serviceName>
-                                          <serviceGUID>88acgWng8njbNsC0fm8Yei</serviceGUID>
+                                          <serviceGUID>aMJnvoUehsEecYGoaGo8Oj</serviceGUID>
                                           <serviceInput>
                                              <parameter name="fileWriteTask" source="formula">
                                                 <expression language="XQuery">&lt;FileWriteTask&gt;
@@ -697,7 +697,7 @@ return
                                     <service id="me3057gs">
                                        <title>SvcUpdateAssignmentPUTETQ</title>
                                        <serviceName>Conn-SC-ETQAPIs:UpdateAssignmentPUTETQ</serviceName>
-                                       <serviceGUID>3SDQRiztzIkjiXuNTNkMOG</serviceGUID>
+                                       <serviceGUID>22TkAKqSVXobeVM95HR2Wh</serviceGUID>
                                        <serviceInput>
                                           <parameter name="in_scPayload" source="formula">
                                              <expression language="XQuery">(:string($temp.vTempJsonInputDuplicated) :)
@@ -757,7 +757,7 @@ $temp.vTempMessage </expression>
                                              <service id="me3057gq">
                                                 <title>SvcFileWriterFaultUpdateETQ</title>
                                                 <serviceName>Conn-File-LogGovOps:FileWriter</serviceName>
-                                                <serviceGUID>88acgWng8njbNsC0fm8Yei</serviceGUID>
+                                                <serviceGUID>aMJnvoUehsEecYGoaGo8Oj</serviceGUID>
                                                 <serviceInput>
                                                    <parameter name="fileWriteTask" source="formula">
                                                       <expression language="XQuery">&lt;FileWriteTask&gt;
@@ -824,7 +824,7 @@ $temp.vTempMessage </expression>
                                     <service id="me3057oe">
                                        <title>SvcInsertAssignmentsETQ</title>
                                        <serviceName>Conn-SC-ETQAPIs:CreateAssignmentPOSTETQ</serviceName>
-                                       <serviceGUID>3SDQRiztzIkjiXuNTNkMOG</serviceGUID>
+                                       <serviceGUID>22TkAKqSVXobeVM95HR2Wh</serviceGUID>
                                        <serviceInput>
                                           <parameter name="in_scToken" source="formula">
                                              <expression language="XQuery">$temp.vTempToken </expression>
@@ -883,7 +883,7 @@ $temp.vTempMessage </expression>
                                              <service id="me3057oc">
                                                 <title>SvcFileWriterFaultInsertETQ</title>
                                                 <serviceName>Conn-File-LogGovOps:FileWriter</serviceName>
-                                                <serviceGUID>88acgWng8njbNsC0fm8Yei</serviceGUID>
+                                                <serviceGUID>aMJnvoUehsEecYGoaGo8Oj</serviceGUID>
                                                 <serviceInput>
                                                    <parameter name="fileWriteTask" source="formula">
                                                       <expression language="XQuery">&lt;FileWriteTask&gt;
@@ -978,12 +978,12 @@ $temp.vTempMessage </expression>
          </process>
          <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
             <ns1:SampleData>
-               <ns1:Id>709cad83-2aa5-4a28-a794-57991d0c89f4</ns1:Id>
+               <ns1:Id>e9c1ef31-a668-419d-84d5-69f8ffefc6b8</ns1:Id>
                <ns1:Name>TEST25Records</ns1:Name>
                <ns1:CreatedBy>gchico@ppg.com</ns1:CreatedBy>
-               <ns1:CreationDate>2026-04-09T13:17:44Z</ns1:CreationDate>
+               <ns1:CreationDate>2026-04-10T12:03:08Z</ns1:CreationDate>
                <ns1:ModifiedBy>gchico@ppg.com</ns1:ModifiedBy>
-               <ns1:ModificationDate>2026-04-09T13:17:44Z</ns1:ModificationDate>
+               <ns1:ModificationDate>2026-04-10T12:03:08Z</ns1:ModificationDate>
                <ns1:Data format="json">{
 "Document": [ {
     "applicationName": "ETQ_TRAINING",
@@ -1254,8 +1254,8 @@ $temp.vTempMessage </expression>
             </ns1:SampleData>
          </ns1:sample-data-sets>
       </types1:Entry>
-      <types1:GUID>8JyPwnMjpLybUNJ4vOKGAZ</types1:GUID>
+      <types1:GUID>6cRTYrqFNoIiUFzMpT7FOI</types1:GUID>
       <types1:DisplayName>SDasInsertRecordsETQ</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-10T10:19:53.717Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-10T12:21:21.452Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

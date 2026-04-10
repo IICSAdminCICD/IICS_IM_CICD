@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>CY7tu2SHCwkNmum-gt-1010014-2026-04-09T13:17:42.467Z::conn.xml</types1:EntryId>
+      <types1:EntryId>abbf5ZK0CYybdsM-gt-1168353-2026-04-10T12:03:06.013Z::conn.xml</types1:EntryId>
       <types1:Name>Conn-SC-SDasWorkDayTrainingSQL</types1:Name>
       <types1:MimeType>application/xml+connection</types1:MimeType>
       <types1:Description>@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC_SDasWordDayTrainingSQL</types1:Description>
@@ -11,7 +11,7 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-09T13:17:42Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-10T12:03:06Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
@@ -51,7 +51,7 @@
             <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
                                agentOnly="true"
                                connectorPath="project:/rt.connector/SC_SDasWorkDayTrainingSQL/SC_SDasWorkDayTrainingSQL_svcDef.xml"
-                               guid="58ugMgO9sJChoTBxe8mwUJ"
+                               guid="4bfC6tzqM4MhlmYtB4MfIi"
                                name="SC-SDasWorkDayTrainingSQL"
                                plugin="DAS"
                                supportsConnectionTest="true"
@@ -62,8 +62,8 @@
             </businessConnector>
          </connection>
       </types1:Entry>
-      <types1:GUID>0bjpdTZDnGefjYn7cNOpuu</types1:GUID>
+      <types1:GUID>0CUW3KGwHkKeqfIMxitcgP</types1:GUID>
       <types1:DisplayName>Conn-SC-SDasWorkDayTrainingSQL</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-10T10:19:53.418Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-10T12:21:21.211Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

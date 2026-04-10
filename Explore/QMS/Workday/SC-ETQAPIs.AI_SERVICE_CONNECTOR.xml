@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>160S24FsWTzIf6r-gt-1014347-2026-04-09T13:17:41.848Z::svc.xml</types1:EntryId>
+      <types1:EntryId>aaa-gt-1171994-2026-04-10T12:03:05.004Z::svc.xml</types1:EntryId>
       <types1:Name>SC-ETQAPIs</types1:Name>
       <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
       <types1:Description>@scType=ETQ APIs to create validate and update, @application=ETQ System, @additionalText=Group of APIs from ETQ </types1:Description>
@@ -11,7 +11,7 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-09T13:17:42Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-10T12:03:05Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
@@ -249,8 +249,8 @@ return $auth}</header>
             </objects>
          </businessConnector>
       </types1:Entry>
-      <types1:GUID>g4rseSUduMggMAnk2aBSeL</types1:GUID>
+      <types1:GUID>f60HmOpbXeniIJgL047HoS</types1:GUID>
       <types1:DisplayName>SC-ETQAPIs</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-10T10:19:53.15Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-10T12:21:20.967Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

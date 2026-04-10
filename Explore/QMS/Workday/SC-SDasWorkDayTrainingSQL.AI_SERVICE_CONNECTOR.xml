@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>jiYBeMHck5qbbfU-gt-1014093-2026-04-09T13:17:41.146Z::svc.xml</types1:EntryId>
+      <types1:EntryId>eLRfRW8UBM7zsZv-gt-1172002-2026-04-10T12:03:05.077Z::svc.xml</types1:EntryId>
       <types1:Name>SC-SDasWorkDayTrainingSQL</types1:Name>
       <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
       <types1:Description>@scType=Trainings Workday, @application= Workday/ETQ
@@ -13,7 +13,7 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-09T13:17:41Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-10T12:03:05Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
@@ -255,8 +255,8 @@
             <objects/>
          </businessConnector>
       </types1:Entry>
-      <types1:GUID>58ugMgO9sJChoTBxe8mwUJ</types1:GUID>
+      <types1:GUID>4bfC6tzqM4MhlmYtB4MfIi</types1:GUID>
       <types1:DisplayName>SC-SDasWorkDayTrainingSQL</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-10T10:19:53.156Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-10T12:21:20.954Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

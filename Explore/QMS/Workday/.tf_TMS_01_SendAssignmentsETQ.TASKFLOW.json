@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "7I2cRMqs6HRfY6X5Rw9QCr",
+    "id" : "cazaloILLuZe1GUbWIE28o",
     "name" : "tf_TMS_01_SendAssignmentsETQ",
     "type" : "TASKFLOW",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "rT2htghGZ5i4rsw-gt-4859960-2026-04-09T13:17:44.278Z::tf.xml"
+        "repoHandle" : "5WA6gaabclvAhrs-gt-5859690-2026-04-10T12:03:07.915Z::tf.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,9 +20,49 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-10T10:19:54.280Z",
+  "updateTime" : "2026-04-10T12:21:21.651Z",
   "objectRefs" : [ {
-    "id" : "hCaU0QOTPwggEtWz5wqLyG",
+    "id" : "1NyPDjquYiBcn1EKGLilUA",
+    "name" : "SDasWorkdayTaskflow",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Y8AyNnQMMnGbciZ-gt-1172042-2026-04-10T12:03:06.818Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation= Recursion taskflow, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText=Recursion taskflow, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  }, {
+    "id" : "5yLUYpoNkPrgLr3IYQmio2",
+    "name" : "SDasWorkDayTrainingSQL",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "NFoFuR55aaabdqp-gt-1172020-2026-04-10T12:03:06.644Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation= Insert/Update LogTraining, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText= Insert and Update training records into table, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  }, {
+    "id" : "4RW4WoKWOI6kxeRRS1nViU",
     "name" : "mt_TMS_01_SendTrainingsETQ",
     "type" : "MTT",
     "metadata" : {
@@ -31,7 +71,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "011EE90Z000000000004"
+        "repoHandle" : "011EE90Z000000000005"
       },
       "contextAttributes" : [ {
         "name" : "id",
@@ -45,27 +85,7 @@
     },
     "path" : "/Explore/QMS/Workday"
   }, {
-    "id" : "fXrk6rxdDU0lnqbtKkUzsl",
-    "name" : "SDasWorkdayTaskflow",
-    "type" : "PROCESS",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 1,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "tdsreK8ZAZf5kck-gt-1010082-2026-04-09T13:17:43.317Z::pd.xml"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "@operation= Recursion taskflow, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText=Recursion taskflow, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
-        "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/QMS/Workday"
-  }, {
-    "id" : "gWlg0B1JAC5e7NHVTITm6m",
+    "id" : "1o3yzZ9cHFMgZLFdx2fj80",
     "name" : "tf_UtiGenerateTicketGovOps",
     "type" : "TASKFLOW",
     "metadata" : {
@@ -74,7 +94,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "HvYmsK4PvbcjIw8-gt-4793274-2026-04-09T13:17:42.54Z::tf.xml"
+        "repoHandle" : "NMZQELaabclvAhr-gt-5859673-2026-04-10T12:03:05.637Z::tf.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -84,26 +104,6 @@
       }
     },
     "path" : "/Explore/Utilities_GovOps/InfraTickets"
-  }, {
-    "id" : "46lyvmTCOPHlSF06ChazgP",
-    "name" : "SDasWorkDayTrainingSQL",
-    "type" : "PROCESS",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 1,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "lPHPRPjAXhNUdyO-gt-1010068-2026-04-09T13:17:43.19Z::pd.xml"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "@operation= Insert/Update LogTraining, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText= Insert and Update training records into table, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
-        "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/QMS/Workday"
   } ],
   "readableFileExtension" : null,
   "readableFilePresent" : false

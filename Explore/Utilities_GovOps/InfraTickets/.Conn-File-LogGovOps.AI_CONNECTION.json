@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "88acgWng8njbNsC0fm8Yei",
+    "id" : "aMJnvoUehsEecYGoaGo8Oj",
     "name" : "Conn-File-LogGovOps",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "uwn2H0Fdw8jIw8j-gt-1014141-2026-04-09T13:17:41.337Z::conn.xml"
+        "repoHandle" : "2JrhNzUzeA8rJ4p-gt-1168303-2026-04-10T12:03:04.869Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,7 +20,7 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-10T10:19:54.282Z",
+  "updateTime" : "2026-04-10T12:21:21.646Z",
   "objectRefs" : [ ],
   "readableFileExtension" : null,
   "readableFilePresent" : false

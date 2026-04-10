@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>5raaaaaa-gt-1014355-2026-04-09T13:17:41.907Z::svc.xml</types1:EntryId>
+      <types1:EntryId>i0seGbciZBpDUQb-gt-1172010-2026-04-10T12:03:05.141Z::svc.xml</types1:EntryId>
       <types1:Name>SC-SDASInsertTrainingsLog</types1:Name>
       <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
       <types1:Description>@scType= Workday Trainings, @application= Workday / ETQ
@@ -13,7 +13,7 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-09T13:17:42Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-10T12:03:05Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
@@ -230,8 +230,8 @@ return $l_authorization}</header>
             <objects/>
          </businessConnector>
       </types1:Entry>
-      <types1:GUID>h0f4JRf2DIIgIncmTAxWC1</types1:GUID>
+      <types1:GUID>7bVfnyZFJYrctcg71r5bab</types1:GUID>
       <types1:DisplayName>SC-SDASInsertTrainingsLog</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-10T10:19:53.134Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-10T12:21:20.93Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

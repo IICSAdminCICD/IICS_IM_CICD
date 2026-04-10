@@ -1,9 +1,9 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>JQWSwxF1T4W6jKs-gt-1010038-2026-04-09T13:17:42.57Z::po.xml</types1:EntryId>
+      <types1:EntryId>8ZGqpfZJdqVIKch-gt-1168343-2026-04-10T12:03:05.958Z::po.xml</types1:EntryId>
       <types1:Name>PODocumentFields</types1:Name>
-      <types1:ParentFlowIds>f17k4AdypKwKBqR-gt-1010117-2026-04-09T13:17:44.092Z::pd.xml</types1:ParentFlowIds>
+      <types1:ParentFlowIds>6XEQT53nQciSrZM-gt-1168375-2026-04-10T12:03:07.926Z::pd.xml</types1:ParentFlowIds>
       <types1:MimeType>application/xml+processobject</types1:MimeType>
       <types1:Description>@operation= DocumentAssignments, @dataType= Documents Structure, @application= WorkdayETQ</types1:Description>
       <types1:AppliesTo/>
@@ -12,7 +12,7 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-09T13:17:43Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-10T12:03:06Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
@@ -52,14 +52,14 @@
                   <options>
                      <option name="relationshipName">Child</option>
                      <option name="referenceTo">$po:POFieldRows</option>
-                     <option name="guid">bwudAU3Qs0ZjDfVugOWpGN</option>
+                     <option name="guid">1YFBVNuqbGZil5VisFvVIi</option>
                   </options>
                </field>
             </detail>
          </processObject>
       </types1:Entry>
-      <types1:GUID>akxSc2UZabdimsnX9LbqaB</types1:GUID>
+      <types1:GUID>2a36IbssI9jjXcs0NZy8Yt</types1:GUID>
       <types1:DisplayName>PODocumentFields</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-10T10:19:53.385Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-10T12:21:21.174Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
