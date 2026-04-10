@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "89FxQr7aFbvlYdqMetMUK3",
+    "id" : "58ugMgO9sJChoTBxe8mwUJ",
     "name" : "SC-SDasWorkDayTrainingSQL",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "lKDeDyf6riX2FNB-gt-693948-2026-04-07T11:41:47.189Z::svc.xml"
+        "repoHandle" : "jiYBeMHck5qbbfU-gt-1014093-2026-04-09T13:17:41.146Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,7 +20,7 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-09T13:13:13.395Z",
+  "updateTime" : "2026-04-10T10:19:54.298Z",
   "objectRefs" : [ ],
   "readableFileExtension" : null,
   "readableFilePresent" : false

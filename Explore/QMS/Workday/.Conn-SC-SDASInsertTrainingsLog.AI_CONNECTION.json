@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "35bBc4tXcA0dvcsj9e3CGf",
+    "id" : "3D1NNfKSXvHhaw3jLvqrqw",
     "name" : "Conn-SC-SDASInsertTrainingsLog",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "mY6pkTjFIMeINci-gt-700499-2026-04-07T11:41:48.195Z::conn.xml"
+        "repoHandle" : "FHyabdvhxiQLnzY-gt-1010028-2026-04-09T13:17:42.515Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,9 +20,9 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-09T13:13:13.372Z",
+  "updateTime" : "2026-04-10T10:19:54.280Z",
   "objectRefs" : [ {
-    "id" : "8Rj26Ze1HqJdCGTwQxVhO4",
+    "id" : "h0f4JRf2DIIgIncmTAxWC1",
     "name" : "SC-SDASInsertTrainingsLog",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -31,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "V4pbgchwAQlBWlD-gt-693982-2026-04-07T11:41:47.767Z::svc.xml"
+        "repoHandle" : "5raaaaaa-gt-1014355-2026-04-09T13:17:41.907Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
