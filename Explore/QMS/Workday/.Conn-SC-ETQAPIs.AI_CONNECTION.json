@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "jSPqaNdH3aIfi0oyd6rhQN",
+    "id" : "3SDQRiztzIkjiXuNTNkMOG",
     "name" : "Conn-SC-ETQAPIs",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "tVOSSHCwkNmumf6-gt-694022-2026-04-07T11:41:48.312Z::conn.xml"
+        "repoHandle" : "QX3cjk91pqrzYLn-gt-1010058-2026-04-09T13:17:42.684Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,9 +20,9 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-09T13:13:13.385Z",
+  "updateTime" : "2026-04-10T10:19:54.293Z",
   "objectRefs" : [ {
-    "id" : "7pzDjpUHjC7gYT5VARXIaX",
+    "id" : "g4rseSUduMggMAnk2aBSeL",
     "name" : "SC-ETQAPIs",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -31,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "Rlvk0qZF3a-gt-693974-2026-04-07T11:41:47.708Z::svc.xml"
+        "repoHandle" : "160S24FsWTzIf6r-gt-1014347-2026-04-09T13:17:41.848Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

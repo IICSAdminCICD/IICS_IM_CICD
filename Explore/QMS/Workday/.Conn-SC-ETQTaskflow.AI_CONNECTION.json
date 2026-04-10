@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "76JxDo0HkSJcfAyZQRG98k",
+    "id" : "aDlfr0GNSZjgATxrV57p41",
     "name" : "Conn-SC-ETQTaskflow",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "mnXQeK8ZAZf5kck-gt-694002-2026-04-07T11:41:48.205Z::conn.xml"
+        "repoHandle" : "MBu8zbgdwUiQLnz-gt-1010048-2026-04-09T13:17:42.628Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,9 +20,9 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-09T13:13:13.369Z",
+  "updateTime" : "2026-04-10T10:19:54.303Z",
   "objectRefs" : [ {
-    "id" : "kNtjgvC3Kehg6TqeJoeusw",
+    "id" : "8bpexzYOtVmlkkeuVzsoGq",
     "name" : "SC-ETQTaskflow",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -31,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "aa-gt-693922-2026-04-07T11:41:47.002Z::svc.xml"
+        "repoHandle" : "w4i5rdsMkdypKwK-gt-1014147-2026-04-09T13:17:41.359Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
