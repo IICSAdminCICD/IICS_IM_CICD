@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>sOk81V4AdypKwKB-gt-61423-2026-04-13T09:15:40.294Z::pd.xml</types1:EntryId>
+      <types1:EntryId>lO01huaa-gt-100864-2026-04-13T16:27:34.191Z::pd.xml</types1:EntryId>
       <types1:Name>SIntSendAssignmentsETQ</types1:Name>
       <types1:MimeType>application/xml+process</types1:MimeType>
       <types1:Description>@operation= Insert Training into Buffer SQL, @dataType= Workday Trainings, @source= Workday, @target= SQL Server Buffer, @apiName= SIntSendAssignmentsETQREST, @additionalText= Proccess Build to storage trainings in SQL Server table that works as a buffer, @prcRunOn = Cloud, @prcAllowedGroups= ServiceConsumer</types1:Description>
@@ -11,14 +11,14 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-13T09:15:40Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-13T16:27:34Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
          <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
                   xmlns:list="urn:activevos:spi:list:functions"
-                  GUID="7i09Y7E3es3di0KKDBrl2r"
+                  GUID="0CAfcFH51ZKcLqmwRSLOk8"
                   displayName="SIntSendAssignmentsETQ"
                   name="SIntSendAssignmentsETQ"
                   overrideAPIName="false">
@@ -37,7 +37,7 @@
                      <option hide="true" name="multiSelect">true</option>
                      <option name="required">false</option>
                      <option name="isCopy">true</option>
-                     <option name="guid">lLJK9fcjUmrcSlsmbxfzsd</option>
+                     <option name="guid">5IFdCe0y1SOei4bqoM6WGt</option>
                   </options>
                </parameter>
             </input>
@@ -53,7 +53,7 @@
                      <option hide="true" name="multiSelect">true</option>
                      <option name="required">false</option>
                      <option name="isCopy">true</option>
-                     <option name="guid">2GOhwoyTaRMlhVWRVsMaGp</option>
+                     <option name="guid">7wLfVJz22QTflQuLnc3hwt</option>
                   </options>
                </field>
                <field description="" name="vTempTotalJsonParts" type="string">
@@ -178,7 +178,7 @@ return
                         <service id="mdyvee51">
                            <title>SvcInsertTrainingLog</title>
                            <serviceName>Conn-SC-SDASInsertTrainingsLog:InsertLogWorkdaySP</serviceName>
-                           <serviceGUID>2O25mD53tM9dkD4dThRIGz</serviceGUID>
+                           <serviceGUID>8kRoQ3Evrv6e6D8xt3HyK8</serviceGUID>
                            <serviceInput>
                               <parameter name="in_scStatus" source="formula">
                                  <expression language="XQuery">'New'</expression>
@@ -221,7 +221,7 @@ return
                                     <service id="mdyvee4y">
                                        <title>SvcInsertTrainingRecords</title>
                                        <serviceName>Conn-SC-SDASInsertTrainingsLog:InsertRecordsSQL</serviceName>
-                                       <serviceGUID>2O25mD53tM9dkD4dThRIGz</serviceGUID>
+                                       <serviceGUID>8kRoQ3Evrv6e6D8xt3HyK8</serviceGUID>
                                        <serviceInput>
                                           <parameter name="sc_InLogID" source="formula">
                                              <expression language="XQuery">$output.sc_outLogID </expression>
@@ -280,7 +280,7 @@ return
                                              <service id="me36aen5">
                                                 <title>SvcInsertTrainingLogFileWriterRecords</title>
                                                 <serviceName>Conn-File-LogGovOps:FileWriter</serviceName>
-                                                <serviceGUID>aMJnvoUehsEecYGoaGo8Oj</serviceGUID>
+                                                <serviceGUID>7FmJXtLmkZSjZ0nK3CPI2j</serviceGUID>
                                                 <serviceInput>
                                                    <parameter name="fileWriteTask" source="formula">
                                                       <expression language="XQuery">&lt;FileWriteTask&gt;
@@ -392,7 +392,7 @@ return
                                  <service id="me36ae3x">
                                     <title>SvcInsertTrainingLogFileWriter</title>
                                     <serviceName>Conn-File-LogGovOps:FileWriter</serviceName>
-                                    <serviceGUID>aMJnvoUehsEecYGoaGo8Oj</serviceGUID>
+                                    <serviceGUID>7FmJXtLmkZSjZ0nK3CPI2j</serviceGUID>
                                     <serviceInput>
                                        <parameter name="fileWriteTask" source="formula">
                                           <expression language="XQuery">&lt;FileWriteTask&gt;
@@ -460,8 +460,8 @@ return
             </flow>
          </process>
       </types1:Entry>
-      <types1:GUID>7i09Y7E3es3di0KKDBrl2r</types1:GUID>
+      <types1:GUID>0CAfcFH51ZKcLqmwRSLOk8</types1:GUID>
       <types1:DisplayName>SIntSendAssignmentsETQ</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-13T12:07:52.442Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-13T16:33:57.477Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

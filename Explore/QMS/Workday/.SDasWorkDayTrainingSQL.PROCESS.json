@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "3EWKcbsRLkqlrvr1uf6No7",
+    "id" : "j5q1UWR6aMriGJuEesyUW1",
     "name" : "SDasWorkDayTrainingSQL",
     "type" : "PROCESS",
     "metadata" : {
@@ -9,40 +9,20 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "oDdvrTdtqSLlBWl-gt-61377-2026-04-13T09:15:39.234Z::pd.xml"
+        "repoHandle" : "ueDHFKi9zhFtybd-gt-100818-2026-04-13T16:27:33.33Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "@operation= Insert/Update LogTraining, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText= Insert and Update training records into table, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
         "contentType" : "application/json; charset=utf-8",
-        "documentState" : "INVALID"
+        "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-13T12:07:53.058Z",
+  "updateTime" : "2026-04-13T16:33:57.716Z",
   "objectRefs" : [ {
-    "id" : "1z80uRIiRvdjx6vgwEDzCl",
-    "name" : "Conn-SC-SDasWorkDayTrainingSQL",
-    "type" : "AI_CONNECTION",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 1,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "KoEFsWTzIf6riX2-gt-60525-2026-04-13T09:15:38.585Z::conn.xml"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC_SDasWordDayTrainingSQL",
-        "contentType" : "application/json; charset=utf-8",
-        "documentState" : "INVALID"
-      }
-    },
-    "path" : "/Explore/QMS/Workday"
-  }, {
-    "id" : "2O25mD53tM9dkD4dThRIGz",
+    "id" : "8kRoQ3Evrv6e6D8xt3HyK8",
     "name" : "Conn-SC-SDASInsertTrainingsLog",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -51,11 +31,31 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "CY7tu2SHCwkNmum-gt-60505-2026-04-13T09:15:38.467Z::conn.xml"
+        "repoHandle" : "uRZXDyvs7xvk0qZ-gt-99063-2026-04-13T16:27:32.327Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "@appType= Trainings Workday, @application= Workday/ETQ, @appSCName= SC_SDASInsertTrainingsLog",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  }, {
+    "id" : "3Alaiq0kbONk7U316Gw00z",
+    "name" : "Conn-SC-SDasWorkDayTrainingSQL",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "BfWWCSHbf13ErhN-gt-99084-2026-04-13T16:27:32.448Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC_SDasWordDayTrainingSQL",
         "contentType" : "application/json; charset=utf-8",
         "documentState" : "VALID"
       }

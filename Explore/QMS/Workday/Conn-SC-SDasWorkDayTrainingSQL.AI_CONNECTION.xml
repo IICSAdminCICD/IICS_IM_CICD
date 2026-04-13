@@ -1,29 +1,28 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>KoEFsWTzIf6riX2-gt-60525-2026-04-13T09:15:38.585Z::conn.xml</types1:EntryId>
+      <types1:EntryId>BfWWCSHbf13ErhN-gt-99084-2026-04-13T16:27:32.448Z::conn.xml</types1:EntryId>
       <types1:Name>Conn-SC-SDasWorkDayTrainingSQL</types1:Name>
       <types1:MimeType>application/xml+connection</types1:MimeType>
       <types1:Description>@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC_SDasWordDayTrainingSQL</types1:Description>
       <types1:AppliesTo/>
-      <types1:Tags>.agent:SZU1IICSSA01</types1:Tags>
+      <types1:Tags>.agent:SDCAMDMSA01</types1:Tags>
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-13T09:15:39Z</types1:CreationDate>
-      <types1:ModifiedBy>gchico@ppg.com</types1:ModifiedBy>
-      <types1:ModificationDate>2026-04-13T12:05:05Z</types1:ModificationDate>
+      <types1:CreationDate>2026-04-13T16:27:32Z</types1:CreationDate>
+      <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
          <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
-                     GUID="1z80uRIiRvdjx6vgwEDzCl"
+                     GUID="3Alaiq0kbONk7U316Gw00z"
                      displayName="Conn-SC-SDasWorkDayTrainingSQL"
                      label="Conn-SC-SDasWorkDayTrainingSQL"
                      name="Conn-SC-SDasWorkDayTrainingSQL">
             <description>@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC_SDasWordDayTrainingSQL</description>
-            <tags>.agent:SZU1IICSSA01</tags>
-            <agent>SZU1IICSSA01</agent>
+            <tags>.agent:SDCAMDMSA01</tags>
+            <agent>SDCAMDMSA01</agent>
             <attributes>
                <attribute encrypted="false"
                           name="driver"
@@ -53,7 +52,7 @@
             <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
                                agentOnly="true"
                                connectorPath="project:/rt.connector/SC_SDasWorkDayTrainingSQL/SC_SDasWorkDayTrainingSQL_svcDef.xml"
-                               guid="ihXw8tENjASdas0zgfWMK1"
+                               guid="4Hs8HIyDyizb6SWAfMF1A7"
                                name="SC-SDasWorkDayTrainingSQL"
                                plugin="DAS"
                                supportsConnectionTest="true"
@@ -64,8 +63,8 @@
             </businessConnector>
          </connection>
       </types1:Entry>
-      <types1:GUID/>
+      <types1:GUID>3Alaiq0kbONk7U316Gw00z</types1:GUID>
       <types1:DisplayName>Conn-SC-SDasWorkDayTrainingSQL</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-13T12:07:52.054Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-13T16:33:57.174Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

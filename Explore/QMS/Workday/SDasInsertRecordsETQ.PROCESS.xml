@@ -1,32 +1,31 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>hFIMeINciZBpDUQ-gt-61411-2026-04-13T09:15:40.123Z::pd.xml</types1:EntryId>
+      <types1:EntryId>bgeHRi92qBbbeJO-gt-100852-2026-04-13T16:27:34.032Z::pd.xml</types1:EntryId>
       <types1:Name>SDasInsertRecordsETQ</types1:Name>
       <types1:MimeType>application/xml+process</types1:MimeType>
       <types1:Description>@operation=Send Assignments from Workday to ETQ, @dataType=Workday Trainings, @source=WorkDay, @target=ETQ, @apiName=SIntSendAssignmentsETQREST, @additionalText=API used to send assignment courses to ETQ, @prcRunOn=SDCAMDMSA01, @prcAllowedGroups=ServiceConsumer</types1:Description>
       <types1:AppliesTo/>
-      <types1:Tags>.agent:SZU1IICSSA01</types1:Tags>
+      <types1:Tags>.agent:SDCAMDMSA01,.anonymous</types1:Tags>
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-13T09:15:40Z</types1:CreationDate>
-      <types1:ModifiedBy>gchico@ppg.com</types1:ModifiedBy>
-      <types1:ModificationDate>2026-04-13T12:05:50Z</types1:ModificationDate>
+      <types1:CreationDate>2026-04-13T16:27:34Z</types1:CreationDate>
+      <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
          <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
                   xmlns:list="urn:activevos:spi:list:functions"
-                  GUID="1NbRWp59CcokINEGbtGrEO"
+                  GUID="90s1gIoHZYlht2aTiCavkf"
                   displayName="SDasInsertRecordsETQ"
                   name="SDasInsertRecordsETQ"
                   overrideAPIName="false">
             <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
             <appliesTo/>
             <description>@operation=Send Assignments from Workday to ETQ, @dataType=Workday Trainings, @source=WorkDay, @target=ETQ, @apiName=SIntSendAssignmentsETQREST, @additionalText=API used to send assignment courses to ETQ, @prcRunOn=SDCAMDMSA01, @prcAllowedGroups=ServiceConsumer</description>
-            <tags>.agent:SZU1IICSSA01</tags>
+            <tags>.agent:SDCAMDMSA01,.anonymous</tags>
             <generator>Informatica Process Designer 11</generator>
             <input>
                <parameter description="JSON payload as String"
@@ -183,7 +182,7 @@
                      <option hide="true" name="multiSelect">true</option>
                      <option name="required">false</option>
                      <option name="isCopy">true</option>
-                     <option name="guid">2GOhwoyTaRMlhVWRVsMaGp</option>
+                     <option name="guid">7wLfVJz22QTflQuLnc3hwt</option>
                   </options>
                </field>
                <field description="" name="vTempNonDuplicatedRecords" type="objectlist">
@@ -192,7 +191,7 @@
                      <option hide="true" name="multiSelect">true</option>
                      <option name="required">false</option>
                      <option name="isCopy">true</option>
-                     <option name="guid">2GOhwoyTaRMlhVWRVsMaGp</option>
+                     <option name="guid">7wLfVJz22QTflQuLnc3hwt</option>
                   </options>
                </field>
                <field description="" name="vTempDuplicatedRecordsItem" type="objectlist">
@@ -201,7 +200,7 @@
                      <option hide="true" name="multiSelect">true</option>
                      <option name="required">false</option>
                      <option name="isCopy">true</option>
-                     <option name="guid">2GOhwoyTaRMlhVWRVsMaGp</option>
+                     <option name="guid">7wLfVJz22QTflQuLnc3hwt</option>
                   </options>
                </field>
                <field description="" name="vTempJsonInputDuplicated" type="string">
@@ -242,20 +241,20 @@
             </tempFields>
             <notes/>
             <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
-               <targetLocation>SZU1IICSSA01</targetLocation>
+               <targetLocation>SDCAMDMSA01</targetLocation>
                <rest>
                   <allowAnonymousAccess/>
                </rest>
             </deployment>
             <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
                <nvpair name="treatEmptyObjectListAsArray">true</nvpair>
             </extData>
-            <flow id="j7b54825f-502d-46da-b27d-f286dbd1d70b">
-               <start id="m782e9adb-b71f-4619-8aa6-69f4963fd531">
-                  <link id="kb869f179-69cc-41e0-b02b-a4903cae3dd7"
-                        targetId="a11NbRWp59CcokINEGbtGrEO-me05l503"/>
+            <flow id="a">
+               <start id="b">
+                  <link id="me05l504" targetId="me05l503"/>
                </start>
-               <assignment id="a11NbRWp59CcokINEGbtGrEO-me05l503">
+               <assignment id="me05l503">
                   <title>Assign_JsonToXml</title>
                   <operation source="formula" to="temp.vTempPayloadJSONToXML">
                      <expression language="XQuery">util:parseJSON(replace($input.in_PayloadMessage,'\\',''))</expression>
@@ -263,10 +262,9 @@
                   <operation source="formula" to="temp.vTempProcessName">
                      <expression language="XQuery">ipd:setProcessTitle('SDasInsertRecordsETQ: '||$input.in_LogID )</expression>
                   </operation>
-                  <link id="qd8da4dea-d210-435b-b428-754225ea8d1e"
-                        targetId="a11NbRWp59CcokINEGbtGrEO-mdf0tjic"/>
+                  <link id="me05l505" targetId="mdf0tjic"/>
                </assignment>
-               <assignment id="a11NbRWp59CcokINEGbtGrEO-mdf0tjic">
+               <assignment id="mdf0tjic">
                   <title>Assign_CountNumberRecords</title>
                   <operation source="formula" to="temp.vTempNoRecords">
                      <expression language="XQuery">count($temp.vTempPayloadJSONToXML)
@@ -285,31 +283,30 @@
                   <operation source="formula" to="temp.vTempXMLPayload">
                      <expression language="XQuery">util:parseJSON(replace($input.in_PayloadMessage,'\\','' ))</expression>
                   </operation>
-                  <link id="obb495520-fa27-40b6-8037-74de5f84db48"
-                        targetId="a11NbRWp59CcokINEGbtGrEO-mdf0tjiw"/>
+                  <link id="mdf0tjix" targetId="mdf0tjiw"/>
                </assignment>
-               <container id="a11NbRWp59CcokINEGbtGrEO-mdf0tjiw" type="exclusive">
+               <container id="mdf0tjiw" type="exclusive">
                   <title>moreThan1Record</title>
-                  <flow id="e6609e9ca-22b6-4f9f-a6ec-c581cee76637">
-                     <assignment id="a11NbRWp59CcokINEGbtGrEO-me05l46y">
+                  <flow id="mdf0tjj0">
+                     <assignment id="me05l46y">
                         <title>Assign_Counter</title>
                         <operation source="formula" to="temp.vTempCounterRecords">
                            <expression language="XQuery">$temp.vTempCounterRecords + 1</expression>
                         </operation>
-                        <link id="p27182695-de8a-42dd-a7ee-b1880078f4d6"
-                              targetId="a11NbRWp59CcokINEGbtGrEO-me0y96q6"/>
+                        <link id="me0y96q7" targetId="me0y96q6"/>
                      </assignment>
-                     <container id="a11NbRWp59CcokINEGbtGrEO-me0y96q6" type="exclusive">
+                     <container id="me0y96q6" type="exclusive">
                         <title>moreItems</title>
-                        <flow id="ic7c612c5-fa8d-408c-b922-8d679fe4f589">
-                           <eventContainer id="a11NbRWp59CcokINEGbtGrEO-me0y96qv">
-                              <service id="bed863978-ca59-4cef-8363-b1d76185f1d9">
+                        <flow id="me0y96qa">
+                           <eventContainer id="me0y96qv">
+                              <service id="me0y96r7">
                                  <title>SvcETQGetToken</title>
                                  <serviceName>Conn-SC-ETQAPIs:getTokenETQ</serviceName>
-                                 <serviceGUID>1vy6Hhy2sOXlwz4C8Hb5Sh</serviceGUID>
+                                 <serviceGUID>8t0mJMp0Zs4cCGMkJLMqcx</serviceGUID>
+                                 <serviceInput/>
                               </service>
-                              <flow id="s1f3b87f8-0345-45d3-aaa5-ef685f502574">
-                                 <assignment id="a11NbRWp59CcokINEGbtGrEO-me0y96sb">
+                              <flow id="me0y96qw">
+                                 <assignment id="me0y96sb">
                                     <title>Assign_TokenAndRefID</title>
                                     <operation source="formula" to="temp.vTempToken">
                                        <expression language="XQuery">$output.outResponse[1]/access_token </expression>
@@ -321,14 +318,13 @@
                                        <expression language="XQuery">$temp.vTempPayloadJSONToXML[$temp.vTempCounterRecords ]/Fields[fieldName='PPG_TRAINING_A_REFERENCE_ID_D']/Values[1]/text()
 </expression>
                                     </operation>
-                                    <link id="h76c368f7-4ad3-493d-bcd9-ae15f160b9db"
-                                          targetId="a11NbRWp59CcokINEGbtGrEO-me0y96t8"/>
+                                    <link id="me0y96we" targetId="me0y96t8"/>
                                  </assignment>
-                                 <eventContainer id="a11NbRWp59CcokINEGbtGrEO-me0y96t8">
-                                    <service id="ub0550560-6527-4782-b76c-0fb45f406605">
+                                 <eventContainer id="me0y96t8">
+                                    <service id="me0y96uv">
                                        <title>SvcViewETQAssignments</title>
                                        <serviceName>Conn-SC-ETQAPIs:View_AssignmentsETQ</serviceName>
-                                       <serviceGUID>1vy6Hhy2sOXlwz4C8Hb5Sh</serviceGUID>
+                                       <serviceGUID>8t0mJMp0Zs4cCGMkJLMqcx</serviceGUID>
                                        <serviceInput>
                                           <parameter name="in_scVARVAL" source="formula">
                                              <expression language="XQuery">$temp.vTempRefID </expression>
@@ -344,8 +340,8 @@
                                           </parameter>
                                        </serviceInput>
                                     </service>
-                                    <flow id="cb111d05e-f0d8-43a1-8b39-a0d6f43794ab">
-                                       <assignment id="a11NbRWp59CcokINEGbtGrEO-me0y96ta">
+                                    <flow id="me0y96t9">
+                                       <assignment id="me0y96ta">
                                           <title>Assign_IsDuplicatedRecord</title>
                                           <operation source="formula" to="temp.vTempDuplicated">
                                              <expression language="XQuery">let $outResponseXML := util:parseXML($output.out_scResponseAssigments )
@@ -358,13 +354,12 @@ return $refDuplicated</expression>
                                              <expression language="XQuery">let $isDuplicated := util:iif(fn:empty($temp.vTempDuplicated ) = fn:true(),1,0)
 return $isDuplicated</expression>
                                           </operation>
-                                          <link id="l2d7c190e-84d6-445f-9d87-32f33379250d"
-                                                targetId="a11NbRWp59CcokINEGbtGrEO-me0y96tb"/>
+                                          <link id="me0y96uy" targetId="me0y96tb"/>
                                        </assignment>
-                                       <container id="a11NbRWp59CcokINEGbtGrEO-me0y96tb" type="exclusive">
+                                       <container id="me0y96tb" type="exclusive">
                                           <title>vTempDuplicated</title>
-                                          <flow id="r192aa14d-ada3-4a83-b4ab-39c279f3eaf9">
-                                             <assignment id="a11NbRWp59CcokINEGbtGrEO-me0y96td">
+                                          <flow id="me0y96tc">
+                                             <assignment id="me0y96td">
                                                 <title>Assign_NonDuplicatedRecordXML</title>
                                                 <operation source="formula" to="temp.vTempXMLPayloadNonDuplicated">
                                                    <expression language="XQuery">let $xml := util:parseJSON(util:toJSON($temp.vTempPayloadJSONToXML))
@@ -372,11 +367,10 @@ let $xmlNode := $xml[$temp.vTempCounterRecords]
 
 return $xmlNode</expression>
                                                 </operation>
-                                                <link id="z5c810ffa-62cf-4634-846e-d6efbde37655"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me1k4b64"/>
+                                                <link id="me1k4b65" targetId="me1k4b64"/>
                                              </assignment>
-                                             <assignment id="a11NbRWp59CcokINEGbtGrEO-me1k4b64">
-                                                <title>Assignment to vTempNonDuplicatedRecordsItem</title>
+                                             <assignment id="me1k4b64">
+                                                <title>Assign_RecordsItem</title>
                                                 <operation source="formula" to="temp.vTempNonDuplicatedRecordsItem">
                                                    <expression language="XQuery">let $xmlItem := $temp.vTempXMLPayloadNonDuplicated
 
@@ -397,29 +391,25 @@ return
   &lt;/Document&gt;
 </expression>
                                                 </operation>
-                                                <link id="g13063063-a9df-4a80-ab89-01552b2bfdd6"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me0y96te"/>
+                                                <link id="me1k4b66" targetId="me0y96te"/>
                                              </assignment>
-                                             <assignment id="a11NbRWp59CcokINEGbtGrEO-me0y96te">
-                                                <title>Assignment to vTempNonDuplicatedRecords</title>
+                                             <assignment id="me0y96te">
+                                                <title>Assign_NonDuplicatedRecordToList</title>
                                                 <operation source="formula" to="temp.vTempNonDuplicatedRecords">
                                                    <expression language="XQuery">list:append($temp.vTempNonDuplicatedRecords , $temp.vTempNonDuplicatedRecordsItem )</expression>
                                                 </operation>
-                                                <link id="o0e7ecf49-3e03-4501-b8e3-372751e59096"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me1k4at1"/>
+                                                <link id="me1k4at2" targetId="me1k4at1"/>
                                              </assignment>
-                                             <assignment id="a11NbRWp59CcokINEGbtGrEO-me1k4at1">
+                                             <assignment id="me1k4at1">
                                                 <title>Assign_ToJsonStringNonDuplicated</title>
                                                 <operation source="formula" to="temp.vTempJsonInputNonDuplicated">
                                                    <expression language="XQuery">util:toJSON($temp.vTempNonDuplicatedRecords)</expression>
                                                 </operation>
                                              </assignment>
-                                             <link id="s84c7ebbf-53fc-45fa-8be0-3069e7aa013f"
-                                                   targetId="a11NbRWp59CcokINEGbtGrEO-me0y96tb"
-                                                   type="containerLink"/>
+                                             <link id="me0y96v2" targetId="me0y96tb" type="containerLink"/>
                                           </flow>
-                                          <flow id="seea37f11-9d4c-4768-816b-8f5c36d723c9">
-                                             <assignment id="a11NbRWp59CcokINEGbtGrEO-me0y96tg">
+                                          <flow id="me0y96tf">
+                                             <assignment id="me0y96tg">
                                                 <title>Assign_TempXMLPayload</title>
                                                 <operation source="formula" to="temp.vTempXMLPayload">
                                                    <expression language="XQuery">let $xml := util:parseJSON(util:toJSON($temp.vTempPayloadJSONToXML[$temp.vTempCounterRecords]))
@@ -427,11 +417,10 @@ let $xmlNode := $xml
 
 return $xmlNode</expression>
                                                 </operation>
-                                                <link id="s06ccd434-61ec-4d98-b40e-e58804a1d072"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me0y96th"/>
+                                                <link id="me0y96v5" targetId="me0y96th"/>
                                              </assignment>
-                                             <assignment id="a11NbRWp59CcokINEGbtGrEO-me0y96th">
-                                                <title>Assignment to vTempDuplicatedRecordsItem</title>
+                                             <assignment id="me0y96th">
+                                                <title>Assign_InputPayloadUpdateETQ</title>
                                                 <operation source="formula" to="temp.vTempDuplicatedRecordsItem">
                                                    <expression language="XQuery">let $xmlItem := $temp.vTempXMLPayload
 
@@ -452,30 +441,24 @@ return
   &lt;/Document&gt;
 </expression>
                                                 </operation>
-                                                <link id="m1660171a-550e-4a69-88e1-3854f418fa71"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me0y96ti"/>
+                                                <link id="me0y96v6" targetId="me0y96ti"/>
                                              </assignment>
-                                             <assignment id="a11NbRWp59CcokINEGbtGrEO-me0y96ti">
-                                                <title>Assignment to vTempDuplicatedRecords</title>
+                                             <assignment id="me0y96ti">
+                                                <title>Assign_NonDuplicatedRecords</title>
                                                 <operation source="formula" to="temp.vTempDuplicatedRecords">
                                                    <expression language="XQuery">list:append($temp.vTempDuplicatedRecords, $temp.vTempDuplicatedRecordsItem)</expression>
                                                 </operation>
-                                                <link id="mfb3787cf-80f2-474f-8706-cd502d6870eb"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me1k4ag0"/>
+                                                <link id="me1k4ag1" targetId="me1k4ag0"/>
                                              </assignment>
-                                             <assignment id="a11NbRWp59CcokINEGbtGrEO-me1k4ag0">
+                                             <assignment id="me1k4ag0">
                                                 <title>Assign_ToJsonStringRequest</title>
                                                 <operation source="formula" to="temp.vTempJsonInputDuplicated">
                                                    <expression language="XQuery">util:toJSON($temp.vTempDuplicatedRecords)</expression>
                                                 </operation>
                                              </assignment>
-                                             <link id="u0e65b288-16e8-44ed-ae06-6f54b4b7ff3b"
-                                                   targetId="a11NbRWp59CcokINEGbtGrEO-me0y96tb"
-                                                   type="containerLink"/>
+                                             <link id="me0y96v4" targetId="me0y96tb" type="containerLink"/>
                                           </flow>
-                                          <link id="pf390ce28-4130-439c-a4eb-5bd57eedfbb1"
-                                                targetId="r192aa14d-ada3-4a83-b4ab-39c279f3eaf9"
-                                                type="containerLink">
+                                          <link id="me0y96uz" targetId="me0y96tc" type="containerLink">
                                              <condition source="formula">
                                                 <function name="string-equals">
                                                    <arg name="left">{$temp.vTempIsDuplicated}</arg>
@@ -483,30 +466,25 @@ return
                                                 </function>
                                              </condition>
                                           </link>
-                                          <link id="ia9d5529d-e315-4323-9663-9dcd8baa3ee6"
-                                                targetId="seea37f11-9d4c-4768-816b-8f5c36d723c9"
-                                                type="containerLink"/>
-                                          <link id="t66837369-b671-4b25-8d99-ebed09bc7198"
-                                                targetId="a11NbRWp59CcokINEGbtGrEO-me1k4clv"/>
+                                          <link id="me0y96v0" targetId="me0y96tf" type="containerLink"/>
+                                          <link id="me1k4clx" targetId="me1k4clv"/>
                                        </container>
-                                       <jumpTo id="a11NbRWp59CcokINEGbtGrEO-me1k4clv">
-                                          <link id="vd0118318-9828-4bcf-8d49-44f3d2113bdb"
-                                                targetId="a11NbRWp59CcokINEGbtGrEO-me05l46y"/>
+                                       <jumpTo id="me1k4clv">
+                                          <link id="me1k4clw" targetId="me05l46y"/>
                                        </jumpTo>
                                     </flow>
-                                    <flow id="q80d279b2-bcd6-4f66-bdb3-2ef65717573a">
-                                       <assignment id="a11NbRWp59CcokINEGbtGrEO-me0y96um">
+                                    <flow id="me0y96ul">
+                                       <assignment id="me0y96um">
                                           <title>Assign_IncrementCounterViewETQ</title>
                                           <operation source="formula" to="temp.vTempRetryNumber">
                                              <expression language="XQuery">$temp.vTempRetryNumber + 1</expression>
                                           </operation>
-                                          <link id="wc5e09bbb-602f-4c25-896b-cfdaf5ee3498"
-                                                targetId="a11NbRWp59CcokINEGbtGrEO-me0y96un"/>
+                                          <link id="me0y96w7" targetId="me0y96un"/>
                                        </assignment>
-                                       <container id="a11NbRWp59CcokINEGbtGrEO-me0y96un" type="exclusive">
+                                       <container id="me0y96un" type="exclusive">
                                           <title>vTempMaxRetryNumberViewETQ</title>
-                                          <flow id="z669ae194-1f48-44c0-91d7-d0ab155bd187">
-                                             <wait id="a11NbRWp59CcokINEGbtGrEO-me0y96up">
+                                          <flow id="me0y96uo">
+                                             <wait id="me0y96up">
                                                 <title>WaitViewETQ</title>
                                                 <duration source="formula">
                                                    <function name="duration_expression">
@@ -515,16 +493,14 @@ return
                                                       <arg name="businessDays"/>
                                                    </function>
                                                 </duration>
-                                                <link id="eb5806716-b132-4d1d-8def-c063e28da8bc"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me0y96uq"/>
+                                                <link id="me0y96wa" targetId="me0y96uq"/>
                                              </wait>
-                                             <jumpTo id="a11NbRWp59CcokINEGbtGrEO-me0y96uq">
-                                                <link id="t235a3f03-1431-4961-8ebf-998e51ff35e7"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me0y96t8"/>
+                                             <jumpTo id="me0y96uq">
+                                                <link id="me0y96wb" targetId="me0y96t8"/>
                                              </jumpTo>
                                           </flow>
-                                          <flow id="p7ce226c1-79ba-452f-b888-c805dd5ac9fe">
-                                             <assignment id="a11NbRWp59CcokINEGbtGrEO-me0y96us">
+                                          <flow id="me0y96ur">
+                                             <assignment id="me0y96us">
                                                 <title>Assign_ErrorMessageViewETQ</title>
                                                 <operation source="formula" to="temp.vTempErrorMessage">
                                                    <expression language="XQuery">fn:concat('ERP: Workday - ETQ, Process: SIntSendAssignmentsETQ, Detail Error: ',$output.faultViewETQAssignments[1]/detail   ,' , Reason: ', $output.faultViewETQAssignments[1]/reason   ,' ErrorCode: ',$output.faultViewETQAssignments[1]/code  )</expression>
@@ -538,13 +514,12 @@ return
                                                 <operation source="formula" to="temp.vTempErrorFaultFileName">
                                                    <expression language="XQuery">fn:concat('Log_WorkDay-ETQ_Ticket_', fn:translate(fn:substring(fn:string(fn:current-dateTime()), 0, 24), '-T:.', ''),'.txt')</expression>
                                                 </operation>
-                                                <link id="a3669be48-8395-4618-9aa1-0fa2c686e70f"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me0y96ut"/>
+                                                <link id="me0y96wc" targetId="me0y96ut"/>
                                              </assignment>
-                                             <service id="a11NbRWp59CcokINEGbtGrEO-me0y96ut">
+                                             <service id="me0y96ut">
                                                 <title>SvcFileWriterFaultViewETQ</title>
                                                 <serviceName>Conn-File-LogGovOps:FileWriter</serviceName>
-                                                <serviceGUID>aMJnvoUehsEecYGoaGo8Oj</serviceGUID>
+                                                <serviceGUID>7FmJXtLmkZSjZ0nK3CPI2j</serviceGUID>
                                                 <serviceInput>
                                                    <parameter name="fileWriteTask" source="formula">
                                                       <expression language="XQuery">&lt;FileWriteTask&gt;
@@ -553,10 +528,9 @@ return
 &lt;/FileWriteTask&gt;</expression>
                                                    </parameter>
                                                 </serviceInput>
-                                                <link id="s589eb923-1ada-4ae1-9073-c9c9a0c788a7"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me0y96uu"/>
+                                                <link id="me0y96wd" targetId="me0y96uu"/>
                                              </service>
-                                             <throw id="a11NbRWp59CcokINEGbtGrEO-me0y96uu">
+                                             <throw id="me0y96uu">
                                                 <title>ThrowUpdateETQ</title>
                                                 <throwInput>
                                                    <parameter name="code" source="formula" updatable="true">
@@ -571,9 +545,7 @@ return
                                                 </throwInput>
                                              </throw>
                                           </flow>
-                                          <link id="i0af93867-1e75-4b5a-bd88-dd068ae0ff4f"
-                                                targetId="z669ae194-1f48-44c0-91d7-d0ab155bd187"
-                                                type="containerLink">
+                                          <link id="me0y96w8" targetId="me0y96uo" type="containerLink">
                                              <condition source="formula">
                                                 <function name="less-or-equals">
                                                    <arg name="left">{$temp.vTempRetryNumber}</arg>
@@ -581,38 +553,31 @@ return
                                                 </function>
                                              </condition>
                                           </link>
-                                          <link id="g1f0f8130-b981-4ade-852f-b01656c14f8a"
-                                                targetId="p7ce226c1-79ba-452f-b888-c805dd5ac9fe"
-                                                type="containerLink"/>
+                                          <link id="me0y96w9" targetId="me0y96ur" type="containerLink"/>
                                        </container>
                                     </flow>
-                                    <link id="t6c2e4dd9-d152-40f9-84dc-2fc49f6d0bad"
-                                          targetId="cb111d05e-f0d8-43a1-8b39-a0d6f43794ab"
-                                          type="containerLink"/>
+                                    <link id="me0y96uw" targetId="me0y96t9" type="containerLink"/>
                                     <events>
                                        <catch faultField="faultViewETQAssignments"
-                                              id="i934d89e3-5cf2-4ee3-8666-aa9f276d04db"
+                                              id="mdf0tjnj"
                                               interrupting="true">
-                                          <link id="y5505fa85-c8a1-491a-a746-2d2270aaff00"
-                                                targetId="q80d279b2-bcd6-4f66-bdb3-2ef65717573a"
-                                                type="containerLink"/>
+                                          <link id="me0y96ux" targetId="me0y96ul" type="containerLink"/>
                                        </catch>
                                     </events>
                                  </eventContainer>
                               </flow>
-                              <flow id="a289fa6ab-6130-4161-a9bb-5774186cb809">
-                                 <assignment id="a11NbRWp59CcokINEGbtGrEO-me0y96qy">
+                              <flow id="me0y96qx">
+                                 <assignment id="me0y96qy">
                                     <title>Assign_IncrementCounter</title>
                                     <operation source="formula" to="temp.vTempRetryNumber">
                                        <expression language="XQuery">$temp.vTempRetryNumber + 1</expression>
                                     </operation>
-                                    <link id="x3e7fefca-7233-4db7-b553-31731de03bd1"
-                                          targetId="a11NbRWp59CcokINEGbtGrEO-me0y96qz"/>
+                                    <link id="me0y96rb" targetId="me0y96qz"/>
                                  </assignment>
-                                 <container id="a11NbRWp59CcokINEGbtGrEO-me0y96qz" type="exclusive">
+                                 <container id="me0y96qz" type="exclusive">
                                     <title>vTempMaxRetryNumber</title>
-                                    <flow id="r4e6e2ec8-cdee-4c94-9564-4950fde70322">
-                                       <wait id="a11NbRWp59CcokINEGbtGrEO-me0y96r1">
+                                    <flow id="me0y96r0">
+                                       <wait id="me0y96r1">
                                           <title>WaitGetToken</title>
                                           <duration source="formula">
                                              <function name="duration_expression">
@@ -621,16 +586,14 @@ return
                                                 <arg name="businessDays"/>
                                              </function>
                                           </duration>
-                                          <link id="p68eeb319-f3db-408d-b9b4-12c396285a79"
-                                                targetId="a11NbRWp59CcokINEGbtGrEO-me0y96r2"/>
+                                          <link id="me0y96re" targetId="me0y96r2"/>
                                        </wait>
-                                       <jumpTo id="a11NbRWp59CcokINEGbtGrEO-me0y96r2">
-                                          <link id="c52837e48-c9e3-4663-a7f6-d3c93234914a"
-                                                targetId="a11NbRWp59CcokINEGbtGrEO-me0y96qv"/>
+                                       <jumpTo id="me0y96r2">
+                                          <link id="me0y96rf" targetId="me0y96qv"/>
                                        </jumpTo>
                                     </flow>
-                                    <flow id="l5f0e710c-7cf7-412b-88c1-0a858e3efbf3">
-                                       <assignment id="a11NbRWp59CcokINEGbtGrEO-me0y96r4">
+                                    <flow id="me0y96r3">
+                                       <assignment id="me0y96r4">
                                           <title>Assign_ErrorMessage</title>
                                           <operation source="formula" to="temp.vTempErrorMessage">
                                              <expression language="XQuery">fn:concat('ERP: Workday - ETQ, Process: SDasInsertRecordsETQ, Detail Error: ',$output.faultGetTokenETQ[1]/detail  ,' , Reason: ', $output.faultGetTokenETQ[1]/reason   ,' ErrorCode: ',$output.faultGetTokenETQ[1]/code  )</expression>
@@ -644,13 +607,12 @@ return
                                           <operation source="formula" to="temp.vTempErrorFaultFileName">
                                              <expression language="XQuery">fn:concat('Log_WorkDay-ETQ_Ticket_', fn:translate(fn:substring(fn:string(fn:current-dateTime()), 0, 24), '-T:.', ''),'.txt')</expression>
                                           </operation>
-                                          <link id="c4d663aff-5b56-4326-be00-abb2d30055af"
-                                                targetId="a11NbRWp59CcokINEGbtGrEO-me0y96r5"/>
+                                          <link id="me0y96rg" targetId="me0y96r5"/>
                                        </assignment>
-                                       <service id="a11NbRWp59CcokINEGbtGrEO-me0y96r5">
+                                       <service id="me0y96r5">
                                           <title>SvcFileWriterFaultSelectResults</title>
                                           <serviceName>Conn-File-LogGovOps:FileWriter</serviceName>
-                                          <serviceGUID>aMJnvoUehsEecYGoaGo8Oj</serviceGUID>
+                                          <serviceGUID>7FmJXtLmkZSjZ0nK3CPI2j</serviceGUID>
                                           <serviceInput>
                                              <parameter name="fileWriteTask" source="formula">
                                                 <expression language="XQuery">&lt;FileWriteTask&gt;
@@ -659,10 +621,9 @@ return
 &lt;/FileWriteTask&gt;</expression>
                                              </parameter>
                                           </serviceInput>
-                                          <link id="y1dd3e752-7f3b-4dcd-8dc5-4587ead82d99"
-                                                targetId="a11NbRWp59CcokINEGbtGrEO-me0y96r6"/>
+                                          <link id="me0y96rh" targetId="me0y96r6"/>
                                        </service>
-                                       <throw id="a11NbRWp59CcokINEGbtGrEO-me0y96r6">
+                                       <throw id="me0y96r6">
                                           <title>ThrowGetTokenETQ</title>
                                           <throwInput>
                                              <parameter name="code" source="formula" updatable="true">
@@ -677,9 +638,7 @@ return
                                           </throwInput>
                                        </throw>
                                     </flow>
-                                    <link id="ycf80a93e-db03-4b33-9e00-a0690a60900a"
-                                          targetId="r4e6e2ec8-cdee-4c94-9564-4950fde70322"
-                                          type="containerLink">
+                                    <link id="me0y96rc" targetId="me0y96r0" type="containerLink">
                                        <condition source="formula">
                                           <function name="less-or-equals">
                                              <arg name="left">{$temp.vTempRetryNumber}</arg>
@@ -687,43 +646,33 @@ return
                                           </function>
                                        </condition>
                                     </link>
-                                    <link id="m7c8f561e-fed3-4b87-851f-656c2904970d"
-                                          targetId="l5f0e710c-7cf7-412b-88c1-0a858e3efbf3"
-                                          type="containerLink"/>
+                                    <link id="me0y96rd" targetId="me0y96r3" type="containerLink"/>
                                  </container>
                               </flow>
-                              <link id="k69946dd2-0905-4119-b0d5-67282aeb2d49"
-                                    targetId="s1f3b87f8-0345-45d3-aaa5-ef685f502574"
-                                    type="containerLink"/>
+                              <link id="me0y96r8" targetId="me0y96qw" type="containerLink"/>
                               <events>
-                                 <catch faultField="faultGetTokenETQ"
-                                        id="m60d27854-76cc-4e5c-8fca-41f171d2d0f6"
-                                        interrupting="true">
-                                    <link id="rd233b45c-3f95-488b-aa16-308b6d2b9395"
-                                          targetId="a289fa6ab-6130-4161-a9bb-5774186cb809"
-                                          type="containerLink"/>
+                                 <catch faultField="faultGetTokenETQ" id="mdhz7zvz" interrupting="true">
+                                    <link id="me0y96r9" targetId="me0y96qx" type="containerLink"/>
                                  </catch>
                               </events>
                            </eventContainer>
                         </flow>
-                        <flow id="ib7134c8f-b0a9-475f-818b-aae397785d3d">
-                           <assignment id="a11NbRWp59CcokINEGbtGrEO-me305772">
+                        <flow id="me0y96qd">
+                           <assignment id="me305772">
                               <title>Assign_CountDuplicateds</title>
                               <operation source="formula" to="temp.vTempCountDuplicateds">
                                  <expression language="XQuery">count(util:parseJSON(util:toJSON($temp.vTempDuplicatedRecords)))</expression>
                               </operation>
-                              <link id="qdb702831-2d94-4361-89e2-9b73d7c407cc"
-                                    targetId="a11NbRWp59CcokINEGbtGrEO-mgi71cei"/>
+                              <link id="mgi71cej" targetId="mgi71cei"/>
                            </assignment>
-                           <assignment id="a11NbRWp59CcokINEGbtGrEO-mgi71cei">
+                           <assignment id="mgi71cei">
                               <title>Assign_Payload</title>
                               <operation source="formula" to="temp.vTempMessage">
                                  <expression language="XQuery">string($temp.vTempJsonInputDuplicated )</expression>
                               </operation>
-                              <link id="dd234d545-f1de-40db-9a0e-c8a2b694ce14"
-                                    targetId="a11NbRWp59CcokINEGbtGrEO-me3057gd"/>
+                              <link id="mgi71cek" targetId="me3057gd"/>
                            </assignment>
-                           <assignment id="a11NbRWp59CcokINEGbtGrEO-me3057i1">
+                           <assignment id="me3057i1">
                               <title>Assign_NonDuplicatedCount</title>
                               <operation source="formula" to="temp.vTempCountNonDuplicated">
                                  <expression language="XQuery">util:iif(count($temp.vTempJsonInputNonDuplicated) = 0,0,count(util:parseJSON($temp.vTempJsonInputNonDuplicated)))</expression>
@@ -731,10 +680,9 @@ return
                               <operation source="formula" to="temp.vTempToken">
                                  <expression language="XQuery">$output.outResponse[1]/access_token </expression>
                               </operation>
-                              <link id="a17bab27f-4924-4a91-8b2e-d9c5305ca732"
-                                    targetId="a11NbRWp59CcokINEGbtGrEO-me3057iw"/>
+                              <link id="me3057nq" targetId="me3057iw"/>
                            </assignment>
-                           <assignment id="a11NbRWp59CcokINEGbtGrEO-me3057tm">
+                           <assignment id="me3057tm">
                               <title>Assign_OutMessage</title>
                               <operation source="formula" to="output.out_PrcResult">
                                  <expression language="XQuery">'Duplicated Records '||'--&gt;&gt; '|| util:iif(util:isNull($output.out_scResponsePUTETQ), '', string($output.out_scResponsePUTETQ)) ||' NonDuplicated Records '||'--&gt;&gt; '||string(util:iif(util:isNull($output.out_scResponsePostETQ), '', string($output.out_scResponsePostETQ)) )
@@ -742,14 +690,14 @@ return
 </expression>
                               </operation>
                            </assignment>
-                           <container id="a11NbRWp59CcokINEGbtGrEO-me3057gd" type="exclusive">
+                           <container id="me3057gd" type="exclusive">
                               <title>vTempCountDuplicateds</title>
-                              <flow id="v911f6e9e-f287-4ca7-aa69-6a39168aa671">
-                                 <eventContainer id="a11NbRWp59CcokINEGbtGrEO-me3057gf">
-                                    <service id="h0f8f5a8e-8906-4232-8b59-58e9c2ab2f37">
+                              <flow id="me3057ge">
+                                 <eventContainer id="me3057gf">
+                                    <service id="me3057gs">
                                        <title>SvcUpdateAssignmentPUTETQ</title>
                                        <serviceName>Conn-SC-ETQAPIs:UpdateAssignmentPUTETQ</serviceName>
-                                       <serviceGUID>1vy6Hhy2sOXlwz4C8Hb5Sh</serviceGUID>
+                                       <serviceGUID>8t0mJMp0Zs4cCGMkJLMqcx</serviceGUID>
                                        <serviceInput>
                                           <parameter name="in_scPayload" source="formula">
                                              <expression language="XQuery">(:string($temp.vTempJsonInputDuplicated) :)
@@ -760,24 +708,21 @@ $temp.vTempMessage </expression>
                                           </parameter>
                                        </serviceInput>
                                     </service>
-                                    <flow id="j25cbfdda-02e0-4af0-9d61-d221bd2202d8">
-                                       <link id="z9bfef103-71f8-438f-b9d1-4da354b7ff35"
-                                             targetId="a11NbRWp59CcokINEGbtGrEO-me3057gf"
-                                             type="containerLink"/>
+                                    <flow id="me3057gg">
+                                       <link id="me3057gz" targetId="me3057gf" type="containerLink"/>
                                     </flow>
-                                    <flow id="qa8266980-b57c-45b8-a361-3ab23d02a6f0">
-                                       <assignment id="a11NbRWp59CcokINEGbtGrEO-me3057gj">
+                                    <flow id="me3057gi">
+                                       <assignment id="me3057gj">
                                           <title>Assign_CounterUpdateETQ</title>
                                           <operation source="formula" to="temp.vTempRetryNumber">
                                              <expression language="XQuery">$temp.vTempRetryNumber + 1</expression>
                                           </operation>
-                                          <link id="z1ba1e19d-9a65-4a59-bc5d-6e26806ad90e"
-                                                targetId="a11NbRWp59CcokINEGbtGrEO-me3057gk"/>
+                                          <link id="me3057h0" targetId="me3057gk"/>
                                        </assignment>
-                                       <container id="a11NbRWp59CcokINEGbtGrEO-me3057gk" type="exclusive">
+                                       <container id="me3057gk" type="exclusive">
                                           <title>vTempMaxRetryNumUpdateETQ</title>
-                                          <flow id="f6fce5a10-e119-442e-9225-a80595cd1b6f">
-                                             <wait id="a11NbRWp59CcokINEGbtGrEO-me3057gm">
+                                          <flow id="me3057gl">
+                                             <wait id="me3057gm">
                                                 <title>WaitUpdateETQ</title>
                                                 <duration source="formula">
                                                    <function name="duration_expression">
@@ -786,16 +731,14 @@ $temp.vTempMessage </expression>
                                                       <arg name="businessDays"/>
                                                    </function>
                                                 </duration>
-                                                <link id="y755d7d81-7195-4e44-a832-91b388043f4e"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me3057gn"/>
+                                                <link id="me3057h3" targetId="me3057gn"/>
                                              </wait>
-                                             <jumpTo id="a11NbRWp59CcokINEGbtGrEO-me3057gn">
-                                                <link id="m46039cea-4d85-4130-8347-57a249ea2229"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me3057gf"/>
+                                             <jumpTo id="me3057gn">
+                                                <link id="me3057h4" targetId="me3057gf"/>
                                              </jumpTo>
                                           </flow>
-                                          <flow id="d87171e08-7724-4056-bdd9-556c464379d9">
-                                             <assignment id="a11NbRWp59CcokINEGbtGrEO-me3057gp">
+                                          <flow id="me3057go">
+                                             <assignment id="me3057gp">
                                                 <title>Assign_ErrorMessageUpdateETQ</title>
                                                 <operation source="formula" to="temp.vTempErrorMessage">
                                                    <expression language="XQuery">fn:concat('ERP: Workday - ETQ, Process: SIntSendAssignmentsETQ, Detail Error: ',$output.faultUpdatePUTETQ[1]/detail    ,' , Reason: ', $output.faultUpdatePUTETQ[1]/reason  ,' ErrorCode: ',$output.faultUpdatePUTETQ[1]/code  )</expression>
@@ -809,13 +752,12 @@ $temp.vTempMessage </expression>
                                                 <operation source="formula" to="temp.vTempErrorFaultFileName">
                                                    <expression language="XQuery">fn:concat('Log_WorkDay-ETQ_Ticket_', fn:translate(fn:substring(fn:string(fn:current-dateTime()), 0, 24), '-T:.', ''),'.txt')</expression>
                                                 </operation>
-                                                <link id="u53073e00-d9c2-4d8a-b848-88955e73f97b"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me3057gq"/>
+                                                <link id="me3057h5" targetId="me3057gq"/>
                                              </assignment>
-                                             <service id="a11NbRWp59CcokINEGbtGrEO-me3057gq">
+                                             <service id="me3057gq">
                                                 <title>SvcFileWriterFaultUpdateETQ</title>
                                                 <serviceName>Conn-File-LogGovOps:FileWriter</serviceName>
-                                                <serviceGUID>aMJnvoUehsEecYGoaGo8Oj</serviceGUID>
+                                                <serviceGUID>7FmJXtLmkZSjZ0nK3CPI2j</serviceGUID>
                                                 <serviceInput>
                                                    <parameter name="fileWriteTask" source="formula">
                                                       <expression language="XQuery">&lt;FileWriteTask&gt;
@@ -824,10 +766,9 @@ $temp.vTempMessage </expression>
 &lt;/FileWriteTask&gt;</expression>
                                                    </parameter>
                                                 </serviceInput>
-                                                <link id="o7dd140ba-b005-4767-bbc6-c788885583be"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me3057gr"/>
+                                                <link id="me3057h6" targetId="me3057gr"/>
                                              </service>
-                                             <throw id="a11NbRWp59CcokINEGbtGrEO-me3057gr">
+                                             <throw id="me3057gr">
                                                 <title>ThrowUpdateETQ</title>
                                                 <throwInput>
                                                    <parameter name="code" source="formula" updatable="true">
@@ -842,9 +783,7 @@ $temp.vTempMessage </expression>
                                                 </throwInput>
                                              </throw>
                                           </flow>
-                                          <link id="aa8c79aae-be4b-4801-a48c-4794c0fe8bae"
-                                                targetId="f6fce5a10-e119-442e-9225-a80595cd1b6f"
-                                                type="containerLink">
+                                          <link id="me3057h1" targetId="me3057gl" type="containerLink">
                                              <condition source="formula">
                                                 <function name="less-or-equals">
                                                    <arg name="left">{$temp.vTempRetryNumber}</arg>
@@ -852,36 +791,22 @@ $temp.vTempMessage </expression>
                                                 </function>
                                              </condition>
                                           </link>
-                                          <link id="l20c1c8b9-9cdf-4032-9871-92fc209f1263"
-                                                targetId="d87171e08-7724-4056-bdd9-556c464379d9"
-                                                type="containerLink"/>
+                                          <link id="me3057h2" targetId="me3057go" type="containerLink"/>
                                        </container>
                                     </flow>
-                                    <link id="ha8003989-edbd-43ca-8856-82aad665ede2"
-                                          targetId="j25cbfdda-02e0-4af0-9d61-d221bd2202d8"
-                                          type="containerLink"/>
+                                    <link id="me3057gx" targetId="me3057gg" type="containerLink"/>
                                     <events>
-                                       <catch faultField="faultUpdatePUTETQ"
-                                              id="r34a3a50f-7aff-46e3-9f83-2449948f1fa9"
-                                              interrupting="true">
-                                          <link id="kaeb082d6-75fd-45ec-94d0-834e33074b53"
-                                                targetId="qa8266980-b57c-45b8-a361-3ab23d02a6f0"
-                                                type="containerLink"/>
+                                       <catch faultField="faultUpdatePUTETQ" id="mdhkrd3g" interrupting="true">
+                                          <link id="me3057gy" targetId="me3057gi" type="containerLink"/>
                                        </catch>
                                     </events>
                                  </eventContainer>
-                                 <link id="ybcf31c37-1c06-4b2f-bddd-7bab70c4e018"
-                                       targetId="a11NbRWp59CcokINEGbtGrEO-me3057gd"
-                                       type="containerLink"/>
+                                 <link id="me3057gw" targetId="me3057gd" type="containerLink"/>
                               </flow>
-                              <flow id="sed1cdc36-d721-4ef9-89a5-c67a708b30c0">
-                                 <link id="h24faad95-8325-4aef-aa42-fb408b11b0e3"
-                                       targetId="a11NbRWp59CcokINEGbtGrEO-me3057gd"
-                                       type="containerLink"/>
+                              <flow id="me3057gt">
+                                 <link id="me3057h7" targetId="me3057gd" type="containerLink"/>
                               </flow>
-                              <link id="o85e8e47a-5190-488b-8d5f-0be18bc38ed3"
-                                    targetId="v911f6e9e-f287-4ca7-aa69-6a39168aa671"
-                                    type="containerLink">
+                              <link id="me3057gu" targetId="me3057ge" type="containerLink">
                                  <condition source="formula">
                                     <function name="greater-than">
                                        <arg name="left">{$temp.vTempCountDuplicateds}</arg>
@@ -889,20 +814,17 @@ $temp.vTempMessage </expression>
                                     </function>
                                  </condition>
                               </link>
-                              <link id="b195ea289-1dbc-4d78-a42f-38ab751beda0"
-                                    targetId="sed1cdc36-d721-4ef9-89a5-c67a708b30c0"
-                                    type="containerLink"/>
-                              <link id="j148648a6-b41c-49ab-9f89-0b8b7b70b421"
-                                    targetId="a11NbRWp59CcokINEGbtGrEO-me3057i1"/>
+                              <link id="me3057gv" targetId="me3057gt" type="containerLink"/>
+                              <link id="me3057i2" targetId="me3057i1"/>
                            </container>
-                           <container id="a11NbRWp59CcokINEGbtGrEO-me3057iw" type="exclusive">
+                           <container id="me3057iw" type="exclusive">
                               <title>ExistDuplicatedRecords</title>
-                              <flow id="r65a35c87-a890-40d3-a442-ab7193ba9f2a">
-                                 <eventContainer id="a11NbRWp59CcokINEGbtGrEO-me3057o2">
-                                    <service id="da152205c-5725-41dc-9768-f487a46118c9">
+                              <flow id="me3057ix">
+                                 <eventContainer id="me3057o2">
+                                    <service id="me3057oe">
                                        <title>SvcInsertAssignmentsETQ</title>
                                        <serviceName>Conn-SC-ETQAPIs:CreateAssignmentPOSTETQ</serviceName>
-                                       <serviceGUID>1vy6Hhy2sOXlwz4C8Hb5Sh</serviceGUID>
+                                       <serviceGUID>8t0mJMp0Zs4cCGMkJLMqcx</serviceGUID>
                                        <serviceInput>
                                           <parameter name="in_scToken" source="formula">
                                              <expression language="XQuery">$temp.vTempToken </expression>
@@ -912,24 +834,21 @@ $temp.vTempMessage </expression>
                                           </parameter>
                                        </serviceInput>
                                     </service>
-                                    <flow id="l2e014f14-9206-479a-9e6f-566cd15d9fa9">
-                                       <link id="y9d3ca26e-cb3a-40e1-b300-3253709cc884"
-                                             targetId="a11NbRWp59CcokINEGbtGrEO-me3057o2"
-                                             type="containerLink"/>
+                                    <flow id="me3057o3">
+                                       <link id="me3057oh" targetId="me3057o2" type="containerLink"/>
                                     </flow>
-                                    <flow id="y980bdfe0-dca3-47bd-a03f-76b32e12c9f2">
-                                       <assignment id="a11NbRWp59CcokINEGbtGrEO-me3057o5">
+                                    <flow id="me3057o4">
+                                       <assignment id="me3057o5">
                                           <title>Assign_CounterInsertETQ</title>
                                           <operation source="formula" to="temp.vTempRetryNumber">
                                              <expression language="XQuery">$temp.vTempRetryNumber + 1</expression>
                                           </operation>
-                                          <link id="r86cc3fb3-42ec-4efc-8f62-7eee2b921ee8"
-                                                targetId="a11NbRWp59CcokINEGbtGrEO-me3057o6"/>
+                                          <link id="me3057oi" targetId="me3057o6"/>
                                        </assignment>
-                                       <container id="a11NbRWp59CcokINEGbtGrEO-me3057o6" type="exclusive">
+                                       <container id="me3057o6" type="exclusive">
                                           <title>vTempMaxRetryNumInsertETQ</title>
-                                          <flow id="hd9294552-8860-4fd5-8985-2375c3be42eb">
-                                             <wait id="a11NbRWp59CcokINEGbtGrEO-me3057o8">
+                                          <flow id="me3057o7">
+                                             <wait id="me3057o8">
                                                 <title>WaitInsertETQ</title>
                                                 <duration source="formula">
                                                    <function name="duration_expression">
@@ -938,16 +857,14 @@ $temp.vTempMessage </expression>
                                                       <arg name="businessDays"/>
                                                    </function>
                                                 </duration>
-                                                <link id="s394fa2b1-256c-4e0b-871d-102806c61f95"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me3057o9"/>
+                                                <link id="me3057ol" targetId="me3057o9"/>
                                              </wait>
-                                             <jumpTo id="a11NbRWp59CcokINEGbtGrEO-me3057o9">
-                                                <link id="q453a9d02-3469-4a1e-b1a3-7c88e6b9e380"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me3057o2"/>
+                                             <jumpTo id="me3057o9">
+                                                <link id="me3057om" targetId="me3057o2"/>
                                              </jumpTo>
                                           </flow>
-                                          <flow id="efe997953-f698-47b4-8784-601f6a7e800c">
-                                             <assignment id="a11NbRWp59CcokINEGbtGrEO-me3057ob">
+                                          <flow id="me3057oa">
+                                             <assignment id="me3057ob">
                                                 <title>Assign_ErrorMessageInsertETQ</title>
                                                 <operation source="formula" to="temp.vTempErrorMessage">
                                                    <expression language="XQuery">fn:concat('ERP: Workday - ETQ, Process: SIntSendAssignmentsETQ, Detail Error: ',  $output.faultInsertETQ[1]/detail  ,' , Reason: ', $output.faultInsertETQ[1]/reason    ,' ErrorCode: ',$output.faultInsertETQ[1]/code   )</expression>
@@ -961,13 +878,12 @@ $temp.vTempMessage </expression>
                                                 <operation source="formula" to="temp.vTempErrorFaultFileName">
                                                    <expression language="XQuery">fn:concat('Log_WorkDay-ETQ_Ticket_', fn:translate(fn:substring(fn:string(fn:current-dateTime()), 0, 24), '-T:.', ''),'.txt')</expression>
                                                 </operation>
-                                                <link id="je6f38c42-9b33-46de-af6e-4e28e6da11d5"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me3057oc"/>
+                                                <link id="me3057on" targetId="me3057oc"/>
                                              </assignment>
-                                             <service id="a11NbRWp59CcokINEGbtGrEO-me3057oc">
+                                             <service id="me3057oc">
                                                 <title>SvcFileWriterFaultInsertETQ</title>
                                                 <serviceName>Conn-File-LogGovOps:FileWriter</serviceName>
-                                                <serviceGUID>aMJnvoUehsEecYGoaGo8Oj</serviceGUID>
+                                                <serviceGUID>7FmJXtLmkZSjZ0nK3CPI2j</serviceGUID>
                                                 <serviceInput>
                                                    <parameter name="fileWriteTask" source="formula">
                                                       <expression language="XQuery">&lt;FileWriteTask&gt;
@@ -976,10 +892,9 @@ $temp.vTempMessage </expression>
 &lt;/FileWriteTask&gt;</expression>
                                                    </parameter>
                                                 </serviceInput>
-                                                <link id="bf2400036-02f4-4fe5-964d-f5c3ad9afd84"
-                                                      targetId="a11NbRWp59CcokINEGbtGrEO-me3057od"/>
+                                                <link id="me3057oo" targetId="me3057od"/>
                                              </service>
-                                             <throw id="a11NbRWp59CcokINEGbtGrEO-me3057od">
+                                             <throw id="me3057od">
                                                 <title>ThrowInsertETQ</title>
                                                 <throwInput>
                                                    <parameter name="code" source="formula" updatable="true">
@@ -994,9 +909,7 @@ $temp.vTempMessage </expression>
                                                 </throwInput>
                                              </throw>
                                           </flow>
-                                          <link id="le69a2fec-5a4c-482e-998e-6cc59fbd54d2"
-                                                targetId="hd9294552-8860-4fd5-8985-2375c3be42eb"
-                                                type="containerLink">
+                                          <link id="me3057oj" targetId="me3057o7" type="containerLink">
                                              <condition source="formula">
                                                 <function name="less-or-equals">
                                                    <arg name="left">{$temp.vTempRetryNumber}</arg>
@@ -1004,36 +917,22 @@ $temp.vTempMessage </expression>
                                                 </function>
                                              </condition>
                                           </link>
-                                          <link id="k51a2e7ed-01cb-4237-b6e1-84835cdec475"
-                                                targetId="efe997953-f698-47b4-8784-601f6a7e800c"
-                                                type="containerLink"/>
+                                          <link id="me3057ok" targetId="me3057oa" type="containerLink"/>
                                        </container>
                                     </flow>
-                                    <link id="k027f63df-7220-4d09-ba2c-5f6c722caefe"
-                                          targetId="l2e014f14-9206-479a-9e6f-566cd15d9fa9"
-                                          type="containerLink"/>
+                                    <link id="me3057of" targetId="me3057o3" type="containerLink"/>
                                     <events>
-                                       <catch faultField="faultInsertETQ"
-                                              id="f04028d59-ff56-40a8-9510-be16f3fc7cdd"
-                                              interrupting="true">
-                                          <link id="sf044f746-3bc9-4f56-a8c1-6e6fee2042aa"
-                                                targetId="y980bdfe0-dca3-47bd-a03f-76b32e12c9f2"
-                                                type="containerLink"/>
+                                       <catch faultField="faultInsertETQ" id="mdj5vt6g" interrupting="true">
+                                          <link id="me3057og" targetId="me3057o4" type="containerLink"/>
                                        </catch>
                                     </events>
                                  </eventContainer>
-                                 <link id="ab05fc560-c54a-4103-b019-0c90b64454d8"
-                                       targetId="a11NbRWp59CcokINEGbtGrEO-me3057iw"
-                                       type="containerLink"/>
+                                 <link id="me3057je" targetId="me3057iw" type="containerLink"/>
                               </flow>
-                              <flow id="e9310a394-6c57-41d7-b34a-a483e39f6850">
-                                 <link id="t4d818576-b43b-436a-b367-10c6e822d463"
-                                       targetId="a11NbRWp59CcokINEGbtGrEO-me3057iw"
-                                       type="containerLink"/>
+                              <flow id="me3057jb">
+                                 <link id="me3057jp" targetId="me3057iw" type="containerLink"/>
                               </flow>
-                              <link id="h96128026-d757-4638-befc-6eb0d7d874bf"
-                                    targetId="r65a35c87-a890-40d3-a442-ab7193ba9f2a"
-                                    type="containerLink">
+                              <link id="me3057jc" targetId="me3057ix" type="containerLink">
                                  <condition source="formula">
                                     <function name="greater-than">
                                        <arg name="left">{$temp.vTempCountNonDuplicated}</arg>
@@ -1041,19 +940,12 @@ $temp.vTempMessage </expression>
                                     </function>
                                  </condition>
                               </link>
-                              <link id="b5a5c13ef-e013-47c8-a01b-6d6025e3194d"
-                                    targetId="e9310a394-6c57-41d7-b34a-a483e39f6850"
-                                    type="containerLink"/>
-                              <link id="r17bfa096-c77a-4981-92ed-16edd02d645a"
-                                    targetId="a11NbRWp59CcokINEGbtGrEO-me3057tm"/>
+                              <link id="me3057jd" targetId="me3057jb" type="containerLink"/>
+                              <link id="me3057tn" targetId="me3057tm"/>
                            </container>
-                           <link id="ab9dbc966-9697-43f8-a2e0-c9c08d6c3dc7"
-                                 targetId="a11NbRWp59CcokINEGbtGrEO-me0y96q6"
-                                 type="containerLink"/>
+                           <link id="me0y96qe" targetId="me0y96q6" type="containerLink"/>
                         </flow>
-                        <link id="mfc81186f-3f94-4179-a23f-117ebd5bea56"
-                              targetId="ic7c612c5-fa8d-408c-b922-8d679fe4f589"
-                              type="containerLink">
+                        <link id="me0y96q9" targetId="me0y96qa" type="containerLink">
                            <condition source="formula">
                               <function name="less-or-equals">
                                  <arg name="left">{$temp.vTempCounterRecords}</arg>
@@ -1061,22 +953,14 @@ $temp.vTempMessage </expression>
                               </function>
                            </condition>
                         </link>
-                        <link id="y1eaa00ce-d853-4c48-9eed-030d50e8ea3b"
-                              targetId="ib7134c8f-b0a9-475f-818b-aae397785d3d"
-                              type="containerLink"/>
+                        <link id="me0y96qc" targetId="me0y96qd" type="containerLink"/>
                      </container>
-                     <link id="e45261cc0-c65c-48f5-8976-3e474137a5a1"
-                           targetId="a11NbRWp59CcokINEGbtGrEO-mdf0tjiw"
-                           type="containerLink"/>
+                     <link id="me0y96t7" targetId="mdf0tjiw" type="containerLink"/>
                   </flow>
-                  <flow id="e56ee9eee-901a-45e1-8ffc-a1110fb0b3ce">
-                     <link id="k0065811d-7c8a-43dc-8baa-ff96f2f9ebe2"
-                           targetId="a11NbRWp59CcokINEGbtGrEO-mdf0tjiw"
-                           type="containerLink"/>
+                  <flow id="mdf0tjj3">
+                     <link id="mdf0tjj4" targetId="mdf0tjiw" type="containerLink"/>
                   </flow>
-                  <link id="e7a5e3d51-9725-4ff1-bcbb-948e928b2a0c"
-                        targetId="e6609e9ca-22b6-4f9f-a6ec-c581cee76637"
-                        type="containerLink">
+                  <link id="mdf0tjiz" targetId="mdf0tjj0" type="containerLink">
                      <condition source="formula">
                         <function name="greater-than">
                            <arg name="left">{$temp.vTempNoRecords}</arg>
@@ -1084,25 +968,22 @@ $temp.vTempMessage </expression>
                         </function>
                      </condition>
                   </link>
-                  <link id="qcf42724a-5508-4ac2-bca6-812ba3c0bb86"
-                        targetId="e56ee9eee-901a-45e1-8ffc-a1110fb0b3ce"
-                        type="containerLink"/>
-                  <link id="o17637c10-3264-4376-999c-c78f1f103c93"
-                        targetId="a11NbRWp59CcokINEGbtGrEO-c"/>
+                  <link id="mdf0tjj2" targetId="mdf0tjj3" type="containerLink"/>
+                  <link id="mdf0tjk6" targetId="c"/>
                </container>
-               <end id="a11NbRWp59CcokINEGbtGrEO-c">
+               <end id="c">
                   <title>End_SDasInsertRecordsETQ</title>
                </end>
             </flow>
          </process>
          <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
             <ns1:SampleData>
-               <ns1:Id>f5a6a98c-e4b8-449c-8952-6afc1db6484d</ns1:Id>
+               <ns1:Id>8a9a089b-4313-4528-8b1e-11ba51ff9b84</ns1:Id>
                <ns1:Name>TEST25Records</ns1:Name>
                <ns1:CreatedBy>gchico@ppg.com</ns1:CreatedBy>
-               <ns1:CreationDate>2026-04-13T09:15:40Z</ns1:CreationDate>
+               <ns1:CreationDate>2026-04-13T16:27:34Z</ns1:CreationDate>
                <ns1:ModifiedBy>gchico@ppg.com</ns1:ModifiedBy>
-               <ns1:ModificationDate>2026-04-13T09:15:40Z</ns1:ModificationDate>
+               <ns1:ModificationDate>2026-04-13T16:27:34Z</ns1:ModificationDate>
                <ns1:Data format="json">{
 "Document": [ {
     "applicationName": "ETQ_TRAINING",
@@ -1373,8 +1254,8 @@ $temp.vTempMessage </expression>
             </ns1:SampleData>
          </ns1:sample-data-sets>
       </types1:Entry>
-      <types1:GUID>1NbRWp59CcokINEGbtGrEO</types1:GUID>
+      <types1:GUID>90s1gIoHZYlht2aTiCavkf</types1:GUID>
       <types1:DisplayName>SDasInsertRecordsETQ</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-13T12:07:52.424Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-13T16:33:57.458Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

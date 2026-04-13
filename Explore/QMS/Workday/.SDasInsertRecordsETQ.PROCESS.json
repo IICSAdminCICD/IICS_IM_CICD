@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "1NbRWp59CcokINEGbtGrEO",
+    "id" : "90s1gIoHZYlht2aTiCavkf",
     "name" : "SDasInsertRecordsETQ",
     "type" : "PROCESS",
     "metadata" : {
@@ -9,20 +9,20 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "hFIMeINciZBpDUQ-gt-61411-2026-04-13T09:15:40.123Z::pd.xml"
+        "repoHandle" : "bgeHRi92qBbbeJO-gt-100852-2026-04-13T16:27:34.032Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "@operation=Send Assignments from Workday to ETQ, @dataType=Workday Trainings, @source=WorkDay, @target=ETQ, @apiName=SIntSendAssignmentsETQREST, @additionalText=API used to send assignment courses to ETQ, @prcRunOn=SDCAMDMSA01, @prcAllowedGroups=ServiceConsumer",
         "contentType" : "application/json; charset=utf-8",
-        "documentState" : "INVALID"
+        "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-13T12:07:53.057Z",
+  "updateTime" : "2026-04-13T16:33:57.718Z",
   "objectRefs" : [ {
-    "id" : "aMJnvoUehsEecYGoaGo8Oj",
+    "id" : "7FmJXtLmkZSjZ0nK3CPI2j",
     "name" : "Conn-File-LogGovOps",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -31,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "2JrhNzUzeA8rJ4p-gt-1168303-2026-04-10T12:03:04.869Z::conn.xml"
+        "repoHandle" : "GKcn8dzWztZK0CY-gt-100805-2026-04-13T16:27:31.525Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -42,7 +42,7 @@
     },
     "path" : "/Explore/Utilities_GovOps/InfraTickets"
   }, {
-    "id" : "1vy6Hhy2sOXlwz4C8Hb5Sh",
+    "id" : "8t0mJMp0Zs4cCGMkJLMqcx",
     "name" : "Conn-SC-ETQAPIs",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -51,7 +51,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "NEOvlp6oIuQaaab-gt-60535-2026-04-13T09:15:38.644Z::conn.xml"
+        "repoHandle" : "FGtuslqAOclkZ2s-gt-99094-2026-04-13T16:27:32.505Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -62,7 +62,7 @@
     },
     "path" : "/Explore/QMS/Workday"
   }, {
-    "id" : "2GOhwoyTaRMlhVWRVsMaGp",
+    "id" : "7wLfVJz22QTflQuLnc3hwt",
     "name" : "PODocumentParts",
     "type" : "PROCESS_OBJECT",
     "metadata" : {
@@ -71,7 +71,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "uAKlFmVSciY3Axt-gt-61389-2026-04-13T09:15:39.338Z::po.xml"
+        "repoHandle" : "zzBMdpppppppppp-gt-100830-2026-04-13T16:27:33.417Z::po.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
