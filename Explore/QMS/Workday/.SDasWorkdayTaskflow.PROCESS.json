@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "1NyPDjquYiBcn1EKGLilUA",
+    "id" : "5YLnyGu3YV7cVHskg21wOv",
     "name" : "SDasWorkdayTaskflow",
     "type" : "PROCESS",
     "metadata" : {
@@ -9,18 +9,18 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "Y8AyNnQMMnGbciZ-gt-1172042-2026-04-10T12:03:06.818Z::pd.xml"
+        "repoHandle" : "AzbdtqSLlBWlD2p-gt-61399-2026-04-13T09:15:39.429Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "@operation= Recursion taskflow, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText=Recursion taskflow, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
         "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
+        "documentState" : "INVALID"
       }
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-10T12:21:21.645Z",
+  "updateTime" : "2026-04-13T12:07:53.061Z",
   "objectRefs" : [ {
     "id" : "aMJnvoUehsEecYGoaGo8Oj",
     "name" : "Conn-File-LogGovOps",
@@ -42,7 +42,7 @@
     },
     "path" : "/Explore/Utilities_GovOps/InfraTickets"
   }, {
-    "id" : "5cKBObN86iKeSC4xBNezK3",
+    "id" : "9AbziDorPJXgETkvKTtKu6",
     "name" : "Conn-SC-ETQTaskflow",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -51,7 +51,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "5i4rswVYx8R8WrY-gt-1168333-2026-04-10T12:03:05.906Z::conn.xml"
+        "repoHandle" : "GD4ARW8UBM7zsZv-gt-60515-2026-04-13T09:15:38.524Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

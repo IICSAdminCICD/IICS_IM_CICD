@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "cazaloILLuZe1GUbWIE28o",
+    "id" : "jSwz2847zqYgpS7obfnfu6",
     "name" : "tf_TMS_01_SendAssignmentsETQ",
     "type" : "TASKFLOW",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "5WA6gaabclvAhrs-gt-5859690-2026-04-10T12:03:07.915Z::tf.xml"
+        "repoHandle" : "tT1cnFKi9zhFtyb-gt-253600-2026-04-13T09:15:41.312Z::tf.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,71 +20,8 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-10T12:21:21.651Z",
+  "updateTime" : "2026-04-13T12:07:53.070Z",
   "objectRefs" : [ {
-    "id" : "1NyPDjquYiBcn1EKGLilUA",
-    "name" : "SDasWorkdayTaskflow",
-    "type" : "PROCESS",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 1,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "Y8AyNnQMMnGbciZ-gt-1172042-2026-04-10T12:03:06.818Z::pd.xml"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "@operation= Recursion taskflow, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText=Recursion taskflow, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
-        "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/QMS/Workday"
-  }, {
-    "id" : "5yLUYpoNkPrgLr3IYQmio2",
-    "name" : "SDasWorkDayTrainingSQL",
-    "type" : "PROCESS",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 1,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "NFoFuR55aaabdqp-gt-1172020-2026-04-10T12:03:06.644Z::pd.xml"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "@operation= Insert/Update LogTraining, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText= Insert and Update training records into table, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
-        "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/QMS/Workday"
-  }, {
-    "id" : "4RW4WoKWOI6kxeRRS1nViU",
-    "name" : "mt_TMS_01_SendTrainingsETQ",
-    "type" : "MTT",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "011EE90Z000000000005"
-      },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
-      "additionalInfo" : {
-        "description" : "@connectionSource= SQL Server, @connection Target= SQL Server, @sources= [@connection1=SQL_Wdy_ETQ_TMS], @targets= [@connection1= SQL_Wdy_ETQ_TMS], @transformation= select, @dataType= JSON Training Records, @additionalText= select the first record inserted and send the records to ETQ",
-        "contentType" : "JSON",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/QMS/Workday"
-  }, {
     "id" : "1o3yzZ9cHFMgZLFdx2fj80",
     "name" : "tf_UtiGenerateTicketGovOps",
     "type" : "TASKFLOW",
@@ -104,6 +41,69 @@
       }
     },
     "path" : "/Explore/Utilities_GovOps/InfraTickets"
+  }, {
+    "id" : "3EWKcbsRLkqlrvr1uf6No7",
+    "name" : "SDasWorkDayTrainingSQL",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "oDdvrTdtqSLlBWl-gt-61377-2026-04-13T09:15:39.234Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation= Insert/Update LogTraining, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText= Insert and Update training records into table, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "INVALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  }, {
+    "id" : "jZ6IuCsxtIwjUID8FSYaUC",
+    "name" : "mt_TMS_01_SendTrainingsETQ",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "011EE90Z000000000006"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "@connectionSource= SQL Server, @connection Target= SQL Server, @sources= [@connection1=SQL_Wdy_ETQ_TMS], @targets= [@connection1= SQL_Wdy_ETQ_TMS], @transformation= select, @dataType= JSON Training Records, @additionalText= select the first record inserted and send the records to ETQ",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  }, {
+    "id" : "5YLnyGu3YV7cVHskg21wOv",
+    "name" : "SDasWorkdayTaskflow",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "AzbdtqSLlBWlD2p-gt-61399-2026-04-13T09:15:39.429Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@operation= Recursion taskflow, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText=Recursion taskflow, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "INVALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
   } ],
   "readableFileExtension" : null,
   "readableFilePresent" : false

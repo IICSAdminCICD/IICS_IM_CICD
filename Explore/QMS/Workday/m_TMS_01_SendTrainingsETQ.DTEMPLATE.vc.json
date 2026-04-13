@@ -22,6 +22,7 @@
     ],
     "transformations" : [
       {
+        "augmented" : "false",
         "createTime" : "2025-07-30T22:53:28.376Z",
         "name" : "SRC_SQLTrainigs",
         "advancedProperties" : [
@@ -207,6 +208,7 @@
         }
       },
       {
+        "augmented" : "false",
         "createTime" : "2025-07-30T22:53:28.376Z",
         "name" : "TGT_ETQ_TMS",
         "advancedProperties" : [
@@ -391,6 +393,7 @@
         }
       },
       {
+        "augmented" : "false",
         "createTime" : "2025-08-01T06:19:17.064Z",
         "name" : "JTX_CallWsSDasInsertRecordsETQ",
         "groups" : [
@@ -483,6 +486,7 @@
         ]
       },
       {
+        "augmented" : "false",
         "createTime" : "2025-08-01T06:24:52.936Z",
         "name" : "EXP_AssignWSDL",
         "groups" : [
@@ -543,6 +547,7 @@
         }
       },
       {
+        "augmented" : "false",
         "createTime" : "2025-08-01T06:46:22.210Z",
         "name" : "EXP_SuccesfullCall",
         "groups" : [
@@ -653,5 +658,5 @@
       }
     ]
   },
-  "vcsExportTime" : "2026-04-10 05:21:21 PDT"
+  "vcsExportTime" : "2026-04-13 05:07:51 PDT"
 }

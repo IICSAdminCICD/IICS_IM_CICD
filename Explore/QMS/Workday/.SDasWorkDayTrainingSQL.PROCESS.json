@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "5yLUYpoNkPrgLr3IYQmio2",
+    "id" : "3EWKcbsRLkqlrvr1uf6No7",
     "name" : "SDasWorkDayTrainingSQL",
     "type" : "PROCESS",
     "metadata" : {
@@ -9,20 +9,20 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "NFoFuR55aaabdqp-gt-1172020-2026-04-10T12:03:06.644Z::pd.xml"
+        "repoHandle" : "oDdvrTdtqSLlBWl-gt-61377-2026-04-13T09:15:39.234Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "@operation= Insert/Update LogTraining, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText= Insert and Update training records into table, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
         "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
+        "documentState" : "INVALID"
       }
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-10T12:21:21.640Z",
+  "updateTime" : "2026-04-13T12:07:53.058Z",
   "objectRefs" : [ {
-    "id" : "0CUW3KGwHkKeqfIMxitcgP",
+    "id" : "1z80uRIiRvdjx6vgwEDzCl",
     "name" : "Conn-SC-SDasWorkDayTrainingSQL",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -31,18 +31,18 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "abbf5ZK0CYybdsM-gt-1168353-2026-04-10T12:03:06.013Z::conn.xml"
+        "repoHandle" : "KoEFsWTzIf6riX2-gt-60525-2026-04-13T09:15:38.585Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC_SDasWordDayTrainingSQL",
         "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
+        "documentState" : "INVALID"
       }
     },
     "path" : "/Explore/QMS/Workday"
   }, {
-    "id" : "5fzi7oDq35NjKujhsPivAI",
+    "id" : "2O25mD53tM9dkD4dThRIGz",
     "name" : "Conn-SC-SDASInsertTrainingsLog",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -51,7 +51,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "2lxbdypKwKBqRi9-gt-1168323-2026-04-10T12:03:05.861Z::conn.xml"
+        "repoHandle" : "CY7tu2SHCwkNmum-gt-60505-2026-04-13T09:15:38.467Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

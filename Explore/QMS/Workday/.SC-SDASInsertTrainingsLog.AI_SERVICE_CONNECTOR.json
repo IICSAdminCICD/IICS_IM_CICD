@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "7bVfnyZFJYrctcg71r5bab",
+    "id" : "jHHSk4hCn0yj9zt91UY7eR",
     "name" : "SC-SDASInsertTrainingsLog",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "i0seGbciZBpDUQb-gt-1172010-2026-04-10T12:03:05.141Z::svc.xml"
+        "repoHandle" : "beMUvIw8jIw8jIw-gt-60494-2026-04-13T09:15:38.028Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,7 +20,7 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-10T12:21:21.644Z",
+  "updateTime" : "2026-04-13T12:07:53.068Z",
   "objectRefs" : [ ],
   "readableFileExtension" : null,
   "readableFilePresent" : false
