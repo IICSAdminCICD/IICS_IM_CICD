@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>uAKlFmVSciY3Axt-gt-61389-2026-04-13T09:15:39.338Z::po.xml</types1:EntryId>
+      <types1:EntryId>zzBMdpppppppppp-gt-100830-2026-04-13T16:27:33.417Z::po.xml</types1:EntryId>
       <types1:Name>PODocumentParts</types1:Name>
       <types1:MimeType>application/xml+processobject</types1:MimeType>
       <types1:Description>@operation= Parse Json into Segments, @dataType=Workday Trainings, @application= Workday - ETQ</types1:Description>
@@ -11,7 +11,7 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-13T09:15:39Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-13T16:27:33Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
@@ -30,15 +30,15 @@
                   <options>
                      <option name="relationshipName">Child</option>
                      <option name="referenceTo">$po:PODocumentFields</option>
-                     <option name="guid">lLJK9fcjUmrcSlsmbxfzsd</option>
+                     <option name="guid">5IFdCe0y1SOei4bqoM6WGt</option>
                      <option name="isCopy">true</option>
                   </options>
                </field>
             </detail>
          </processObject>
       </types1:Entry>
-      <types1:GUID>2GOhwoyTaRMlhVWRVsMaGp</types1:GUID>
+      <types1:GUID>7wLfVJz22QTflQuLnc3hwt</types1:GUID>
       <types1:DisplayName>PODocumentParts</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-13T12:07:52.328Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-13T16:27:55.142Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "1z80uRIiRvdjx6vgwEDzCl",
+    "id" : "3Alaiq0kbONk7U316Gw00z",
     "name" : "Conn-SC-SDasWorkDayTrainingSQL",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -9,20 +9,20 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "KoEFsWTzIf6riX2-gt-60525-2026-04-13T09:15:38.585Z::conn.xml"
+        "repoHandle" : "BfWWCSHbf13ErhN-gt-99084-2026-04-13T16:27:32.448Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "@appType= Workday Trainings, @application= Workday / ETQ, @appSCName= SC_SDasWordDayTrainingSQL",
         "contentType" : "application/json; charset=utf-8",
-        "documentState" : "INVALID"
+        "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-13T12:07:53.065Z",
+  "updateTime" : "2026-04-13T16:27:55.840Z",
   "objectRefs" : [ {
-    "id" : "ihXw8tENjASdas0zgfWMK1",
+    "id" : "4Hs8HIyDyizb6SWAfMF1A7",
     "name" : "SC-SDasWorkDayTrainingSQL",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -31,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "5aaaaabdvhxiQLn-gt-60478-2026-04-13T09:15:37.911Z::svc.xml"
+        "repoHandle" : "Qnbf6riX2FNBeNT-gt-99714-2026-04-13T16:27:31.687Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

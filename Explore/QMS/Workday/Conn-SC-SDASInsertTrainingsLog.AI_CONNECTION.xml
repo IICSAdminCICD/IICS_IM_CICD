@@ -1,36 +1,32 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>CY7tu2SHCwkNmum-gt-60505-2026-04-13T09:15:38.467Z::conn.xml</types1:EntryId>
+      <types1:EntryId>uRZXDyvs7xvk0qZ-gt-99063-2026-04-13T16:27:32.327Z::conn.xml</types1:EntryId>
       <types1:Name>Conn-SC-SDASInsertTrainingsLog</types1:Name>
       <types1:MimeType>application/xml+connection</types1:MimeType>
       <types1:Description>@appType= Trainings Workday, @application= Workday/ETQ, @appSCName= SC_SDASInsertTrainingsLog</types1:Description>
       <types1:AppliesTo/>
-      <types1:Tags>.agent:SZU1IICSSA01</types1:Tags>
+      <types1:Tags>.agent:SDCAMDMSA01</types1:Tags>
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-13T09:15:38Z</types1:CreationDate>
-      <types1:ModifiedBy>gchico@ppg.com</types1:ModifiedBy>
-      <types1:ModificationDate>2026-04-13T12:04:48Z</types1:ModificationDate>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
-      <types1:PublishedBy>gchico@ppg.com</types1:PublishedBy>
-      <types1:PublicationDate>2026-04-13T12:05:27Z</types1:PublicationDate>
-      <types1:PublishedContributionId>project:/rt.connection/Conn-SC-SDASInsertTrainingsLog/Conn-SC-SDASInsertTrainingsLog.conn.xml</types1:PublishedContributionId>
+      <types1:CreationDate>2026-04-13T16:27:32Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
          <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
-                     GUID="2O25mD53tM9dkD4dThRIGz"
+                     GUID="8kRoQ3Evrv6e6D8xt3HyK8"
                      displayName="Conn-SC-SDASInsertTrainingsLog"
                      label="Conn-SC-SDASInsertTrainingsLog"
                      name="Conn-SC-SDASInsertTrainingsLog">
             <description>@appType= Trainings Workday, @application= Workday/ETQ, @appSCName= SC_SDASInsertTrainingsLog</description>
-            <tags>.agent:SZU1IICSSA01</tags>
-            <agent>SZU1IICSSA01</agent>
+            <tags>.agent:SDCAMDMSA01</tags>
+            <agent>SDCAMDMSA01</agent>
             <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
                                agentOnly="false"
                                connectorPath="project:/rt.connector/SC_SDASInsertTrainingsLog/SC_SDASInsertTrainingsLog_svcDef.xml"
-                               guid="jHHSk4hCn0yj9zt91UY7eR"
+                               guid="0jeVVX5wD4qjtcNMbCp0wz"
                                name="SC-SDASInsertTrainingsLog"
                                supportsConnectionTest="false"
                                uuid="b07cba10-dffd-47b0-a601-f92d66753e9c">
@@ -40,8 +36,8 @@
             </businessConnector>
          </connection>
       </types1:Entry>
-      <types1:GUID>2O25mD53tM9dkD4dThRIGz</types1:GUID>
+      <types1:GUID>8kRoQ3Evrv6e6D8xt3HyK8</types1:GUID>
       <types1:DisplayName>Conn-SC-SDASInsertTrainingsLog</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-13T12:07:52.032Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-13T16:27:54.783Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

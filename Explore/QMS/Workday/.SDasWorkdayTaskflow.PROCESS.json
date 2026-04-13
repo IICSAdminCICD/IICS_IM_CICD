@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "5YLnyGu3YV7cVHskg21wOv",
+    "id" : "bBDhsXDsm0ifK6OCJ2Dd8n",
     "name" : "SDasWorkdayTaskflow",
     "type" : "PROCESS",
     "metadata" : {
@@ -9,40 +9,20 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "AzbdtqSLlBWlD2p-gt-61399-2026-04-13T09:15:39.429Z::pd.xml"
+        "repoHandle" : "FAWtHww43dtQR6k-gt-100840-2026-04-13T16:27:33.504Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "@operation= Recursion taskflow, @dataType= Workday Trainings, @source= WorkDay, @target= SQL Database, @additionalText=Recursion taskflow, @prcRunOn = SDCAMDMSA01,\n@prcAllowedGroups= ServiceConsumer",
         "contentType" : "application/json; charset=utf-8",
-        "documentState" : "INVALID"
+        "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-13T12:07:53.061Z",
+  "updateTime" : "2026-04-13T16:27:55.851Z",
   "objectRefs" : [ {
-    "id" : "aMJnvoUehsEecYGoaGo8Oj",
-    "name" : "Conn-File-LogGovOps",
-    "type" : "AI_CONNECTION",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 1,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "2JrhNzUzeA8rJ4p-gt-1168303-2026-04-10T12:03:04.869Z::conn.xml"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "@appType=File, @application=OnTap, @additionalText=This app connection writes log files and monitors a directory in OnTap",
-        "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/Utilities_GovOps/InfraTickets"
-  }, {
-    "id" : "9AbziDorPJXgETkvKTtKu6",
+    "id" : "9QCsFfab08piMxQglUqu40",
     "name" : "Conn-SC-ETQTaskflow",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -51,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "GD4ARW8UBM7zsZv-gt-60515-2026-04-13T09:15:38.524Z::conn.xml"
+        "repoHandle" : "xGomUhGdwOLIFvu-gt-99074-2026-04-13T16:27:32.381Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -61,6 +41,26 @@
       }
     },
     "path" : "/Explore/QMS/Workday"
+  }, {
+    "id" : "7FmJXtLmkZSjZ0nK3CPI2j",
+    "name" : "Conn-File-LogGovOps",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "GKcn8dzWztZK0CY-gt-100805-2026-04-13T16:27:31.525Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "@appType=File, @application=OnTap, @additionalText=This app connection writes log files and monitors a directory in OnTap",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Utilities_GovOps/InfraTickets"
   } ],
   "readableFileExtension" : null,
   "readableFilePresent" : false
