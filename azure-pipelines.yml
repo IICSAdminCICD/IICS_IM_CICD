@@ -3,6 +3,16 @@ trigger:
     include:
       - DEV
 
+parameters:
+- name: ENVIRONMENT
+  displayName: "Selecciona entorno destino"
+  type: string
+  default: QA
+  values:
+    - QA
+    - UAT
+    - PROD      
+
 pool:
   vmImage: ubuntu-latest
 
