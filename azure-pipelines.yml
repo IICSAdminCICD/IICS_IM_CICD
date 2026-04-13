@@ -10,7 +10,7 @@ parameters:
   default: QA
   values:
     - QA
-    - UAT
+    - SNB2
     - PROD      
 
 pool:
