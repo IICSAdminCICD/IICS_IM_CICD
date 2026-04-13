@@ -15,7 +15,7 @@ stages:
 # VALIDATE
 # -----------------------
 - stage: VALIDATE
-  displayName: "Validate commit message"
+  displayName: "Validate commit message."
 
   jobs:
   - job: ValidateCommit
