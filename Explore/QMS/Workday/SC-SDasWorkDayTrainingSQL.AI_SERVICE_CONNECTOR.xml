@@ -1,8 +1,9 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>eLRfRW8UBM7zsZv-gt-1172002-2026-04-10T12:03:05.077Z::svc.xml</types1:EntryId>
+      <types1:EntryId>5aaaaabdvhxiQLn-gt-60478-2026-04-13T09:15:37.911Z::svc.xml</types1:EntryId>
       <types1:Name>SC-SDasWorkDayTrainingSQL</types1:Name>
+      <types1:ParentFlowIds>KoEFsWTzIf6riX2-gt-60525-2026-04-13T09:15:38.585Z::conn.xml</types1:ParentFlowIds>
       <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
       <types1:Description>@scType=Trainings Workday, @application= Workday/ETQ
 
@@ -13,9 +14,12 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>gchico@ppg.com</types1:CreatedBy>
-      <types1:CreationDate>2026-04-10T12:03:05Z</types1:CreationDate>
+      <types1:CreationDate>2026-04-13T09:15:38Z</types1:CreationDate>
       <types1:ModifiedBy/>
-      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>gchico@ppg.com</types1:PublishedBy>
+      <types1:PublicationDate>2026-04-13T12:03:49Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/SC_SDasWorkDayTrainingSQL/SC_SDasWorkDayTrainingSQL_svcDef.xml</types1:PublishedContributionId>
       <types1:Entry>
          <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
                             agentOnly="true"
@@ -255,8 +259,8 @@
             <objects/>
          </businessConnector>
       </types1:Entry>
-      <types1:GUID>4bfC6tzqM4MhlmYtB4MfIi</types1:GUID>
+      <types1:GUID>ihXw8tENjASdas0zgfWMK1</types1:GUID>
       <types1:DisplayName>SC-SDasWorkDayTrainingSQL</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2026-04-10T12:21:20.954Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2026-04-13T12:07:51.867Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

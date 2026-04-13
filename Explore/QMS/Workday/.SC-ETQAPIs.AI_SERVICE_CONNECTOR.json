@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "f60HmOpbXeniIJgL047HoS",
+    "id" : "bazBCNltHUCbk46jeRZr07",
     "name" : "SC-ETQAPIs",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "aaa-gt-1171994-2026-04-10T12:03:05.004Z::svc.xml"
+        "repoHandle" : "95Xt1T4W6jKsJlv-gt-60486-2026-04-13T09:15:37.969Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,7 +20,7 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2026-04-10T12:21:21.643Z",
+  "updateTime" : "2026-04-13T12:07:53.066Z",
   "objectRefs" : [ ],
   "readableFileExtension" : null,
   "readableFilePresent" : false

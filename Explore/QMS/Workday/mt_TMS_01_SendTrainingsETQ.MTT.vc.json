@@ -45,9 +45,9 @@
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
       },
+      "restmodernSource" : true,
       "unspecified" : false,
-      "fileList" : false,
-      "restmodernSource" : true
+      "fileList" : false
     },
     {
       "name" : "$TGT_ETQ_TMS$",
@@ -98,13 +98,13 @@
         "objectRuntimeParameter" : false
       },
       "dbSchema" : "dbo",
+      "restmodernSource" : true,
       "unspecified" : false,
-      "fileList" : false,
-      "restmodernSource" : true
+      "fileList" : false
     }
   ],
   "verbose" : false,
-  "mappingId" : "@cPN5l7vQ3MYiRmyTwbL82D",
+  "mappingId" : "@3948aLyZ0pjhk7MKzqLMeA",
   "mappingTemplateName" : "m_TMS_01_SendTrainingsETQ",
   "sessionPropertiesList" : [
     {
@@ -170,5 +170,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2026-04-10 05:21:21 PDT"
+  "vcsExportTime" : "2026-04-13 05:07:52 PDT"
 }
