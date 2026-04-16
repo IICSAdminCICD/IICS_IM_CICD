@@ -62,6 +62,9 @@ stages:
   dependsOn: VALIDATE
   condition: succeeded()
 
+  variables:
+    RUNTIME_MAPPING_FILE: CICD/config/runtime_mapping_qa.yml
+
   jobs:
   - deployment: DeployQA
     displayName: "Promote DEV commit to QA"
@@ -93,7 +96,6 @@ stages:
               git config --global user.name "Azure DevOps Pipeline"
 
               git fetch --all
-
               git checkout QA
               git pull origin QA
 
@@ -101,7 +103,6 @@ stages:
 
               CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r --diff-filter=AM $COMMIT)
 
-              echo "Archivos detectados:"
               echo "$CHANGED_FILES"
 
               COUNT=$(echo "$CHANGED_FILES" | wc -l)
@@ -118,28 +119,23 @@ stages:
                   git checkout $COMMIT -- "$file"
               done
 
-              # Exportar variable para Python
               export CHANGED_FILES="$CHANGED_FILES"
 
-              echo "Aplicando mapping de Runtime Environment con Python"
+              echo "Aplicando Runtime Mapping"
               python3 CICD/scripts/runtime_mapping.py
 
-              echo "Añadiendo archivos modificados al commit QA"
+              echo "Commit QA"
 
               for file in $CHANGED_FILES
               do
                   git add "$file"
               done
 
-              git diff --cached --quiet || git commit -m "Promote files from DEV commit $COMMIT to QA (runtime mapped)"
+              git diff --cached --quiet || git commit -m "Promote DEV -> QA (runtime mapped) $COMMIT"
 
               git push origin QA
 
             displayName: "Promote files + Runtime mapping"
-
-          # ------------------------
-          # LOGIN IICS
-          # ------------------------
 
           - script: |
               python3 CICD/scripts/infa_login.py
@@ -151,19 +147,9 @@ stages:
               QA_IICS_USERNAME: $(QA_IICS_USERNAME)
               QA_IICS_PASSWORD: $(QA_IICS_PASSWORD)
 
-          # ------------------------
-          # PULL BY COMMIT + WAIT
-          # ------------------------
-
           - script: |
 
-              echo "Executing PullByCommitHash + Polling"
-
               COMMIT=$(cat $(Pipeline.Workspace)/commit.txt)
-
-              echo "Commit recibido:"
-              echo $COMMIT
-
               export COMMIT_HASH=$COMMIT
 
               python3 CICD/scripts/pull_and_wait.py
