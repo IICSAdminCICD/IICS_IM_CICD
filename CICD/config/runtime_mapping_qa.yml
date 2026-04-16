@@ -1,8 +1,8 @@
 runtime_mapping:
   - DEV:
       name: SDCAMDMSA01
-      id: 011EE92500000000001I
-      federatedId: 9xO6JQYRdY1gX3ACS2wkei
+      id: 011EE92500000000001J
+      federatedId: ewJOrifuzmAdOEdplJLsOl
     TARGET:
       name: SZU1IICSSA01
       id: 011EE925000000000002
