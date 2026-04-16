@@ -1,7 +1,7 @@
 {
   "name" : "mt_TMS_01_SendTrainingsETQ",
   "description" : "@connectionSource= SQL Server, @connection Target= SQL Server, @sources= [@connection1=SQL_Wdy_ETQ_TMS], @targets= [@connection1= SQL_Wdy_ETQ_TMS], @transformation= select, @dataType= JSON Training Records, @additionalText= select the first record inserted and send the records to ETQ",
-  "runtimeEnvironmentId" : "@9xO6JQYRdY1gX3ACS2wkei",
+  "runtimeEnvironmentId" : "@ewJOrifuzmAdOEdplJLsOl",
   "runtimeEnvironmentName" : "SDCAMDMSA01",
   "maxLogs" : 10,
   "parameters" : [
@@ -104,7 +104,7 @@
     }
   ],
   "verbose" : false,
-  "mappingId" : "@ahSbUSmUGm3c2WOOhaCHqX",
+  "mappingId" : "@bn78ZlJhyShgG3LMVJJHon",
   "mappingTemplateName" : "m_TMS_01_SendTrainingsETQ",
   "sessionPropertiesList" : [
     {
@@ -160,7 +160,7 @@
   ],
   "hidden" : false,
   "enableCrossSchemaPushdown" : false,
-  "enableParallelRun" : true,
+  "enableParallelRun" : false,
   "autoTunedApplied" : false,
   "autoTunedAppliedType" : "NONE",
   "paramFileType" : "PARAM_FILE_LOCAL",
@@ -170,5 +170,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2026-04-16 08:20:20 PDT"
+  "vcsExportTime" : "2026-04-16 15:45:37 PDT"
 }
