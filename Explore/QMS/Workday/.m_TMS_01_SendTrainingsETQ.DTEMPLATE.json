@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "8gnqJDAZZYQd5PIJNNfF0t",
+    "id" : "0PN6qOtVC6wdrSAuwEFCSH",
     "name" : "m_TMS_01_SendTrainingsETQ",
     "type" : "DTEMPLATE",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "011EE91700000000000D"
+        "repoHandle" : "011EE91700000000000F"
       },
       "contextAttributes" : [ {
         "name" : "id",
@@ -23,7 +23,7 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2026-04-16T11:06:56.482Z",
+  "updateTime" : "2026-04-16T11:27:22.110Z",
   "objectRefs" : [ {
     "id" : "2DEI8yRMNubdoPahJHv52P",
     "name" : "SQL_Wdy_ETQ_TMS",
