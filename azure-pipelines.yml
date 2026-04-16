@@ -111,12 +111,11 @@ stages:
                 exit 1
               fi
 
-              echo "Promoviendo archivos"
+              echo "Promoviendo archivos desde commit DEV"
 
               for file in $CHANGED_FILES
               do
                   git checkout $COMMIT -- "$file"
-                  git add "$file"
               done
 
               # Exportar variable para Python
@@ -125,7 +124,14 @@ stages:
               echo "Aplicando mapping de Runtime Environment con Python"
               python3 CICD/scripts/runtime_mapping.py
 
-              git diff --cached --quiet || git commit -m "Promote files from DEV commit $COMMIT to QA (with runtime mapping)"
+              echo "Añadiendo archivos modificados al commit QA"
+
+              for file in $CHANGED_FILES
+              do
+                  git add "$file"
+              done
+
+              git diff --cached --quiet || git commit -m "Promote files from DEV commit $COMMIT to QA (runtime mapped)"
 
               git push origin QA
 
