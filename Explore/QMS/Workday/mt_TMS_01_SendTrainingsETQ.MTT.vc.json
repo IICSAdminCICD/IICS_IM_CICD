@@ -1,8 +1,8 @@
 {
   "name" : "mt_TMS_01_SendTrainingsETQ",
   "description" : "@connectionSource= SQL Server, @connection Target= SQL Server, @sources= [@connection1=SQL_Wdy_ETQ_TMS], @targets= [@connection1= SQL_Wdy_ETQ_TMS], @transformation= select, @dataType= JSON Training Records, @additionalText= select the first record inserted and send the records to ETQ",
-  "runtimeEnvironmentId" : "@ewJOrifuzmAdOEdplJLsOl",
-  "runtimeEnvironmentName" : "AG_IICS_QA_CDI",
+  "runtimeEnvironmentId" : "@2SwhqkOxXnzdvof9oxXaU6",
+  "runtimeEnvironmentName" : "SZU1IICSSA01",
   "maxLogs" : 10,
   "parameters" : [
     {

@@ -68,8 +68,8 @@
     },
     "path" : "/SYS"
   }, {
-    "id" : "ewJOrifuzmAdOEdplJLsOl",
-    "name" : "AG_IICS_QA_CDI",
+    "id" : "2SwhqkOxXnzdvof9oxXaU6",
+    "name" : "SZU1IICSSA01",
     "type" : "AgentGroup",
     "metadata" : {
       "modelVersion" : {
@@ -77,7 +77,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "011EE92500000000001J"
+        "repoHandle" : "011EE925000000000002"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
