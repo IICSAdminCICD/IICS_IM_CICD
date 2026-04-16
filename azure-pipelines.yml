@@ -101,6 +101,7 @@ stages:
 
               CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r --diff-filter=AM $COMMIT)
 
+              echo "Archivos detectados:"
               echo "$CHANGED_FILES"
 
               COUNT=$(echo "$CHANGED_FILES" | wc -l)
@@ -118,11 +119,17 @@ stages:
                   git add "$file"
               done
 
-              git diff --cached --quiet || git commit -m "Promote files from DEV commit $COMMIT to QA"
+              # Exportar variable para Python
+              export CHANGED_FILES="$CHANGED_FILES"
+
+              echo "Aplicando mapping de Runtime Environment con Python"
+              python3 CICD/scripts/runtime_mapping.py
+
+              git diff --cached --quiet || git commit -m "Promote files from DEV commit $COMMIT to QA (with runtime mapping)"
 
               git push origin QA
 
-            displayName: "Promote files to QA"
+            displayName: "Promote files + Runtime mapping"
 
           # ------------------------
           # LOGIN IICS
