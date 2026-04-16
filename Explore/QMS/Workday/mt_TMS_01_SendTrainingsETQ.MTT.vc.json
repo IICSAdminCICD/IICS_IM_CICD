@@ -1,7 +1,7 @@
 {
   "name" : "mt_TMS_01_SendTrainingsETQ",
   "description" : "@connectionSource= SQL Server, @connection Target= SQL Server, @sources= [@connection1=SQL_Wdy_ETQ_TMS], @targets= [@connection1= SQL_Wdy_ETQ_TMS], @transformation= select, @dataType= JSON Training Records, @additionalText= select the first record inserted and send the records to ETQ",
-  "runtimeEnvironmentId" : "@8F5jb2M1Jx4igk4etzQ1Y6",
+  "runtimeEnvironmentId" : "@ejoS1HHsMOhig0oh80MwIH",
   "runtimeEnvironmentName" : "AG_IICS_QA_CDI",
   "maxLogs" : 10,
   "parameters" : [
@@ -104,7 +104,7 @@
     }
   ],
   "verbose" : false,
-  "mappingId" : "@0dj6blE7aF7eikA6axwXcx",
+  "mappingId" : "@ahSbUSmUGm3c2WOOhaCHqX",
   "mappingTemplateName" : "m_TMS_01_SendTrainingsETQ",
   "sessionPropertiesList" : [
     {
@@ -170,5 +170,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2026-04-16 04:45:30 PDT"
+  "vcsExportTime" : "2026-04-16 08:20:20 PDT"
 }
