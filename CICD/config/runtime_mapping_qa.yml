@@ -1,18 +1,9 @@
 runtime_mapping:
   - DEV:
-      name: DEV_RUNTIME_1
-      id: 123
-      federatedId: abc-dev
+      name: SDCAMDMSA01
+      id: 010T4725000000000004
+      federatedId: 9ew81IGCjUshOwChB1zgWT
     TARGET:
-      name: QA_RUNTIME_1
-      id: 987
-      federatedId: abc-qa
-
-  - DEV:
-      name: DEV_RUNTIME_2
-      id: 124
-      federatedId: def-dev
-    TARGET:
-      name: QA_RUNTIME_2
-      id: 988
-      federatedId: def-qa
+      name: AG_IICS_QA_CDI
+      id: 010T4G2500000000000G
+      federatedId: fCPnTBJj0qvloh3kEBbhA3
