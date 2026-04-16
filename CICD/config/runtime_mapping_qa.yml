@@ -1,0 +1,18 @@
+runtime_mapping:
+  - DEV:
+      name: DEV_RUNTIME_1
+      id: 123
+      federatedId: abc-dev
+    TARGET:
+      name: QA_RUNTIME_1
+      id: 987
+      federatedId: abc-qa
+
+  - DEV:
+      name: DEV_RUNTIME_2
+      id: 124
+      federatedId: def-dev
+    TARGET:
+      name: QA_RUNTIME_2
+      id: 988
+      federatedId: def-qa
