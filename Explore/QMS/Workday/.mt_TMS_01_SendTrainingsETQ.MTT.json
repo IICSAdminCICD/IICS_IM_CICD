@@ -1,0 +1,93 @@
+{
+  "objectInfo" : {
+    "id" : "73hjqSyYaWdi6BL087ctCn",
+    "name" : "mt_TMS_01_SendTrainingsETQ",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "011EE90Z000000000007"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "@connectionSource= SQL Server, @connection Target= SQL Server, @sources= [@connection1=SQL_Wdy_ETQ_TMS], @targets= [@connection1= SQL_Wdy_ETQ_TMS], @transformation= select, @dataType= JSON Training Records, @additionalText= select the first record inserted and send the records to ETQ",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2026-04-16T11:06:56.483Z",
+  "objectRefs" : [ {
+    "id" : "1zM2N8QPIaafaPWnrWQFKu",
+    "name" : "AG_IICS_QA_CDI",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "011EE92500000000002U"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "8gnqJDAZZYQd5PIJNNfF0t",
+    "name" : "m_TMS_01_SendTrainingsETQ",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "011EE91700000000000D"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "@connectionSource= SQL Server, @connection Target= SQL Server, @sources= [@connection1=SQL_Wdy_ETQ_TMS], @targets= [@connection1= SQL_Wdy_ETQ_TMS], @transformation= select, @dataType= JSON Training Records, @additionalText= select the first record inserted and send the records to ETQ",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/QMS/Workday"
+  }, {
+    "id" : "2DEI8yRMNubdoPahJHv52P",
+    "name" : "SQL_Wdy_ETQ_TMS",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "011EE90B000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ],
+  "readableFileExtension" : "json",
+  "readableFilePresent" : true
+}
