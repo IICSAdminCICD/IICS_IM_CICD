@@ -1,0 +1,174 @@
+{
+  "name" : "mt_TMS_01_SendTrainingsETQ",
+  "description" : "@connectionSource= SQL Server, @connection Target= SQL Server, @sources= [@connection1=SQL_Wdy_ETQ_TMS], @targets= [@connection1= SQL_Wdy_ETQ_TMS], @transformation= select, @dataType= JSON Training Records, @additionalText= select the first record inserted and send the records to ETQ",
+  "runtimeEnvironmentId" : "@1zM2N8QPIaafaPWnrWQFKu",
+  "runtimeEnvironmentName" : "SDCAMDMSA01",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$SRC_SQLTrainigs$",
+      "type" : "SOURCE",
+      "label" : "SRC_SQLTrainigs",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "isSelectDistinct" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "isCustomQueryRetainMetaData" : "true",
+        "flags" : "SUPPORTS_MULTI_SCHEMA",
+        "originalPath" : "SRC_SQLTrainigs"
+      },
+      "sourceConnectionId" : "@2DEI8yRMNubdoPahJHv52P",
+      "connectionName" : "SQL_Wdy_ETQ_TMS",
+      "sourceObject" : "DUMMY_SRC_SQLTrainigs",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "customQuery" : "SELECT TOP 10 * FROM payloadLog WHERE payloadID = 4122 ORDER BY insertDateTime ASC;",
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "DUMMY_SRC_SQLTrainigs",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$TGT_ETQ_TMS$",
+      "type" : "TARGET",
+      "label" : "TGT_ETQ_TMS",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "flags" : "SUPPORTS_MULTI_SCHEMA",
+        "defaultTargetUpdateColumns" : "payloadID",
+        "supportApplyDDLChanges" : "false",
+        "originalPath" : "TGT_ETQ_TMS"
+      },
+      "targetConnectionId" : "@2DEI8yRMNubdoPahJHv52P",
+      "connectionName" : "SQL_Wdy_ETQ_TMS",
+      "targetObject" : "dbo/payloadLog",
+      "targetObjectLabel" : "payloadLog",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Update",
+      "customFuncCfg" : { },
+      "targetUpdateColumns" : [
+        "payloadID"
+      ],
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "dbo/payloadLog",
+      "objectLabel" : "payloadLog",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "dbSchema" : "dbo",
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "mappingId" : "@8gnqJDAZZYQd5PIJNNfF0t",
+  "mappingTemplateName" : "m_TMS_01_SendTrainingsETQ",
+  "sessionPropertiesList" : [
+    {
+      "name" : "Pushdown Optimization",
+      "value" : "None"
+    },
+    {
+      "name" : "Pushdown Optimization Context",
+      "value" : "None"
+    },
+    {
+      "name" : "Pushdown Optimization Fallback Option",
+      "value" : "Partial PDO"
+    }
+  ],
+  "inOutParameters" : [
+    {
+      "name" : "payloadID_i",
+      "description" : "payload ID to query into the data base",
+      "datatype" : "INTEGER",
+      "precision" : "10",
+      "scale" : "0",
+      "retentionPolicy" : "NEVER",
+      "aggregationType" : "MAX"
+    },
+    {
+      "name" : "WSDLURL_i",
+      "description" : "WSDL to call the corresponding CAI Process",
+      "datatype" : "STRING",
+      "precision" : "255",
+      "scale" : "0",
+      "retentionPolicy" : "NEVER",
+      "aggregationType" : "MAX"
+    },
+    {
+      "name" : "SoapAction_i",
+      "description" : "SAP Action from the WSDL",
+      "datatype" : "STRING",
+      "precision" : "255",
+      "scale" : "0",
+      "retentionPolicy" : "NEVER",
+      "aggregationType" : "MAX"
+    },
+    {
+      "name" : "result_i",
+      "description" : "Result of the validations in ETQ",
+      "datatype" : "INTEGER",
+      "precision" : "10",
+      "scale" : "0",
+      "retentionPolicy" : "NEVER",
+      "aggregationType" : "MAX"
+    }
+  ],
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : false,
+  "enableParallelRun" : true,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "paramFileType" : "PARAM_FILE_LOCAL",
+  "schemaMode" : "async",
+  "valid" : true,
+  "optimizationPlan" : "NONE",
+  "allowMaxFieldLength" : false,
+  "specialCharacterSupport" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2026-04-16 04:06:56 PDT"
+}
